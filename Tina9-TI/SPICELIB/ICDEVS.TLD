@@ -1,0 +1,6 @@
+Others
+SUBCKT Q_NPN  C B E   TinaICs:<NPN>  [Internal]
+SUBCKT Q_PNP  C B E   TinaICs:<PNP>  [Internal]
+SUBCKT D_D    A C     TinaICs:<D>    [Internal]
+SUBCKT D_Z    A C     TinaICs:<DZ>    [Internal]
+LOCKED ARE=

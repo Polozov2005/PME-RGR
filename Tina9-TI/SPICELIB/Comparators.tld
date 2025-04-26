@@ -1,0 +1,27 @@
+Texas Instruments
+SUBCKT TLC339          In+ In- V+ V- Out  TEXAS:Comparator5CO-TI  [Comparator]
+SUBCKT TLC352          In+ In- V+ V- Out  TEXAS:Comparator5CO-TI  [Comparator]
+SUBCKT TLC354          In+ In- V+ V- Out  TEXAS:Comparator5CO-TI  [Comparator]
+SUBCKT TLC3702         In+ In- V+ V- Out  TEXAS:Comparator5CO-TI  [Comparator]
+SUBCKT TLC3704         In+ In- V+ V- Out  TEXAS:Comparator5CO-TI  [Comparator]
+SUBCKT TLC372          In+ In- V+ V- Out  TEXAS:Comparator5CO-TI  [Comparator]
+SUBCKT TLC374          In+ In- V+ V- Out  TEXAS:Comparator5CO-TI  [Comparator]
+SUBCKT TLC393          In+ In- V+ V- Out  TEXAS:Comparator5CO-TI  [Comparator]
+SUBCKT TLV2352I        In+ In- V+ V- Out  TEXAS:Comparator5CO-TI  [Comparator]
+SUBCKT TLV2354I        In+ In- V+ V- Out  TEXAS:Comparator5CO-TI  [Comparator]
+SUBCKT TLV349          In+ In- V+ V- Out  TEXAS:Comparator5CO-TI  [Comparator]
+SUBCKT TLV3401         3 4 5 2 1  Texas:TLV3401  [Comparator]  ; No processable comment
+SUBCKT TLV3491         3 4 5 2 1  Texas:TLV3491  [Comparator]  ; No processable comment
+SUBCKT TLV3492         3 4 5 2 1  Texas:TLV3492  [Comparator]  ; No processable comment
+SUBCKT TLV3494         3 4 5 2 1  Texas:TLV3494  [Comparator]
+SUBCKT TLV3501         3 1 4 2 5 6  Texas:TLV3501  [Comparator]  ; No processable comment
+SUBCKT TLV3701         3 4 5 2 1  Texas:TLV3701  [Comparator]  ; No processable comment
+LOCKED T8M=
+
+
+
+
+
+
+
+

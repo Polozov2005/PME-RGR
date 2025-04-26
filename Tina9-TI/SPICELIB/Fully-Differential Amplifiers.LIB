@@ -1,0 +1,3039 @@
+* ------------------------------------------------------------------------
+*|(C) Copyright Texas Instruments Incorporated 2007. All rights reserved. |
+*|                                                                        |
+*|This Model is designed as aTHSn aid for customers of Texas Instruments.    |
+*|No warranties, either expressed or implied, with respect to this Model  |
+*|or its fitness for a particular purpose is claimed by Texas Instruments |
+*|or the author.  The Model is licensed solely on an "as is" basis.  The  |
+*|entire risk as to its quality and performance is with the customer.     |
+* ------------------------------------------------------------------------
+
+*  
+* OPA1632 SUBCIRCUIT
+* FULLY DIFFERENTIAL HIGH SPEED MONLITHIC OPERATIONAL AMPLIFIER 
+* WRITTEN 6/29/04
+* TEMPLATE=X^@REFDES %IN+ %IN- %VCC+ %VCC- %OUT+ %OUT- %VOCM @MODEL
+* CONNECTIONS:      NON-INVERTING INPUT
+*                   | INVERTING INPUT
+*                   | | POSITIVE POWER SUPPLY
+*                   | | | NEGATIVE POWER SUPPLY
+*                   | | | | OUTPUT +
+*                   | | | | | OUTPUT -
+*                   | | | | | |  VOCM
+*                   | | | | | |  |
+.SUBCKT OPA1632     1 2 3 4 5 5b 17 
+*
+* INPUT *
+ Q1          27 1  28 NPN_IN 2
+ Q2          25 2  29 NPN_IN 2
+ R2          26  29  15  
+ R1          26  28  15  
+* SECOND STAGE *
+ Q3          07 Vref  27 PNP 2
+ Q4          09 Vref  25 PNP 2
+ Q5          07  105  06 NPN 1
+ Q7          09  105  08 NPN 1
+ R3           4  06  333  
+ R4           4  08  333  
+ Cc           0  09  25.5p  
+ Ccb          0  07  25.5p  
+* HIGH FREQUENCY SHAPING *
+ Ehf          34 0  09 0 1
+ Lhf          34  35  7n  
+ Rhf          102  35  25  
+ Chf         0  102  23p  
+ Ehfb          24 0  07 0 1
+ Lhfb          24  33  7n  
+ Rhfb          12  33  25  
+ Chfb         0  12  23p  
+* OUTPUT *
+ Q8          102  102  103 PNP 1
+ Q9          102  102  104 NPN 1
+ Q10         3  103  30 NPN 5
+ Q11         4  104  31 PNP 7.5
+ R5          5 30  4  
+ R7          31  5  4  
+ Q8b          12  12  13 PNP 1
+ Q9b          12  12  15 NPN 1
+ Q10b         3  13  22 NPN 5
+ Q11b         4  15  23 PNP 7.5
+ R5b          5b  22  4  
+ R7b          23  5b  4  
+* Vcm ERROR AMP *
+  Gcm          0 105  16  17b 1e-4
+  Vcm	   17 17b 285e-3
+  Rtop         17 3 30k
+  Rbot         17 4 30k   
+  Rcm          16 5  10k  
+  Ccm          16 5b  100p  
+  Rcm2         16 5b  10k  
+  Ccm2         16 5  100p  
+* BIAS SOURCES *
+ V1         3 Vref 1.85
+ I1         3 27 DC 2.1e-3  
+ I2         3 25 DC 2.1e-3  
+ I3         0 103 DC 1.225e-3  
+ I4         26 4 DC 2.1e-3  
+ I5         104 0 DC 1.86e-3  
+ I6         0 13 DC 1.225e-3  
+ I7         15 0 DC 1.86e-3  
+ 
+.MODEL NPN_IN NPN
++ IS=170E-18 BF=400 NF=1 VAF=100 IKF=0.0389 ISE=7.6E-18
++ NE=1.13489 BR=1.11868 NR=1 VAR=4.46837 IKR=8 ISC=8E-15
++ NC=1.8 RB=25 RE=0.1220 RC=20 CJE=120.2E-15 VJE=1.0888 MJE=0.381406
++ VJC=0.589703 MJC=0.265838 FC=0.1 CJC=133.8E-15 XTF=272.204 TF=12.13E-12
++ VTF=10 ITF=0.147 TR=3E-09 XTB=1 XTI=5 KF=7.5E-14
+.MODEL NPN NPN
++ IS=170E-18 BF=100 NF=1 VAF=100 IKF=0.0389 ISE=7.6E-18
++ NE=1.13489 BR=1.11868 NR=1 VAR=4.46837 IKR=8 ISC=8E-15
++ NC=1.8 RB=250 RE=0.1220 RC=200 CJE=120.2E-15 VJE=1.0888 MJE=0.381406
++ VJC=0.589703 MJC=0.265838 FC=0.1 CJC=133.8E-15 XTF=272.204 TF=12.13E-12
++ VTF=10 ITF=0.147 TR=3E-09 XTB=1 XTI=5
+.MODEL PNP PNP
++ IS=296E-18 BF=100 NF=1 VAF=100 IKF=0.021 ISE=494E-18
++ NE=1.49168 BR=0.491925 NR=1 VAR=2.35634 IKR=8 ISC=8E-15
++ NC=1.8 RB=250 RE=0.1220 RC=200 CJE=120.2E-15 VJE=0.940007 MJE=0.55
++ VJC=0.588526 MJC=0.55 FC=0.1 CJC=133.8E-15 XTF=141.135 TF=12.13E-12
++ VTF=6.82756 ITF=0.267 TR=3E-09 XTB=1 XTI=5
+.ENDS
+*$
+* PSpice Model Editor - Version 9.2
+*$
+* ------------------------------------------------------------------------
+*|(C) Copyright Texas Instruments Incorporated 2007. All rights reserved. |
+*|                                                                        |
+*|This Model is designed as an aid for customers of Texas Instruments.    |
+*|No warranties, either expressed or implied, with respect to this Model  |
+*|or its fitness for a particular purpose is claimed by Texas Instruments |
+*|or the author.  The Model is licensed solely on an "as is" basis.  The  |
+*|entire risk as to its quality and performance is with the customer.     |
+* ------------------------------------------------------------------------
+.SUBCKT THS4120 inp1 inn1 vdd vss outp outn vocm
+.MODEL p1 PMOS
++ LEVEL=3
++ L=2.0000E-6
++ W=.5
++ RS=10.000E-3
++ RD=10.000E-3
++ VTO=-3
++ RDS=1.0000E6
++ TOX=2.0000E-6
++ CGSO=40.000E-12
++ CGDO=10.000E-12
++ CBD=1.0000E-9
++ RG=5
++ RB=1.0000E-3
++ GAMMA=0
++ KAPPA=0
++ UO=300
+.MODEL n1 NMOS
++ LEVEL=3
++ L=2.0000E-6
++ W=5.0000E-6
++ KP=100.00E-6
++ RS=10.000E-3
++ RD=10.000E-3
++ VTO=.7
++ RDS=1.0000E6
++ TOX=200.00E-9
++ CGSO=4.0000E-15
++ CGDO=1.0000E-15
++ CBD=1.0000E-15
++ RG=100
++ IS=10.000E-18
++ RB=1.0000E-3
++ GAMMA=.6
++ DELTA=20.000E-3
++ ETA=20.000E-3
++ KAPPA=0
++ VMAX=13.500E3
++ XJ=200.00E-9
++ KF=1.38e-27
++ AF=1
+.MODEL D_break D
++ RS=1.0000E-1
++ CJO=1.0000E-13
++ IS=100e-15
+R_R101       vdd vdd1 65 
+R_R102       vdd vdd2 65
+C-C101       N47671 N47742 1.5p
+C_C102       inp2 try 1p
+C_C103       inn1 try 1p
+C_C104       inp1 N47671 2.3p
+C_C105       inn1 N47742 2.3p
+E_E10        VOCM1 vss VOCM vss 1
+R_R16         vss OUTP  25k  
+E_E5         INP2 INP1 CMR vss 1
+V_V6         vdd N125776 0.85Vdc
+I_I4         TRY vss DC 6mAdc  
+C_C1         OUTN vss  4p  
+X_U3         Vdd1 N47671 vdd AMPP A1_4120 PARAMS:  IL=3.4m
+C_C6         vss INN1  3p  
+C_C7         AMPN N115715  11.8p  
+C_C2         vss OUTP  4p  
+R_R33         OUTP VCOM  20k  
+R_R17         OUTN vss  25k  
+M_Q11         N47671 INP2 TRY TRY N1   
++ W=1.5m         
+G_G3         CMR vss N119932 vss 30e-6
+X_U4         vdd2 N47742 vdd AMPN A1_4120 PARAMS:  IL=3.4m
+R_R34         VCOM OUTN  20k  
+R_R9         VOCM1 AMPN  10k  
+D_D5         OUTP N125776 D_BREAK 32
+M_Q12         N47742 INN1 TRY TRY N1   
++ W=1.5m         
+L_L1         CMR N119774  40n  
+E_E3         N119932 N120193 INP1 INN1 0.5
+V_V7         vss N126207 -0.8
+I_I6         AMPN vss DC 3mAdc  
+D_D6         OUTN N125776 D_BREAK 32
+E_E4         N120193 vss INN1 vss 1
+D_D7         N126207 OUTP D_BREAK 32
+R_R7         vss N119774  0.5  
+C_C8         AMPP N115811  11.8p  
+D_D8         N126207 OUTN D_BREAK 32
+G_G4         OUTP VOCM1 AMPN VOCM1 50m
+R_R5         N115811 OUTN  9.5  
+R_R10         VOCM1 AMPP  10k  
+G_G13         TRY vss VCOM VOCM 200m
+I_I7         AMPP vss DC 3mAdc  
+C_C5         vss INP1  3p  
+R_R6         N115715 OUTP  9.5  
+G_G14         TRY vss VCOM VOCM 200m
+G_G5         OUTN VOCM1 AMPP VOCM1 50m
+.ENDS THS4120
+
+.SUBCKT A1_4120 1 2 3 4  
++ PARAMS: 
++ IL = 800u ;
+v1  1 2 0 
+Gout 3 4 value={limit(I(v1),IL,-IL)} ;
+.ENDS 
+*$
+* PSpice Model Editor - Version 9.2
+*$
+* ------------------------------------------------------------------------
+*|(C) Copyright Texas Instruments Incorporated 2007. All rights reserved. |
+*|                                                                        |
+*|This Model is designed as an aid for customers of Texas Instruments.    |
+*|No warranties, either expressed or implied, with respect to this Model  |
+*|or its fitness for a particular purpose is claimed by Texas Instruments |
+*|or the author.  The Model is licensed solely on an "as is" basis.  The  |
+*|entire risk as to its quality and performance is with the customer.     |
+* ------------------------------------------------------------------------
+.SUBCKT THS4121 inp1 inn1 vdd vss outp outn vocm
+.MODEL p1 PMOS
++ LEVEL=3
++ L=2.0000E-6
++ W=.5
++ RS=10.000E-3
++ RD=10.000E-3
++ VTO=-3
++ RDS=1.0000E6
++ TOX=2.0000E-6
++ CGSO=40.000E-12
++ CGDO=10.000E-12
++ CBD=1.0000E-9
++ RG=5
++ RB=1.0000E-3
++ GAMMA=0
++ KAPPA=0
++ UO=300
+.MODEL n1 NMOS
++ LEVEL=3
++ L=2.0000E-6
++ W=5.0000E-6
++ KP=100.00E-6
++ RS=10.000E-3
++ RD=10.000E-3
++ VTO=.7
++ RDS=1.0000E6
++ TOX=200.00E-9
++ CGSO=4.0000E-15
++ CGDO=1.0000E-15
++ CBD=1.0000E-15
++ RG=100
++ IS=10.000E-18
++ RB=1.0000E-3
++ GAMMA=.6
++ DELTA=20.000E-3
++ ETA=20.000E-3
++ KAPPA=0
++ VMAX=13.500E3
++ XJ=200.00E-9
++ KF=1.38e-27
++ AF=1
+.MODEL D_break D
++ RS=1.0000E-1
++ CJO=1.0000E-13
++ IS=100e-15
+R_R101       vdd vdd1 65 
+R_R102       vdd vdd2 65
+C-C101       N47671 N47742 1.5p
+C_C102       inp2 try 1p
+C_C103       inn1 try 1p
+C_C104       inp1 N47671 2.3p
+C_C105       inn1 N47742 2.3p
+E_E10        VOCM1 vss VOCM vss 1
+R_R16         vss OUTP  25k  
+E_E5         INP2 INP1 CMR vss 1
+V_V6         vdd N125776 0.85Vdc
+I_I4         TRY vss DC 6mAdc  
+C_C1         OUTN vss  4p  
+X_U3         Vdd1 N47671 vdd AMPP A1_4121 PARAMS:  IL=3.4m
+C_C6         vss INN1  3p  
+C_C7         AMPN N115715  11.8p  
+C_C2         vss OUTP  4p  
+R_R33         OUTP VCOM  20k  
+R_R17         OUTN vss  25k  
+M_Q11         N47671 INP2 TRY TRY N1   
++ W=1.5m         
+G_G3         CMR vss N119932 vss 30e-6
+X_U4         vdd2 N47742 vdd AMPN A1_4121 PARAMS:  IL=3.4m
+R_R34         VCOM OUTN  20k  
+R_R9         VOCM1 AMPN  10k  
+D_D5         OUTP N125776 D_BREAK 32
+M_Q12         N47742 INN1 TRY TRY N1   
++ W=1.5m         
+L_L1         CMR N119774  40n  
+E_E3         N119932 N120193 INP1 INN1 0.5
+V_V7         vss N126207 -0.8
+I_I6         AMPN vss DC 3mAdc  
+D_D6         OUTN N125776 D_BREAK 32
+E_E4         N120193 vss INN1 vss 1
+D_D7         N126207 OUTP D_BREAK 32
+R_R7         vss N119774  0.5  
+C_C8         AMPP N115811  11.8p  
+D_D8         N126207 OUTN D_BREAK 32
+G_G4         OUTP VOCM1 AMPN VOCM1 50m
+R_R5         N115811 OUTN  9.5  
+R_R10         VOCM1 AMPP  10k  
+G_G13         TRY vss VCOM VOCM 200m
+I_I7         AMPP vss DC 3mAdc  
+C_C5         vss INP1  3p  
+R_R6         N115715 OUTP  9.5  
+G_G14         TRY vss VCOM VOCM 200m
+G_G5         OUTN VOCM1 AMPP VOCM1 50m
+.ENDS THS4121
+*
+.SUBCKT A1_4121 1 2 3 4  
++ PARAMS: 
++ IL = 800u ;
+v1  1 2 0 
+Gout 3 4 value={limit(I(v1),IL,-IL)} ;
+.ENDS 
+*$
+* THS4130 - Operational-amplifier SPICE MODEL
+*
+* Classification: HIGH-SPEED, LOW NOISE, FULLY-DIFFERENTIAL I/O AMPLIFIER
+*****************************************************************************
+* (C) Copyright 2009 Texas Instruments Incorporated. All rights reserved.                                          
+*****************************************************************************
+** This model is designed as an aid for customers of Texas Instruments.                                           
+** TI and its licensors and suppliers make no warranties, either expressed                                         
+** or implied, with respect to this model, including the warranties of                                                  
+** merchantability or fitness for a particular purpose. The model is                                                  
+** provided solely on an "as is" basis. The entire risk as to its quality                                                    
+** and performance is with the customer                                                                                            
+*****************************************************************************
+*
+* Released by: Analog eLab Design Center, Texas Instruments Inc.
+* Part:        THS4130
+* Written:     2009-09-09
+* Model Type:  TINA
+* Simulator:   Version 7.0.80.40 SF
+* Revision:    B
+* Datasheet:   SLOS318F–MAY 2000–REVISED JANUARY 2006
+*
+*****************************************************************************
+*  
+* NOTES:
+*   1- This macromodel predicts well: DC, small-signal AC, noise,
+*      , and transient performance under a wide range
+*      of conditions.
+*   2- This macromodel does not predict well: distortion
+*      (harmonic, intermod, diff. gain & phase, ...),
+*      temperature effects, board parasitics, differences
+*      between package styles, and process changes
+*   3- Known Problems: - None
+*
+* |----------------------------------------------------------------------
+* |  This macro model is being supplied as an aid to       
+* |  circuit designs.  While it reflects reasonably close      
+* |  similarity to the actual device in terms of performance,
+* |  it is not suggested as a replacement for breadboarding.
+* |  Simulation should be used as a forerunner or a supplement
+* |  to traditional lab testing.                              
+* |                                                           
+* |  Neither this library nor any part may be copied without  
+* |  the express written consent of Texas Instruments Corp. 
+* |----------------------------------------------------------------------
+*
+*$
+* BEGIN MODEL THS4130
+* MODEL OPERATES FROM -40 TO +125 C
+* SOME PARAMETERS DO NOT TRACK THOSE
+* OF THE REAL PART VS TEMPERATURE
+* MODEL FEATURES INCLUDE:
+* OPEN LOOP GAIN, CLOSED LOOP BANDWIDTH (G >=2),
+* INPUT VOLTAGE NOISE WITH 1/F,
+* INPUT CURRENT NOISE WITH 1/F,
+* VOCM FUNCTION, OUTPUT SWING VS CURRENT
+* CMRR, PSRR, VOS, TCVOS, OUTPUT CURRENT LIMIT
+* OUTPUT CURRENT IS DRAWN THROUGH SUPPLY RAILS
+* OUTPUT IMPEDANCE, INPUT CAPACITANCE
+* INPUT BIAS CURRENT, QUIESCENT CURRENT,
+* SHUTDOWN, QUIESCENT AT SHUTDOWN,
+* AND SHUTDOWN ENABLE AND DISABLE TIME DELAYS.
+* END FEATURES
+* PINOUT ORDER VIN- VOCM V+ VOUT+ VOUT- V- PD VIN+
+* PINOUT ORDER  1     2   3   4     5    6  7   8
+.SUBCKT THS4130 1 2 3 4 5 6 7 8
+R51 6 2 30E3
+R52 2 3 30E3
+C3 5 9 1E-15
+C4 9 4 1E-15
+C8 8 10 4E-12
+C9 1 11 4E-12
+R62 0 10 0.1
+R63 0 11 0.1
+Q18 6 12 13 QOP
+Q22 3 14 13 QON
+R176 0 5 1E6
+D6 5 3 DD
+D7 6 5 DD
+D8 15 0 DIN
+D9 16 0 DIN
+I9 0 15 0.1E-3
+I10 0 16 0.1E-3
+E5 17 0 6 0 1
+E6 18 0 3 0 1
+D10 19 0 DVN
+D11 20 0 DVN
+I11 0 19 0.1E-3
+I12 0 20 0.1E-3
+E7 8 21 19 20 0.163
+G3 22 21 15 16 1.5E-22
+I13 3 6 1E-6
+R178 6 3 1E8
+E8 23 0 18 24 1
+E9 25 0 17 24 1
+E10 26 0 27 0 1
+R179 23 28 1E5
+R180 25 29 1E5
+R181 26 30 1E5
+R182 0 28 10
+R183 0 29 10
+R184 0 30 10
+E11 31 1 30 0 0.31
+R185 32 27 1E3
+R186 27 33 1E3
+C18 23 28 1E-12
+C19 25 29 0.25E-12
+C20 26 30 1E-12
+E12 34 31 29 0 -0.06
+E13 35 34 28 0 0.06
+Q29 18 36 12 QON
+Q30 17 36 14 QOP
+G7 37 24 38 24 0.1
+G8 36 24 37 24 0.1
+R187 24 37 10
+R188 24 36 10
+C22 37 24 2E-10
+C23 36 24 2E-14
+R191 13 5 5
+E19 32 0 21 24 1
+E20 33 0 22 24 1
+Q34 6 39 40 QOP
+Q35 3 41 40 QON
+R197 0 4 1E6
+D22 4 3 DD
+D23 6 4 DD
+E21 42 0 6 0 1
+E22 43 0 3 0 1
+I24 3 6 1E-6
+R199 6 3 1E8
+Q40 43 44 39 QON
+Q41 42 44 41 QOP
+G11 45 24 46 24 0.1
+G12 44 24 45 24 0.1
+R208 24 45 10
+R209 24 44 10
+C31 45 24 2E-10
+C32 44 24 2E-14
+R212 40 4 5
+G22 43 41 47 0 0.55E-3
+G23 39 42 47 0 0.55E-3
+G25 18 14 47 0 0.55E-3
+G26 12 17 47 0 0.55E-3
+G29 3 6 48 0 11.65E-3
+E54 49 0 47 0 1
+V31 49 48 0
+M44 50 7 17 17 NEO L=3U W=300U
+M45 51 52 17 17 NEN L=3U W=3000U
+R306 50 18 1E4
+R307 51 53 1E6
+V52 53 17 1
+C62 7 0 1E-12
+E55 54 0 55 17 1
+V53 51 56 1.111E-6
+R308 17 56 1E12
+C63 18 50 3E-15
+C64 53 51 2.5E-15
+M50 57 50 17 17 NEN L=3U W=300U
+M51 52 57 17 17 NEN L=3U W=300U
+R309 57 53 1E4
+R310 52 53 1E4
+C65 53 57 160E-12
+C106 53 52 300E-12
+V54 47 54 0.07U
+R312 0 54 1E12
+R313 0 47 1E12
+R314 0 47 1E12
+R315 47 0 1E12
+R316 47 0 1E12
+R317 48 0 1E12
+R318 48 0 1E12
+E56 9 4 5 4 0.5
+E60 58 59 47 0 45
+E61 60 38 47 0 -45
+V57 61 60 22.5
+V58 62 58 -22.5
+R328 58 24 1E12
+R329 60 24 1E12
+M52 38 62 59 63 PSW L=1.5U W=15000U
+M53 59 61 38 64 NSW L=1.5U W=15000U
+R330 63 24 1E12
+R331 64 24 1E12
+E62 24 6 3 6 0.5
+R332 46 59 0.1
+Q42 65 66 67 QIN
+Q43 68 21 69 QIN
+R338 70 67 15
+R339 70 69 15
+Q44 71 72 65 QIP
+Q45 73 72 68 QIP
+Q46 71 74 75 QIN
+Q47 73 74 76 QIN
+R340 17 75 333
+R341 17 76 333
+I39 77 78 2.1E-5
+I40 79 65 2.1E-3
+I41 79 68 2.1E-3
+V63 79 72 1.67
+Q48 80 81 82 QCP
+Q49 74 74 83 QCN
+Q50 74 2 84 QCP
+R342 82 85 200
+R343 84 85 200
+I42 3 85 1.05E-3
+Q51 80 80 86 QCN
+R344 6 86 666
+R345 6 83 666
+C109 87 71 19.5E-12
+C110 73 88 19.5E-12
+R346 24 87 60
+R347 24 88 60
+R348 71 73 7E5
+R349 55 51 1E8
+C111 55 0 1.5E-14
+Q53 70 78 77 QSN
+V64 18 79 1.2
+V65 77 17 1
+I44 0 89 1E-3
+D36 89 0 DD
+V66 89 90 0.6551
+R351 89 0 1E9
+E68 22 35 90 0 140E-6
+R352 0 90 1E9
+V69 66 22 50E-6
+V70 81 91 16.15E-3
+E69 91 9 90 0 -0.0285
+R353 35 22 1E9
+R354 34 35 1E9
+R355 31 34 1E9
+R356 1 31 1E9
+R357 6 24 1E9
+R358 9 91 1E9
+R359 9 4 1E9
+R360 7 18 5E4
+D37 92 18 DD
+D38 93 18 DD
+D39 17 94 DD
+D40 17 95 DD
+V71 92 46 2.14
+V72 93 38 2.14
+V73 46 94 2.18
+V74 38 95 2.18
+I45 22 0 1.48E-6
+I46 21 0 1.48E-6
+G35 3 6 3 6 -15E-6
+I47 6 3 0.242E-3
+R361 21 8 1E9
+V75 38 73 0.55
+V76 46 71 0.55
+.MODEL PSW PMOS KP=200U VTO=-7.5 IS=1E-18
+.MODEL NSW NMOS KP=200U VTO=7.5 IS=1E-18
+.MODEL QSN NPN
+.MODEL QCN NPN
+.MODEL QCP PNP
+.MODEL QON NPN VAF=90 RE=3 BF=150
+.MODEL QOP PNP VAF=90 RE=3 BF=150
+.MODEL QIN NPN BF=2000 RB=12.1 KF=3E-16
+.MODEL QIP PNP BF=2000 RB=12.1 KF=3E-16
+.MODEL DVN D KF=1.5E-15
+.MODEL DIN D KF=9E-16
+.MODEL DD D
+.MODEL NEN NMOS KP=200U VTO=0.5 IS=1E-18
+.MODEL NEO NMOS KP=200U VTO=0.8 IS=1E-18
+.ENDS
+* END MODEL THS4130
+* ------------------------------------------------------------------------
+*|(C) Copyright Texas Instruments Incorporated 2007. All rights reserved. |
+*|                                                                        |
+*|This Model is designed as an aid for customers of Texas Instruments.    |
+*|No warranties, either expressed or implied, with respect to this Model  |
+*|or its fitness for a particular purpose is claimed by Texas Instruments |
+*|or the author.  The Model is licensed solely on an "as is" basis.  The  |
+*|entire risk as to its quality and performance is with the customer.     |
+* ------------------------------------------------------------------------
+*  
+*  
+* THS4131 SUBCIRCUIT
+* FULLY DIFFERENTIAL HIGH SPEED MONLITHIC OPERATIONAL AMPLIFIER 
+* WRITTEN 9/18/00
+* TEMPLATE=X^@REFDES %IN+ %IN- %VCC+ %VCC- %OUT+ %OUT- %VOCM @MODEL
+* CONNECTIONS:      NON-INVERTING INPUT
+*                   | INVERTING INPUT
+*                   | | POSITIVE POWER SUPPLY
+*                   | | | NEGATIVE POWER SUPPLY
+*                   | | | | OUTPUT +
+*                   | | | | | OUTPUT -
+*                   | | | | | |  VOCM
+*                   | | | | | |  |
+.SUBCKT THS4131     1 2 3 4 5 5b 17 
+*
+* INPUT *
+ Q1          27 1  28 NPN_IN 2
+ Q2          25 2  29 NPN_IN 2
+ R2          26  29  15  
+ R1          26  28  15  
+* SECOND STAGE *
+ Q3          07 Vref  27 PNP 2
+ Q4          09 Vref  25 PNP 2
+ Q5          07  105  06 NPN 1
+ Q7          09  105  08 NPN 1
+ R3           4  06  333  
+ R4           4  08  333  
+ Cc           0  09  25.5p  
+ Ccb          0  07  25.5p  
+* HIGH FREQUENCY SHAPING *
+ Ehf          34 0  09 0 1
+ Lhf          34  35  7n  
+ Rhf          102  35  25  
+ Chf         0  102  23p  
+ Ehfb          24 0  07 0 1
+ Lhfb          24  33  7n  
+ Rhfb          12  33  25  
+ Chfb         0  12  23p  
+* OUTPUT *
+ Q8          102  102  103 PNP 1
+ Q9          102  102  104 NPN 1
+ Q10         3  103  30 NPN 5
+ Q11         4  104  31 PNP 7.5
+ R5          5 30  4  
+ R7          31  5  4  
+ Q8b          12  12  13 PNP 1
+ Q9b          12  12  15 NPN 1
+ Q10b         3  13  22 NPN 5
+ Q11b         4  15  23 PNP 7.5
+ R5b          5b  22  4  
+ R7b          23  5b  4  
+* Vcm ERROR AMP *
+  Gcm          0 105  16  17b 1e-4
+  Vcm		   17 17b 285e-3
+  Rtop         17 3 30k
+  Rbot         17 4 30k   
+  Rcm          16 5  10k  
+  Ccm          16 5b  100p  
+  Rcm2         16 5b  10k  
+  Ccm2         16 5  100p  
+* BIAS SOURCES *
+ V1         3 Vref 1.85
+ I1         3 27 DC 2.1e-3  
+ I2         3 25 DC 2.1e-3  
+ I3         0 103 DC 1.225e-3  
+ I4         26 4 DC 2.1e-3  
+ I5         104 0 DC 1.86e-3  
+ I6         0 13 DC 1.225e-3  
+ I7         15 0 DC 1.86e-3  
+ 
+.MODEL NPN_IN NPN
++ IS=170E-18 BF=400 NF=1 VAF=100 IKF=0.0389 ISE=7.6E-18
++ NE=1.13489 BR=1.11868 NR=1 VAR=4.46837 IKR=8 ISC=8E-15
++ NC=1.8 RB=25 RE=0.1220 RC=20 CJE=120.2E-15 VJE=1.0888 MJE=0.381406
++ VJC=0.589703 MJC=0.265838 FC=0.1 CJC=133.8E-15 XTF=272.204 TF=12.13E-12
++ VTF=10 ITF=0.147 TR=3E-09 XTB=1 XTI=5 KF=7.5E-14
+.MODEL NPN NPN
++ IS=170E-18 BF=100 NF=1 VAF=100 IKF=0.0389 ISE=7.6E-18
++ NE=1.13489 BR=1.11868 NR=1 VAR=4.46837 IKR=8 ISC=8E-15
++ NC=1.8 RB=250 RE=0.1220 RC=200 CJE=120.2E-15 VJE=1.0888 MJE=0.381406
++ VJC=0.589703 MJC=0.265838 FC=0.1 CJC=133.8E-15 XTF=272.204 TF=12.13E-12
++ VTF=10 ITF=0.147 TR=3E-09 XTB=1 XTI=5
+.MODEL PNP PNP
++ IS=296E-18 BF=100 NF=1 VAF=100 IKF=0.021 ISE=494E-18
++ NE=1.49168 BR=0.491925 NR=1 VAR=2.35634 IKR=8 ISC=8E-15
++ NC=1.8 RB=250 RE=0.1220 RC=200 CJE=120.2E-15 VJE=0.940007 MJE=0.55
++ VJC=0.588526 MJC=0.55 FC=0.1 CJC=133.8E-15 XTF=141.135 TF=12.13E-12
++ VTF=6.82756 ITF=0.267 TR=3E-09 XTB=1 XTI=5
+.ENDS
+*$
+* PSpice Model Editor - Version 9.2
+*$
+* ------------------------------------------------------------------------
+*|(C) Copyright Texas Instruments Incorporated 2007. All rights reserved. |
+*|                                                                        |
+*|This Model is designed as an aid for customers of Texas Instruments.    |
+*|No warranties, either expressed or implied, with respect to this Model  |
+*|or its fitness for a particular purpose is claimed by Texas Instruments |
+*|or the author.  The Model is licensed solely on an "as is" basis.  The  |
+*|entire risk as to its quality and performance is with the customer.     |
+* ------------------------------------------------------------------------
+*
+* THS4140 SUBCIRCUIT
+* FULLY DIFFERENTIAL HIGH SPEED MONLITHIC OPERATIONAL AMPLIFIER
+* WRITTEN 9/18/00
+* TEMPLATE=X^@REFDES %IN+ %IN- %VCC+ %VCC- %OUT+ %OUT- %VOCM @MODEL
+* CONNECTIONS:      NON-INVERTING INPUT
+*                   | INVERTING INPUT
+*                   | | POSITIVE POWER SUPPLY
+*                   | | | NEGATIVE POWER SUPPLY
+*                   | | | | OUTPUT +
+*                   | | | | | OUTPUT -
+*                   | | | | | |  VOCM
+*                   | | | | | |  |
+.SUBCKT THS4140     1 2 3 4 5 5b 17
+*
+* INPUT *
+Q1          27 1  28 NPN_IN 2
+Q2          25 2  29 NPN_IN 2
+R2          26  29  250
+R1          26  28  250
+* SECOND STAGE *
+Q3          07 Vref  27 PNP 2
+Q4          09 Vref  25 PNP 2
+Q5          07  105  06 NPN 1
+Q7          09  105  08 NPN 1
+R3           4  06  333
+R4           4  08  333
+Cc           0  09  3.75p
+Ccb          0  07  3.75p
+* HIGH FREQUENCY SHAPING *
+Ehf          34 0  09 0 1
+Lhf          34  35  5n
+Rhf          102  35  25
+Chf         0  102  18p
+Ehfb          24 0  07 0 1
+Lhfb          24  33  5n
+Rhfb          12  33  25
+Chfb         0  12  18p
+* OUTPUT *
+Q8          102  102  103 PNP 1
+Q9          102  102  104 NPN 1
+Q10         3  103  30 NPN 5
+Q11         4  104  31 PNP 7.5
+R5          5 30  4
+R7          31  5  4
+Q8b          12  12  13 PNP 1
+Q9b          12  12  15 NPN 1
+Q10b         3  13  22 NPN 5
+Q11b         4  15  23 PNP 7.5
+R5b          5b  22  4
+R7b          23  5b  4
+* Vcm ERROR AMP *
+Gcm          0 105  16  17b 1e-4
+Vcm     17 17b 285e-3
+Rtop         17 3 30k
+Rbot         17 4 30k
+Rcm          16 5  10k
+Ccm          16 5b  100p
+Rcm2         16 5b  10k
+Ccm2         16 5  100p
+* BIAS SOURCES *
+V1         3 Vref 1.85
+I1         3 27 DC 2.1e-3
+I2         3 25 DC 2.1e-3
+I3         0 103 DC 1.225e-3
+I4         26 4 DC 2.1e-3
+I5         104 0 DC 1.86e-3
+I6         0 13 DC 1.225e-3
+I7         15 0 DC 1.86e-3
+.MODEL NPN_IN NPN
++ IS=170E-18 BF=400 NF=1 VAF=100 IKF=0.0389 ISE=7.6E-18
++ NE=1.13489 BR=1.11868 NR=1 VAR=4.46837 IKR=8 ISC=8E-15
++ NC=1.8 RB=25 RE=0.1220 RC=20 CJE=120.2E-15 VJE=1.0888 MJE=0.381406
++ VJC=0.589703 MJC=0.265838 FC=0.1 CJC=133.8E-15 XTF=272.204 TF=12.13E-12
++ VTF=10 ITF=0.147 TR=3E-09 XTB=1 XTI=5 KF=2.5E-14
+.MODEL NPN NPN
++ IS=170E-18 BF=100 NF=1 VAF=100 IKF=0.0389 ISE=7.6E-18
++ NE=1.13489 BR=1.11868 NR=1 VAR=4.46837 IKR=8 ISC=8E-15
++ NC=1.8 RB=250 RE=0.1220 RC=200 CJE=120.2E-15 VJE=1.0888 MJE=0.381406
++ VJC=0.589703 MJC=0.265838 FC=0.1 CJC=133.8E-15 XTF=272.204 TF=12.13E-12
++ VTF=10 ITF=0.147 TR=3E-09 XTB=1 XTI=5
+.MODEL PNP PNP
++ IS=296E-18 BF=100 NF=1 VAF=100 IKF=0.021 ISE=494E-18
++ NE=1.49168 BR=0.491925 NR=1 VAR=2.35634 IKR=8 ISC=8E-15
++ NC=1.8 RB=250 RE=0.1220 RC=200 CJE=120.2E-15 VJE=0.940007 MJE=0.55
++ VJC=0.588526 MJC=0.55 FC=0.1 CJC=133.8E-15 XTF=141.135 TF=12.13E-12
++ VTF=6.82756 ITF=0.267 TR=3E-09 XTB=1 XTI=5
+.ENDS
+* ------------------------------------------------------------------------
+*|(C) Copyright Texas Instruments Incorporated 2007. All rights reserved. |
+*|                                                                        |
+*|This Model is designed as an aid for customers of Texas Instruments.    |
+*|No warranties, either expressed or implied, with respect to this Model  |
+*|or its fitness for a particular purpose is claimed by Texas Instruments |
+*|or the author.  The Model is licensed solely on an "as is" basis.  The  |
+*|entire risk as to its quality and performance is with the customer.     |
+* ------------------------------------------------------------------------
+*  
+* THS4141 SUBCIRCUIT
+* FULLY DIFFERENTIAL HIGH SPEED MONLITHIC OPERATIONAL AMPLIFIER 
+* WRITTEN 9/18/00
+* TEMPLATE=X^@REFDES %IN+ %IN- %VCC+ %VCC- %OUT+ %OUT- %VOCM @MODEL
+* CONNECTIONS:      NON-INVERTING INPUT
+*                   | INVERTING INPUT
+*                   | | POSITIVE POWER SUPPLY
+*                   | | | NEGATIVE POWER SUPPLY
+*                   | | | | OUTPUT +
+*                   | | | | | OUTPUT -
+*                   | | | | | |  VOCM
+*                   | | | | | |  |
+.SUBCKT THS4141     1 2 3 4 5 5b 17 
+*
+* INPUT *
+ Q1          27 1  28 NPN_IN 2
+ Q2          25 2  29 NPN_IN 2
+ R2          26  29  250  
+ R1          26  28  250  
+* SECOND STAGE *
+ Q3          07 Vref  27 PNP 2
+ Q4          09 Vref  25 PNP 2
+ Q5          07  105  06 NPN 1
+ Q7          09  105  08 NPN 1
+ R3           4  06  333  
+ R4           4  08  333  
+ Cc           0  09  3.75p  
+ Ccb          0  07  3.75p  
+* HIGH FREQUENCY SHAPING *
+ Ehf          34 0  09 0 1
+ Lhf          34  35  5n  
+ Rhf          102  35  25  
+ Chf         0  102  18p  
+ Ehfb          24 0  07 0 1
+ Lhfb          24  33  5n  
+ Rhfb          12  33  25  
+ Chfb         0  12  18p  
+* OUTPUT *
+ Q8          102  102  103 PNP 1
+ Q9          102  102  104 NPN 1
+ Q10         3  103  30 NPN 5
+ Q11         4  104  31 PNP 7.5
+ R5          5 30  4  
+ R7          31  5  4  
+ Q8b          12  12  13 PNP 1
+ Q9b          12  12  15 NPN 1
+ Q10b         3  13  22 NPN 5
+ Q11b         4  15  23 PNP 7.5
+ R5b          5b  22  4  
+ R7b          23  5b  4  
+* Vcm ERROR AMP *
+  Gcm          0 105  16  17b 1e-4
+  Vcm		   17 17b 285e-3
+  Rtop         17 3 30k
+  Rbot         17 4 30k   
+  Rcm          16 5  10k  
+  Ccm          16 5b  100p  
+  Rcm2         16 5b  10k  
+  Ccm2         16 5  100p  
+* BIAS SOURCES *
+ V1         3 Vref 1.85
+ I1         3 27 DC 2.1e-3  
+ I2         3 25 DC 2.1e-3  
+ I3         0 103 DC 1.225e-3  
+ I4         26 4 DC 2.1e-3  
+ I5         104 0 DC 1.86e-3  
+ I6         0 13 DC 1.225e-3  
+ I7         15 0 DC 1.86e-3  
+ 
+.MODEL NPN_IN NPN
++ IS=170E-18 BF=400 NF=1 VAF=100 IKF=0.0389 ISE=7.6E-18
++ NE=1.13489 BR=1.11868 NR=1 VAR=4.46837 IKR=8 ISC=8E-15
++ NC=1.8 RB=25 RE=0.1220 RC=20 CJE=120.2E-15 VJE=1.0888 MJE=0.381406
++ VJC=0.589703 MJC=0.265838 FC=0.1 CJC=133.8E-15 XTF=272.204 TF=12.13E-12
++ VTF=10 ITF=0.147 TR=3E-09 XTB=1 XTI=5 KF=2.5E-14
+.MODEL NPN NPN
++ IS=170E-18 BF=100 NF=1 VAF=100 IKF=0.0389 ISE=7.6E-18
++ NE=1.13489 BR=1.11868 NR=1 VAR=4.46837 IKR=8 ISC=8E-15
++ NC=1.8 RB=250 RE=0.1220 RC=200 CJE=120.2E-15 VJE=1.0888 MJE=0.381406
++ VJC=0.589703 MJC=0.265838 FC=0.1 CJC=133.8E-15 XTF=272.204 TF=12.13E-12
++ VTF=10 ITF=0.147 TR=3E-09 XTB=1 XTI=5
+.MODEL PNP PNP
++ IS=296E-18 BF=100 NF=1 VAF=100 IKF=0.021 ISE=494E-18
++ NE=1.49168 BR=0.491925 NR=1 VAR=2.35634 IKR=8 ISC=8E-15
++ NC=1.8 RB=250 RE=0.1220 RC=200 CJE=120.2E-15 VJE=0.940007 MJE=0.55
++ VJC=0.588526 MJC=0.55 FC=0.1 CJC=133.8E-15 XTF=141.135 TF=12.13E-12
++ VTF=6.82756 ITF=0.267 TR=3E-09 XTB=1 XTI=5
+.ENDS
+*$
+* PSpice Model Editor - Version 9.2
+*$
+* ------------------------------------------------------------------------
+*|(C) Copyright Texas Instruments Incorporated 2007. All rights reserved. |
+*|                                                                        |
+*|This Model is designed as an aid for customers of Texas Instruments.    |
+*|No warranties, either expressed or implied, with respect to this Model  |
+*|or its fitness for a particular purpose is claimed by Texas Instruments |
+*|or the author.  The Model is licensed solely on an "as is" basis.  The  |
+*|entire risk as to its quality and performance is with the customer.     |
+* ------------------------------------------------------------------------
+*
+* THS4150 SUBCIRCUIT
+* FULLY DIFFERENTIAL HIGH SPEED MONLITHIC OPERATIONAL AMPLIFIER
+* WRITTEN 2/19/01
+* TEMPLATE=X^@REFDES %IN+ %IN- %VCC+ %VCC- %OUT+ %OUT- %VOCM @MODEL
+* CONNECTIONS:      NON-INVERTING INPUT
+*                   | INVERTING INPUT
+*                   | | POSITIVE POWER SUPPLY
+*                   | | | NEGATIVE POWER SUPPLY
+*                   | | | | OUTPUT +
+*                   | | | | | OUTPUT -
+*                   | | | | | |  VOCM
+*                   | | | | | |  |
+.SUBCKT THS4150     1 2 3 4 5 5b 17
+*
+* INPUT *
+Q1          27 1  28 NPN_IN 2
+Q2          25 2  29 NPN_IN 2
+R2          26  29  300
+R1          26  28  300
+* SECOND STAGE *
+Q3          07 Vref  27 PNP 2
+Q4          09 Vref  25 PNP 2
+Q5          07  105  06 NPN 1
+Q7          09  105  08 NPN 1
+R3           4  06  333
+R4           4  08  333
+Cc           0  09  3.5p
+Ccb          0  07  3.5p
+* HIGH FREQUENCY SHAPING *
+Ehf          34 0  09 0 1
+Lhf          34  35  8n
+Rhf          102  35  25
+Chf         0  102  25p
+Ehfb          24 0  07 0 1
+Lhfb          24  33  8n
+Rhfb          12  33  25
+Chfb         0  12  25p
+* OUTPUT *
+Q8          102  102  103 PNP 1
+Q9          102  102  104 NPN 1
+Q10         3  103  30 NPN 5
+Q11         4  104  31 PNP 7.5
+R5          5 30  4
+R7          31  5  4
+Q8b          12  12  13 PNP 1
+Q9b          12  12  15 NPN 1
+Q10b         3  13  22 NPN 5
+Q11b         4  15  23 PNP 7.5
+R5b          5b  22  4
+R7b          23  5b  4
+* Vcm ERROR AMP *
+Gcm          0 105  16  17b 1e-4
+Vcm     17 17b 345e-3
+Rtop         17 3 30k
+Rbot         17 4 30k
+Rcm          16 5  10k
+Ccm          16 5b  100p
+Rcm2         16 5b  10k
+Ccm2         16 5  100p
+* BIAS SOURCES *
+V1         3 Vref 1.85
+I1         3 27 DC 2.6e-3
+I2         3 25 DC 2.6e-3
+I3         0 103 DC 1.2e-3
+I4         26 4 DC 2.6e-3
+I5         104 0 DC 1.85e-3
+I6         0 13 DC 1.2e-3
+I7         15 0 DC 1.85e-3
+.MODEL NPN_IN NPN
++ IS=170E-18 BF=400 NF=1 VAF=100 IKF=0.0389 ISE=7.6E-18
++ NE=1.13489 BR=1.11868 NR=1 VAR=4.46837 IKR=8 ISC=8E-15
++ NC=1.8 RB=25 RE=0.1220 RC=20 CJE=120.2E-15 VJE=1.0888 MJE=0.381406
++ VJC=0.589703 MJC=0.265838 FC=0.1 CJC=133.8E-15 XTF=272.204 TF=12.13E-12
++ VTF=10 ITF=0.147 TR=3E-09 XTB=1 XTI=5 KF=4E-14
+.MODEL NPN NPN
++ IS=170E-18 BF=100 NF=1 VAF=100 IKF=0.0389 ISE=7.6E-18
++ NE=1.13489 BR=1.11868 NR=1 VAR=4.46837 IKR=8 ISC=8E-15
++ NC=1.8 RB=250 RE=0.1220 RC=200 CJE=120.2E-15 VJE=1.0888 MJE=0.381406
++ VJC=0.589703 MJC=0.265838 FC=0.1 CJC=133.8E-15 XTF=272.204 TF=12.13E-12
++ VTF=10 ITF=0.147 TR=3E-09 XTB=1 XTI=5
+.MODEL PNP PNP
++ IS=296E-18 BF=100 NF=1 VAF=100 IKF=0.021 ISE=494E-18
++ NE=1.49168 BR=0.491925 NR=1 VAR=2.35634 IKR=8 ISC=8E-15
++ NC=1.8 RB=250 RE=0.1220 RC=200 CJE=120.2E-15 VJE=0.940007 MJE=0.55
++ VJC=0.588526 MJC=0.55 FC=0.1 CJC=133.8E-15 XTF=141.135 TF=12.13E-12
++ VTF=6.82756 ITF=0.267 TR=3E-09 XTB=1 XTI=5
+.ENDS
+
+* ------------------------------------------------------------------------
+*|(C) Copyright Texas Instruments Incorporated 2007. All rights reserved. |
+*|                                                                        |
+*|This Model is designed as an aid for customers of Texas Instruments.    |
+*|No warranties, either expressed or implied, with respect to this Model  |
+*|or its fitness for a particular purpose is claimed by Texas Instruments |
+*|or the author.  The Model is licensed solely on an "as is" basis.  The  |
+*|entire risk as to its quality and performance is with the customer.     |
+* ------------------------------------------------------------------------
+*  
+* THS4151 SUBCIRCUIT
+* FULLY DIFFERENTIAL HIGH SPEED MONLITHIC OPERATIONAL AMPLIFIER 
+* WRITTEN 2/19/01
+* TEMPLATE=X^@REFDES %IN+ %IN- %VCC+ %VCC- %OUT+ %OUT- %VOCM @MODEL
+* CONNECTIONS:      NON-INVERTING INPUT
+*                   | INVERTING INPUT
+*                   | | POSITIVE POWER SUPPLY
+*                   | | | NEGATIVE POWER SUPPLY
+*                   | | | | OUTPUT +
+*                   | | | | | OUTPUT -
+*                   | | | | | |  VOCM
+*                   | | | | | |  |
+.SUBCKT THS4151     1 2 3 4 5 5b 17 
+*
+* INPUT *
+ Q1          27 1  28 NPN_IN 2
+ Q2          25 2  29 NPN_IN 2
+ R2          26  29  300  
+ R1          26  28  300  
+* SECOND STAGE *
+ Q3          07 Vref  27 PNP 2
+ Q4          09 Vref  25 PNP 2
+ Q5          07  105  06 NPN 1
+ Q7          09  105  08 NPN 1
+ R3           4  06  333  
+ R4           4  08  333  
+ Cc           0  09  3.5p  
+ Ccb          0  07  3.5p  
+* HIGH FREQUENCY SHAPING *
+ Ehf          34 0  09 0 1
+ Lhf          34  35  8n  
+ Rhf          102  35  25  
+ Chf         0  102  25p  
+ Ehfb          24 0  07 0 1
+ Lhfb          24  33  8n  
+ Rhfb          12  33  25  
+ Chfb         0  12  25p  
+* OUTPUT *
+ Q8          102  102  103 PNP 1
+ Q9          102  102  104 NPN 1
+ Q10         3  103  30 NPN 5
+ Q11         4  104  31 PNP 7.5
+ R5          5 30  4  
+ R7          31  5  4  
+ Q8b          12  12  13 PNP 1
+ Q9b          12  12  15 NPN 1
+ Q10b         3  13  22 NPN 5
+ Q11b         4  15  23 PNP 7.5
+ R5b          5b  22  4  
+ R7b          23  5b  4  
+* Vcm ERROR AMP *
+  Gcm          0 105  16  17b 1e-4
+  Vcm		   17 17b 345e-3
+  Rtop         17 3 30k
+  Rbot         17 4 30k   
+  Rcm          16 5  10k  
+  Ccm          16 5b  100p  
+  Rcm2         16 5b  10k  
+  Ccm2         16 5  100p  
+* BIAS SOURCES *
+ V1         3 Vref 1.85
+ I1         3 27 DC 2.6e-3  
+ I2         3 25 DC 2.6e-3  
+ I3         0 103 DC 1.2e-3  
+ I4         26 4 DC 2.6e-3  
+ I5         104 0 DC 1.85e-3  
+ I6         0 13 DC 1.2e-3  
+ I7         15 0 DC 1.85e-3  
+.MODEL NPN_IN NPN
++ IS=170E-18 BF=400 NF=1 VAF=100 IKF=0.0389 ISE=7.6E-18
++ NE=1.13489 BR=1.11868 NR=1 VAR=4.46837 IKR=8 ISC=8E-15
++ NC=1.8 RB=25 RE=0.1220 RC=20 CJE=120.2E-15 VJE=1.0888 MJE=0.381406
++ VJC=0.589703 MJC=0.265838 FC=0.1 CJC=133.8E-15 XTF=272.204 TF=12.13E-12
++ VTF=10 ITF=0.147 TR=3E-09 XTB=1 XTI=5 KF=4E-14
+.MODEL NPN NPN
++ IS=170E-18 BF=100 NF=1 VAF=100 IKF=0.0389 ISE=7.6E-18
++ NE=1.13489 BR=1.11868 NR=1 VAR=4.46837 IKR=8 ISC=8E-15
++ NC=1.8 RB=250 RE=0.1220 RC=200 CJE=120.2E-15 VJE=1.0888 MJE=0.381406
++ VJC=0.589703 MJC=0.265838 FC=0.1 CJC=133.8E-15 XTF=272.204 TF=12.13E-12
++ VTF=10 ITF=0.147 TR=3E-09 XTB=1 XTI=5
+.MODEL PNP PNP
++ IS=296E-18 BF=100 NF=1 VAF=100 IKF=0.021 ISE=494E-18
++ NE=1.49168 BR=0.491925 NR=1 VAR=2.35634 IKR=8 ISC=8E-15
++ NC=1.8 RB=250 RE=0.1220 RC=200 CJE=120.2E-15 VJE=0.940007 MJE=0.55
++ VJC=0.588526 MJC=0.55 FC=0.1 CJC=133.8E-15 XTF=141.135 TF=12.13E-12
++ VTF=6.82756 ITF=0.267 TR=3E-09 XTB=1 XTI=5
+.ENDS
+* ------------------------------------------------------------------------
+*|(C) Copyright Texas Instruments Incorporated 2007. All rights reserved. |
+*|                                                                        |
+*|This Model is designed as an aid for customers of Texas Instruments.    |
+*|No warranties, either expressed or implied, with respect to this Model  |
+*|or its fitness for a particular purpose is claimed by Texas Instruments |
+*|or the author.  The Model is licensed solely on an "as is" basis.  The  |
+*|entire risk as to its quality and performance is with the customer.     |
+* ------------------------------------------------------------------------
+*  
+** THS7530 SUBCIRCUIT Rev-
+* HIGH SPEED FULLY DIFFERENTIAL VARIABLE AMPLIFIER  
+* WRITTEN 11/26/02
+* THE GAIN REFERENCE PIN IS TIED TO VS- IN THIS MODEL
+* CONNECTIONS:      NON-INVERTING INPUT
+*  		    | INVERTING INPUT
+*     		    |  | POSITIVE POWER SUPPLY
+*      		    |  |  | NEGATIVE POWER SUPPLY
+*             	    |  |  |  | NEGATIVE OUTPUT
+*		    |  |  |  |  |  POSITIVE OUTPUT
+*	            |  |  |  |  |  |  VOCM INPUT
+* 	            |  |  |  |  |  |  |  GAIN INPUT
+* 	            |  |  |  |  |  |  |  | 
+* 	            |  |  |  |  |  |  |  | 
+* 	            |  |  |  |  |  |  |  | 
+.SUBCKT THS7530     1  2  3  4  5  6  7  8 
+*
+*INPUT*
+Q1         122 1 101 NPN_IN  16
+Q2         123 2 102 NPN_IN  16
+R1         102 101  25  
+I1         101 4 DC 4.85e-3  
+I2         102 4 DC 4.85e-3  
+*QUAD*
+Q3         132 120 122 NPN  16
+Q4         121 119 122 NPN  16
+Q5         132 119 123 NPN  16
+Q6         121 120 123 NPN  16
+R2         132 3  250  
+R3         121 3  250  
+*CURRENT AMP*
+F1         128 129 VF1 6
+VF1       132 121 0V
+*Z NODE*
+R4         128 129  2k 
+I3           129 4 DC 0.75e-3  
+I4           128 4 DC 0.75e-3  
+V9	      128 328 0.7
+V10	      129 329 0.7
+*FREQUENCY SHAPING* 
+E3         131 0 329 0 1
+R5         131 140  30  
+L3         140 133  10n  
+C6         133 0  27p  
+E4         130 0 328 0 1
+R9         130 141  30  
+L4         141 125  10n  
+C7         125 0  27p  
+*OUTPUT BUFFER*
+Q9              4 133 117 PNP  5.12
+Q10            3 133 127 NPN  5.12
+Q11            3 117 134 NPN  81.92
+Q12            4 127 135 PNP  81.92
+Q13            4 125 116 PNP  5.12
+Q14            3 125 126 NPN  5.12
+Q15            3 116 136 NPN  81.92
+Q16            4 126 137 PNP  81.92
+R6           138 134  5  
+R7           135 138  5  
+R10         139 136  5  
+R11         137 139  5  
+I5                  3 117 DC 0.4e-3  
+I6              127 4 DC 0.4e-3  
+I7                  3 116 DC 0.4e-3  
+I8              126 4 DC 0.4e-3  
+*OUTPUT Z*
+R8           113 138  2.25 
+R12         115 139  2.25 
+L1            113 5  4n  
+L2            115 6  4n  
+C1                6 5  2p  
+*VOCM
+Rcm1         115 114  8k  
+Ccm1         115 114  0.1p  
+Rcm2         114 113  8k  
+Ccm2         114 113  0.1p  
+E1               118 0 114 7 1e3
+Rtop               3 7  50k  
+Rbot               4 7  50k  
+Q7               128 118 3 PNP  16
+Q8               129 118 3 PNP  16
+*GAIN CONTROL*
+V8         235 8 0.454
+E5         231 0 235 4 0.51
+E6        232 0 POLY(1) 231 0 0.0 1 1 0.5 3.5 
+E7         233 0 232 0 0.115
+E8         234 0 POLY(1) 233 0 0.0 0 1 0 0.333 
+E9         120 119 234 0 0.42
+V7         3 120 1.6
+Rsupply 3 4 310
+.MODEL NPN_IN NPN  KF=1E-12
+.MODEL NPN NPN
+.MODEL PNP PNP
+.ENDS
+*$
+* ------------------------------------------------------------------------
+*|(C) Copyright Texas Instruments Incorporated 2007. All rights reserved. |
+*|                                                                        |
+*|This Model is designed as an aid for customers of Texas Instruments.    |
+*|No warranties, either expressed or implied, with respect to this Model  |
+*|or its fitness for a particular purpose is claimed by Texas Instruments |
+*|or the author.  The Model is licensed solely on an "as is" basis.  The  |
+*|entire risk as to its quality and performance is with the customer.     |
+* ------------------------------------------------------------------------
+*$
+* THS4505 High Speed Amplifier "macromodel" subcircuit
+* Revision 0 February 18.
+*   1- This macromodel predicts well: DC, small-signal AC,
+*      and transient performance under a wide range of
+*      conditions
+*   2- This macromodel does not predict well: distortion
+*      (harmonic, intermod, diff. gain & phase, ...),
+*      noise, temperature effects, board parasitics, differences
+*      between package styles, and process changes
+*
+* connections:   non-inverting input
+*                | inverting input
+*                | | positive power supply
+*                | | | negative power supply
+*                | | | | outputn
+*                | | | | | outputp
+*                | | | | | | VOCM
+*                | | | | | | |
+*                | | | | | | |
+.subckt THS4505  1 2 3 4 5 6 7
+*Offset
+  Vos  1  9  .004
+  Ios  1  2  .25u
+* upper Vic range limit
+  Vcp   3 16 dc 3.9
+  Drc  17 16 dx
+  Fcp  10  4 Vcp 10
+  Rcp  10 17 10000
+* input stage
+  rc1  3 11 176.8
+  rc2  3 12 176.8
+*  c1   11 12 2.2p
+  q1   11 2 13 qx1
+  q2   12  9 14 qx1
+  re1  13 10 170.5
+  re2  14 10 170.5
+  Cdif  1  2  1p
+  Ccm   2 99  0.4p
+* lower Vic range limit
+  d10  15 10 dx
+  v10  15  4 dc -.8
+* dc bias settings
+  Iee  10  4 dc 3e-3
+  Icc   3  4  9m
+  Rcc   3  4  2500
+  egnd  99  0  poly(2)  3  0  4  0  0 .5  .5
+* gain stage and dominant pole
+  ga   21 22 11 12 -5.6549E-3
+  ca    21 21a 3.5E-12
+  raz   21a 22 .00500
+  rap   21 99 50E3
+  ran   22 99 50E3
+* GAIN STAGE SWING LIMIT
+  DPC1  21 23 dx
+  DPC2  22 23 dx
+  VPC    3 23 1.7
+  DNC1  24 21 dx
+  DNC2  24 22 dx
+  VNC   24  4  1.74
+* phase shift stage
+  gps   27 29 21 22 -50.0E-6
+  rpsp   27 28 10.0E3
+  rpsn   29 28 10.0E3
+*  cps   27 29 7E-15
+  cps   27 29 20E-15
+* Output stages
+  Xp_OP  27 99  3  4  6 THS4505_OP
+  Xn_OP  29 99  3  4  5 THS4505_OP
+* Common mode output control
+  X_Vcm  7  99  5  6  28 VOCM
+* Diode Models
+.model dx D(Is=800.00E-18)
+* Transistor Models
+.model qx1 NPN(Is=800.00E-18 Bf=375)
+.ends
+*$
+* VCM
+* connections:      VOCM
+*                   | Egnd
+*                   | | outputn
+*                   | | | outputp
+*                   | | | | Vcm
+*                   | | | | |
+.subckt VOCM        1 2 3 4 5
+  rcmp   3  6  10k
+  rcmn   4  6  10k
+  ccmp   3  6  2.5p
+  ccmn   4  6  2.5p
+  rcm    1  2  50k
+  gcm    5  2  1  6  -31.6
+  rocm   5  2  10
+  cocm   5  2  27n
+.ends
+*$
+* Output stage
+* connections:      non-inverting input
+*                   | inverting input
+*                   | | positive power supply
+*                   | | | negative power supply
+*                   | | | | output
+*                   | | | | |
+.subckt THS4505_OP  1 2 3 4 5
+* GAIN STAGE SWING LIMIT
+  DOPC   1 38  dx
+  VOPC   3 38  1.
+  DONC  48  1  dx
+  VONC  48  4  1.
+* UPPER DRIVE STAGE
+  ROP   3  34  8.5
+  HLP2 34  33  VLP 30
+  VOP  33  32  0
+  HLP1 35   0  VOP  8
+  RLP  35  36  8
+  DLP  36  37  dx
+  VLP  37   0  0
+  EOP  32  31  Poly(2)   2  1  3  4  -.8  1  .5
+  DOP  31   5  dx
+* LOWER DRIVE STAGE
+  DON   5  41  dx
+  EON  41  42  Poly(2)   1  2  3  4  -.8  1  .5
+  VON  42  43  0
+  HLN1 45   0  VON  15
+  RLN  45  46  8
+  DLN  46  47  dx
+  VLN  47   0  0
+  HLN2 43  44  VLN 45
+  RON  44   4  12
+* Diode Models
+.model dx D(Is=800.00E-18)
+.ends
+*$
+*$
+* ------------------------------------------------------------------------
+*|(C) Copyright Texas Instruments Incorporated 2007. All rights reserved. |
+*|                                                                        |
+*|This Model is designed as an aid for customers of Texas Instruments.    |
+*|No warranties, either expressed or implied, with respect to this Model  |
+*|or its fitness for a particular purpose is claimed by Texas Instruments |
+*|or the author.  The Model is licensed solely on an "as is" basis.  The  |
+*|entire risk as to its quality and performance is with the customer.     |
+* ------------------------------------------------------------------------
+*
+* THS4503 High Speed Amplifier "macromodel" subcircuit
+* Revision 0 February 7.
+* Revision 1 February 18. - improves Unity gain -3dB bandwidth
+*   1- This macromodel predicts well: DC, small-signal AC,
+*      and transient performance under a wide range of
+*      conditions
+*   2- This macromodel does not predict well: distortion
+*      (harmonic, intermod, diff. gain & phase, ...),
+*      noise, temperature effects, board parasitics, differences
+*      between package styles, and process changes
+*   3- This macromodel does not model the powerdown function
+*
+*
+* connections:   non-inverting input
+*                | inverting input
+*                | | positive power supply
+*                | | | negative power supply
+*                | | | | outputn
+*                | | | | | outputp
+*                | | | | | | VOCM
+*                | | | | | | |
+*                | | | | | | |
+.subckt THS4503  1 2 3 4 5 6 7
+*Offset
+  Vos  1  9  .001
+  Ios  1  2  .25u
+* upper Vic range limit
+  Vcp   3 16 dc 2.5
+  Drc  17 16 dx
+  Fcp  10  4 Vcp 60
+  Rcp  10 17 10000
+* input stage
+  rc1  3 11 176.8
+  rc2  3 12 176.8
+  c1   11 12 1.7p
+  q1   11 2 13 qx1
+  q2   12  9 14 qx1
+  re1  13 10 170.5
+  re2  14 10 170.5
+  Cdif  1  2  1p
+*  Ccm   2 99  0.4p
+* lower Vic range limit
+  d10  15 10 dx
+  v10  15  4 dc .8
+* dc bias settings
+  Iee  10  4 dc 3e-3
+  Icc   3  4  14m
+  Rcc   3  4  1667
+  egnd  99  0  poly(2)  3  0  4  0  0 .5  .5
+* gain stage and dominant pole
+  ga   21 22 11 12 -5.6549E-3
+  ca    21 21a 2.43E-12
+  raz   21a 22 5e-3
+  rap   21 99 50E3
+  ran   22 99 50E3
+* GAIN STAGE SWING LIMIT
+  DPC1  21 23 dx
+  DPC2  22 23 dx
+  VPC    3 23 0.17
+  DNC1  24 21 dx
+  DNC2  24 22 dx
+  VNC   24  4  0.174
+* phase shift stage
+  *gps   27 29 21 22 -50.0E-6
+  *rpsp   27 28 10.0E3
+  *rpsn   29 28 10.0E3
+  gpsp 27 28 21 22 -50u
+  rpsp 27 28 10e3
+  gpsn 29 28 21 22 50u
+  rpsn 29 28 10e3
+*  cps   27 29 7E-15
+*  cps   27 29 7E-15
+* Output stages
+  Xp_OP  27 99  3  4  6 THS450x_OP
+  Xn_OP  29 99  3  4  5 THS450x_OP
+* Common mode output control
+  X_Vcm  7  99  5  6  28 THS4503VOCM
+ * X_Vcm  7  99  5  6  10 THS4503VOCM
+ * V_V102 28 99 0
+*added by TZ, 1/16/2007
+*$
+* Diode Models
+.model dx D(Is=800.00E-18)
+*$
+* Transistor Models
+.model qx1 NPN(Is=800.00E-18 Bf=375)
+.ends
+*
+* Output stage
+* connections:      non-inverting input
+*                   | inverting input
+*                   | | positive power supply
+*                   | | | negative power supply
+*                   | | | | output
+*                   | | | | |
+.subckt THS450x_OP  1 2 3 4 5
+* GAIN STAGE SWING LIMIT
+  DOPC   1 38  dx
+  VOPC   3 38  1.
+  DONC  48  1  dx
+  VONC  48  4  1.
+ * DOPC1 1 38 dx
+ *VOPC1 3 38 0.855
+ * DONC1 48 1 dx
+ * VONC1 48 4 0.855
+* UPPER DRIVE STAGE
+  ROP   3  34  8.5
+  HLP2 34  33  VLP 30
+  VOP  33  32  0
+  HLP1 35   0  VOP  8
+  RLP  35  36  8
+  DLP  36  37  dx
+  VLP  37   0  0
+  EOP  32  31  Poly(2)   2  1  3  4  -.8  1  .5
+  DOP  31   5  dx
+* LOWER DRIVE STAGE
+  DON   5  41  dx
+  EON  41  42  Poly(2)   1  2  3  4  -.8  1  .5
+  VON  42  43  0
+  HLN1 45   0  VON  15
+  RLN  45  46  8
+  DLN  46  47  dx
+  VLN  47   0  0
+  HLN2 43  44  VLN 45
+  RON  44   4  12
+.ends
+*
+* VCM
+* connections:      VOCM
+*                   | Egnd
+*                   | | outputn
+*                   | | | outputp
+*                   | | | | Vcm
+*                   | | | | |
+.subckt THS4503VOCM        1 2 3 4 5
+  rcmp   3  6  10k
+  rcmn   4  6  10k
+  ccmp   3  6  2.5p
+  ccmn   4  6  2.5p
+  rcm    1  2  50k
+  *gcm    5  2  1  6  -31.6
+  gcm    5  2  1  6  -31.6
+  rocm   5  2  10
+  cocm   5  2  27n
+*
+* Diode Models
+.model dx D(Is=800.00E-18)
+*
+* Transistor Models
+.model qx1 NPN(Is=800.00E-18 Bf=375)
+.ends
+*
+* THS4509 
+* WIDEBAND, LOW-NOISE, LOW DISTORTION, FULLY DIFFERENTIAL AMPLIFIER
+*
+*****************************************************************************
+* (C) Copyright 2009 Texas Instruments Incorporated. All rights reserved.    
+*****************************************************************************
+** This model is designed as an aid for customers of Texas Instruments.      
+** TI and its licensors and suppliers make no warranties, either expressed   
+** or implied, with respect to this model, including the warranties of       
+** merchantability or fitness for a particular purpose. The model is         
+** provided solely on an "as is" basis. The entire risk as to its quality    
+** and performance is with the customer                                      
+*****************************************************************************
+*
+* Released by: Analog eLab Design Center, Texas Instruments Inc.
+* Part:        THS4509
+* WRITTEN:     01-24-06
+* Model Type:  TINA
+* Simulator:   Version 7.0.80.40 SF
+* Revision:    A
+* Datasheet:   SLOS454G–JANUARY 2005–REVISED MAY 2008
+*
+*****************************************************************************
+* 
+* THIS MODEL SIMULATES TYPICAL VALUES FOR THE FOLLOWING:
+* FREQUENCY RESPONSE OF THE MAIN DIFFERENTIAL AMP, OUTPUT VOLTAGE LIMIT,   
+* INPUT VOLTAGE NOISE, INPUT CURRENT NOISE, INPUT BIAS CURRENT, INPUT OFFSET VOLTAGE, 
+* CM SET POINT, OFFSET, AND BANDWIDTH
+* THIS MODEL WILL NOT PROVIDE ACCURATE SIMULATION OF:  OUTPUT LOADING EFFECTS, SLEW RATE, 
+* SETTLING TIME, OUTPUT IMPEDANCE, DISTORTION, INPUT OFFSET vs INPUT COMMON-MODE VOLTAGE, 
+* CMRR AND PSRR
+* IN PSPICE THIS MODEL WILL NOT CONVERGE IN TRANSIENT ANALYSIS USING PULSES THAT CAUSE 
+* GREATER THAN 4000V/us SLEW RATE
+*
+*$
+.SUBCKT THS4509 IN+ IN- Vs+ Vs- OUT- OUT+ CM
+
+*INPUT*
+Q9         Vs- 001 005 PNP_IN  2.5
+Q10         Vs- IN- 031 PNP_IN  2.505
+Q11         Vs+ IN- 006 NPN_IN  2.5
+Q12         Vs+ 001 002 NPN_IN  2.495
+Q19         039 005 008 NPN  5.198
+Q20         038 031 009 NPN  5
+Q21         033 006 009 PNP  5.198
+Q22         035 002 008 PNP  5
+R1          009 008  90  
+VI1         002 003 0.69995  
+VI2         004 005 0.701  
+VI3         006 007 0.701  
+VI10        036 031 0.70005  
+R20         036 Vs+  2.7k  
+R21         004 Vs+  2.7k  
+R22         Vs- 003  2.7k  
+R23         Vs- 007  2.7k  
+C1         0 001   0.3p  
+C2         0 IN-    0.3p  
+V1         001 IN+ 000u
+IB+	IN+ 0	8u
+IB-	IN- 0	8u
+
+*HIGH Z NODE*
+Q23         041 041 039 PNP  5
+Q24         027 041 038 PNP  5
+Q17         037 037 038 PNP  5
+Q18         029 037 039 PNP  5
+Q15         032 032 033 NPN  5
+Q16         034 034 035 NPN  5
+Q14         029 032 035 NPN  5
+Q13         027 034 033 NPN  5
+I8         Vs+ 032 DC 750u  
+I9         Vs+ 034 DC 750u  
+I11         037 Vs- DC 750u  
+I12         041 Vs- DC 750u  
+R30         029 027  1meg 
+C5         029 027  0.45p  
+R16         038 Vs+  500  
+R17         039 Vs+  500  
+R18         038 Vs+  500  
+R19         039 Vs+  500  
+R24         Vs- 035  500  
+R25         Vs- 033  500  
+R26         Vs- 035  500  
+R27         Vs- 033  500  
+
+*VOLTAGE LIMIT*
+Q116         027 027 128 NPN  5
+V116         Vs+ 128   1.75 
+Q118         027 027 138 PNP  5
+V118         138 Vs-   1.75  
+Q216         029 029 228 NPN  5
+V216         Vs+ 228   1.75 
+Q218         029 029 238 PNP  5
+V218         238 Vs-   1.75  
+RQ	Vs+ Vs- 475
+
+*FREQUENCY SHAPING*
+E2         028 0 027 0 1
+E3         030 0 029 0 1
+C3         0 024  3p  
+C4         0 017  3p  
+L1         025 028  2n  
+L2         030 026  2n  
+R10         024 025  25  
+R11         017 026  25  
+
+*OUTPUT BUFFER*
+Q1         Vs+ 012 013 NPN  50
+Q2         Vs- 015 016 PNP  50
+Q3         Vs+ 017 015 NPN  13
+Q4         Vs- 017 012 PNP  13
+Q5         Vs+ 019 020 NPN  50
+Q6         Vs- 021 023 PNP  50
+Q7         Vs+ 024 021 NPN  13
+Q8         Vs- 024 019 PNP  13
+I4         011 012 DC 2m  
+I5         015 014 DC 2m  
+I6         018 019 DC 2m  
+I7         021 022 DC 2m 
+R4         Vs- 014  100  
+R7         018 Vs+  100  
+R12         011 Vs+  100  
+R13         Vs- 022  100  
+R5         OUT- 013  1  
+R6         016 OUT-  1  
+R8         OUT+ 020  1  
+R9         023 OUT+  1  
+
+*CM CIRCUIT*
+R2         OUT+ 010  10k  
+R3         010 OUT-  10k  
+*C102 	OUT+ 010 100p
+*C103 	010 OUT- 100p
+R114       CM CM2  100 
+C114 	   CM2 0 2.3p
+R14         Vs+ CM2  50k  
+R15         Vs- CM2  50k  
+V3         043 CM2 3m
+F2         041 Vs- VF2 1
+VF2        040 Vs- 0V
+F1         037 Vs- VF1 1
+VF1        042 040 0V
+G1         042 Vs+ 010 043 .002
+*R100	042 0 1meg
+*C100 	042 0 10p
+
+.MODEL NPN_IN NPN KF=1E-11
+.MODEL PNP_IN PNP KF=1E-11
+.MODEL NPN NPN
+.MODEL PNP PNP
+.ENDS
+
+*$
+* PSpice Model Editor - Version 9.2
+
+* ------------------------------------------------------------------------
+*|(C) Copyright Texas Instruments Incorporated 2007. All rights reserved. |
+*|                                                                        |
+*|This Model is designed as an aid for customers of Texas Instruments.    |
+*|No warranties, either expressed or implied, with respect to this Model  |
+*|or its fitness for a particular purpose is claimed by Texas Instruments |
+*|or the author.  The Model is licensed solely on an "as is" basis.  The  |
+*|entire risk as to its quality and performance is with the customer.     |
+* ------------------------------------------------------------------------
+* THS4500 MACRO MODEL
+*.SUBCKT Diff2 PDbar VIN+ VIN- VOCM VOUT+ VOUT- VS+ VS-  *removed PDbar for THS4501
+.SUBCKT THS4501 VIN+ VIN- VOCM VOUT+ VOUT- VS+ VS-
+R_R7         N350252 N347297  900
+C_C8         VS- N402811  1p
+*C_C8         VS- N402811  .01p
+D_D27         VOUT+ N463482 Dbreak
+R_R22         N525185 VS+  908k
+E_E11         N583760 N357101 N303573 N354854 .5
+*E_E11         N583760 N357101 N303573 N354854 .25
+D_D35         N402811 N402451 Dbreak 1
+D_D36         N166465 VS- Dbreak 1
+D_D21         N537436 N423842 Dbreak .001
+R_R16         N354854 N303573  316k
+D_D25         N303573 N537473 Dbreak .001
+D_D13         N461258 N463401 Dbreak
+R_R5         N476582 N347052  9.45k
+G_G8         N402451 N407546 N347052 VS- .0133
+E_E13         N308222 VS- N402451 VS- 1
+C_C5         VS- VOCM  1p
+C_C3         VS- VIN+  1p
+D_D15         N407189 N402257 Dbreak 1
+D_D3         N307743 N468766 Dbreak 5
+E_E8         N356172 N423842 N317703 N194578 1000
+R_R12         VOCM N317703  1k
+R_R24         VS- N166465  100k
+C_C7         VS- VIN-  1p
+R_R8         N166465 N476582  4.25k
+R_R26         N603550 N166465  3.15e6
+C_C6         N354854 N303573  706f
+*C_C6          N354854 N303573  200f
+R_R4         N587024 N407189  212
+E_E12         N303573 VS- VS+ VS- .5
+R_R2         VS+ N166918  250k
+G_G3         VS+ VIN+ N603550 VS- 7.5e-6
+R_R27         N603620 N166465  3.15e6
+D_D32         N362132 N317703 Dbreak 1
+R_R20         N583760 N402811  212
+G_G4         N463401 N463347 N476582 VS- .1745
+E_E10         N362132 VS- N166465 VS- 2
+G_G7         VS+ VIN- N603620 VS- 7.5e-6
+C_C9         VS- N502903  4p
+D_D9         N317703 N362270 Dbreak 1
+D_D33         N362132 N354854 Dbreak 1
+R_R14         N303573 VIN+  1e7
+D_D14         N307831 N307861 Dbreak 5
+X_F1    N515576 VS- N303573 N354854 Diff2_F1
+E_E1         VS+ N307743 VS+ N407134 1
+E_E3         VS+ N362270 N166465 VS- 2
+G_G9         VS+ N166465 N525185 VS- 5.33e-8
+R_R3         N468766 N461258  4
+R_R28         N603620 N603550  1e9
+R_R25         VS- N347377  150e7
+D_D8         N354854 N362270 Dbreak 1
+D_D11         N361278 N347297 Dbreak .1
+R_R9         VOCM N303573  25k
+R_R13         N356203 N356172  884k
+R_R6         N307831 N461258  4
+D_D28         N407546 N402811 Dbreak 1
+R_R1         PDBAR VS+  62k
+E_E5         N307861 VS- N402257 VS- 1
+R_R18         N303573 VIN-  1e7
+D_D26         N463455 VOUT+ Dbreak
+D_D29         N551738 N339403 Dbreak 5
+D_D16         N347377 N361243 Dbreak .1
+D_D20         N357170 N350102 Dbreak .001
+D_D37         N525275 VS- Dbreak .01
+D_D2         N407134 N407189 Dbreak 1
+C_C1         VS- PDBAR  1p
+D_D12         N463347 N461258 Dbreak
+R_R19         N339403 N461313  4
+D_D1         N166918 N502903 Dbreak .001
+R_R11         N194578 VOUT-  10k
+E_E6         N350252 N515576 N350102 VS- 1
+X_F2    N515613 VS- N354854 N303573 Diff2_F2
+R_R10         VIN+ N350102  1k
+D_D5         N502903 N347052 Dbreak .001
+D_D34         N308192 N308222 Dbreak 5
+D_D31         N461313 N463482 Dbreak
+G_G5         N537473 N537436 N476582 VS- .0001333
+D_D23         N357170 N350341 Dbreak .001
+E_E2         VS+ N519838 N166465 VS- 4
+D_D17         N361278 N347377 Dbreak .1
+D_D22         N423842 N537473 Dbreak .001
+D_D4         N166918 PDBAR Dbreak 10
+D_D6         N350102 N519838 Dbreak
+C_C4         N303573 N356203  1p
+R_R21         N308192 N461313  4
+D_D19         VOUT- N463401 Dbreak
+R_R15         VOUT+ N194578  10k
+E_E14         VS+ N357101 VS+ N356203 1
+E_E15         VS- N357170 N166465 VS- .5
+E_E4         N587024 N357101 N354854 N303573 .5
+*E_E4         N587024 N357101 N354854 N303573 .25
+G_G2         N361243 N361278 N303573 VS- .000120
+R_R17         VIN- N350341  1k
+D_D30         N463455 N461313 Dbreak
+R_R23         N525185 N525275  22.5k
+E_E7         N347377 N515613 N350341 VS- 1
+C_C2         VS- N407189  1p
+*C_C2         VS- N407189  .01p
+G_G1         N402257 N407134 N347052 VS- .0133
+E_E9         VS+ N551738 VS+ N407546 1
+D_D7         N350341 N519838 Dbreak
+D_D24         N537436 N303573 Dbreak .001
+G_G6         N463482 N463455 N476582 VS- .1745
+D_D10         N347297 N361243 Dbreak .1
+D_D18         N463347 VOUT- Dbreak
+.model Dbreak D Is=1e-14 Cjo=.1pF Rs=.1
+.ENDS
+*$
+
+*$
+.SUBCKT RC_Network Ccom Rin
+R_R99         N07766 N07793  1k
+R_R89         N07382 N07355  1k
+R_R79         N07652 N07625  1k
+R_R69         N07082 N07109  1k
+C_C98         CCOM N07793  10n
+R_R59         N06566 N06539  1k
+C_C88         CCOM N07382  10n
+R_R49         N06836 N06809  1k
+R_R39         N06266 N06293  1k
+C_C78         CCOM N07652  10n
+C_C68         CCOM N07109  10n
+R_R29         N05750 N05723  1k
+R_R19         N06020 N05993  1k
+C_C58         CCOM N06566  10n
+C_C48         CCOM N06836  10n
+R_R9         N05480 N05507  1k
+C_C38         CCOM N06293  10n
+C_C28         CCOM N05750  10n
+C_C18         CCOM N06020  10n
+C_C8         CCOM N05507  10n
+R_R100         N08048 N07766  1k
+R_R90         N07355 N08009  1k
+R_R80         N07625 N07598  1k
+R_R70         N07055 N07082  1k
+R_R60         N06539 N07325  1k
+C_C99         CCOM N07766  10n
+C_C89         CCOM N07355  10n
+R_R50         N06809 N13506  1k
+R_R40         N06239 N06266  1k
+C_C79         CCOM N07625  10n
+C_C69         CCOM N07082  10n
+R_R30         N05723 N06509  1k
+C_C59         CCOM N06539  10n
+R_R20         N05993 N05966  1k
+R_R10         N05453 N05480  1k
+C_C49         CCOM N06809  10n
+C_C39         CCOM N06266  10n
+C_C29         CCOM N05723  10n
+C_C19         CCOM N05993  10n
+C_C9         CCOM N05480  10n
+R_R91         N07982 N08009  1k
+R_R81         N07598 N07571  1k
+R_R71         N07028 N07055  1k
+R_R61         N07298 N07325  1k
+C_C100         CCOM N08048  5n
+C_C90         N08009 CCOM  10n
+R_R51         N13506 N06755  1k
+C_C80         CCOM N07598  10n
+R_R41         N06212 N06239  1k
+R_R31         N06482 N06509  1k
+C_C70         CCOM N07055  10n
+C_C60         CCOM N07325  10n
+R_R21         N05966 N05939  1k
+C_C50         CCOM N13506  10n
+R_R11         N05426 N05453  1k
+R_R1         RIN RIN  1k
+C_C40         CCOM N06239  10n
+C_C30         CCOM N06509  10n
+C_C20         CCOM N05966  10n
+C_C10         CCOM N05453  10n
+R_R92         N07955 N07982  1k
+R_R82         N07571 N07544  1k
+R_R72         N07001 N07028  1k
+R_R62         N07271 N07298  1k
+R_R52         N06755 N06728  1k
+C_C91         CCOM N07982  10n
+C_C81         CCOM N07571  10n
+R_R42         N06185 N06212  1k
+C_C71         CCOM N07028  10n
+R_R32         N06455 N06482  1k
+R_R22         N05939 N05912  1k
+C_C61         CCOM N07298  10n
+C_C51         CCOM N06755  10n
+R_R12         N05399 N05426  1k
+R_R2         N05669 RIN  1k
+C_C41         CCOM N06212  10n
+C_C31         CCOM N06482  10n
+C_C21         CCOM N05939  10n
+C_C11         CCOM N05426  10n
+C_C1         CCOM RIN  5n
+R_R93         N07928 N07955  1k
+R_R83         N07544 N07517  1k
+R_R73         N06974 N07001  1k
+R_R63         N07244 N07271  1k
+C_C92         CCOM N07955  10n
+R_R53         N06728 N06701  1k
+R_R43         N06158 N06185  1k
+C_C82         CCOM N07544  10n
+C_C72         CCOM N07001  10n
+R_R33         N06428 N06455  1k
+R_R23         N05912 N05885  1k
+C_C62         CCOM N07271  10n
+C_C52         CCOM N06728  10n
+R_R13         N05372 N05399  1k
+C_C42         CCOM N06185  10n
+R_R3         N05642 N05669  1k
+C_C32         CCOM N06455  10n
+C_C22         CCOM N05912  10n
+C_C12         CCOM N05399  10n
+C_C2         CCOM N05669  10n
+R_R94         N07901 N07928  1k
+R_R84         N07517 N07490  1k
+R_R74         N06947 N06974  1k
+R_R64         N07217 N07244  1k
+C_C93         CCOM N07928  10n
+R_R54         N06701 N06674  1k
+R_R44         N06131 N06158  1k
+C_C83         CCOM N07517  10n
+C_C73         CCOM N06974  10n
+R_R34         N06401 N06428  1k
+C_C63         CCOM N07244  10n
+R_R24         N05885 N05858  1k
+R_R14         N05345 N05372  1k
+C_C53         CCOM N06701  10n
+C_C43         CCOM N06158  10n
+R_R4         N05615 N05642  1k
+C_C33         CCOM N06428  10n
+C_C23         CCOM N05885  10n
+C_C13         CCOM N05372  10n
+C_C3         CCOM N05642  10n
+R_R95         N07874 N07901  1k
+R_R85         N07490 N07463  1k
+R_R75         N07736 N06947  1k
+R_R65         N07190 N07217  1k
+C_C94         CCOM N07901  10n
+R_R55         N06674 N06647  1k
+C_C84         CCOM N07490  10n
+R_R45         N06917 N06131  1k
+R_R35         N06374 N06401  1k
+C_C74         CCOM N06947  10n
+C_C64         CCOM N07217  10n
+R_R25         N05858 N05831  1k
+R_R15         N06101 N05345  1k
+C_C54         CCOM N06674  10n
+R_R5         N05588 N05615  1k
+C_C44         CCOM N06131  10n
+C_C34         CCOM N06401  10n
+C_C24         CCOM N05858  10n
+C_C14         CCOM N05345  10n
+C_C4         CCOM N05615  10n
+R_R96         N07847 N07874  1k
+R_R86         N07463 N07436  1k
+R_R76         N07736 N07709  1k
+R_R66         N07163 N07190  1k
+R_R56         N06647 N06620  1k
+C_C95         CCOM N07874  10n
+C_C85         CCOM N07463  10n
+R_R46         N06917 N06890  1k
+R_R36         N06347 N06374  1k
+C_C75         CCOM N07736  10n
+C_C65         CCOM N07190  10n
+R_R26         N05831 N05804  1k
+C_C55         CCOM N06647  10n
+R_R16         N06101 N06074  1k
+R_R6         N05561 N05588  1k
+C_C45         CCOM N06917  10n
+C_C35         CCOM N06374  10n
+C_C25         CCOM N05831  10n
+C_C15         CCOM N06101  10n
+C_C5         CCOM N05588  10n
+R_R97         N07820 N07847  1k
+R_R87         N07436 N07409  1k
+R_R77         N07709 N07682  1k
+R_R67         N07136 N07163  1k
+R_R57         N06620 N06593  1k
+C_C96         CCOM N07847  10n
+C_C86         CCOM N07436  10n
+R_R47         N06890 N06863  1k
+C_C76         CCOM N07709  10n
+R_R37         N06320 N06347  1k
+R_R27         N05804 N05777  1k
+C_C66         CCOM N07163  10n
+C_C56         CCOM N06620  10n
+R_R17         N06074 N06047  1k
+C_C46         CCOM N06890  10n
+R_R7         N05534 N05561  1k
+C_C36         CCOM N06347  10n
+C_C26         CCOM N05804  10n
+C_C16         CCOM N06074  10n
+C_C6         CCOM N05561  10n
+R_R98         N07793 N07820  1k
+R_R88         N07409 N07382  1k
+R_R78         N07682 N07652  1k
+R_R68         N07109 N07136  1k
+C_C97         CCOM N07820  10n
+R_R58         N06593 N06566  1k
+R_R48         N06863 N06836  1k
+C_C87         CCOM N07409  10n
+C_C77         CCOM N07682  10n
+R_R38         N06293 N06320  1k
+C_C67         CCOM N07136  10n
+R_R28         N05777 N05750  1k
+R_R18         N06047 N06020  1k
+C_C57         CCOM N06593  10n
+C_C47         CCOM N06863  10n
+R_R8         N05507 N05534  1k
+C_C37         CCOM N06320  10n
+C_C27         CCOM N05777  10n
+C_C17         CCOM N06047  10n
+C_C7         CCOM N05534  10n
+.ENDS
+*$
+
+
+.subckt SCHEMATIC2_F1 1 2 3 4
+F_F1         3 4 VF_F1 1e6
+VF_F1         1 2 0V
+.ends SCHEMATIC2_F1
+*$
+
+.subckt Diff2_F1 1 2 3 4
+F_F1         3 4 VF_F1 1
+*F_F1         3 4 VF_F1 2
+VF_F1         1 2 0V
+.ends Diff2_F1
+*$
+
+.subckt Diff2_F2 1 2 3 4
+F_F2         3 4 VF_F2 1
+*F_F2         3 4 VF_F2 2
+VF_F2         1 2 0V
+.ends Diff2_F2
+*$
+
+*$
+* ------------------------------------------------------------------------
+*|(C) Copyright Texas Instruments Incorporated 2007. All rights reserved. |
+*|                                                                        |
+*|This Model is designed as an aid for customers of Texas Instruments.    |
+*|No warranties, either expressed or implied, with respect to this Model  |
+*|or its fitness for a particular purpose is claimed by Texas Instruments |
+*|or the author.  The Model is licensed solely on an "as is" basis.  The  |
+*|entire risk as to its quality and performance is with the customer.     |
+* ------------------------------------------------------------------------
+*
+* THS4502 High Speed Amplifier "macromodel" subcircuit
+* Revision 0 February 7.
+* Revision 1 February 18. - improves Unity gain -3dB bandwidth
+*   1- This macromodel predicts well: DC, small-signal AC,
+*      and transient performance under a wide range of
+*      conditions
+*   2- This macromodel does not predict well: distortion
+*      (harmonic, intermod, diff. gain & phase, ...),
+*      noise, temperature effects, board parasitics, differences
+*      between package styles, and process changes
+*   3- This macromodel does not model the powerdown function
+*
+*
+* connections:   non-inverting input
+*                | inverting input
+*                | | positive power supply
+*                | | | negative power supply
+*                | | | | outputn
+*                | | | | | outputp
+*                | | | | | | Vocm
+*                | | | | | | |
+*                | | | | | | |
+.subckt THS4502  1 2 3 4 5 6 7
+*Offset
+  Vos  1  9  .001
+  Ios  1  2  .25u
+* upper Vic range limit
+  Vcp   3 16 dc 2.5
+  Drc  17 16 dx
+  Fcp  10  4 Vcp 60
+  Rcp  10 17 10000
+* input stage
+  rc1  3 11 176.8
+  rc2  3 12 176.8
+  c1   11 12 1.7p
+  q1   11 2 13 qx1
+  q2   12  9 14 qx1
+  re1  13 10 170.5
+  re2  14 10 170.5
+  Cdif  1  2  1p
+*  Ccm   2 99  0.4p
+* lower Vic range limit
+  d10  15 10 dx
+  v10  15  4 dc .8
+* dc bias settings
+  Iee  10  4 dc 3e-3
+  Icc   3  4  14m
+  Rcc   3  4  1667
+  egnd  99  0  poly(2)  3  0  4  0  0 .5  .5
+* gain stage and dominant pole
+  ga   21 22 11 12 -5.6549E-3
+  ca    21 21a 2.43E-12
+  raz   21a 22 5e-3
+  rap   21 99 50E3
+  ran   22 99 50E3
+* GAIN STAGE SWING LIMIT
+  DPC1  21 23 dx
+  DPC2  22 23 dx
+  VPC    3 23 0.17
+  DNC1  24 21 dx
+  DNC2  24 22 dx
+  VNC   24  4  0.174
+* phase shift stage
+  *gps   27 29 21 22 -50.0E-6
+  *rpsp   27 28 10.0E3
+  *rpsn   29 28 10.0E3
+  gpsp 27 28 21 22 -50u
+  rpsp 27 28 10e3
+  gpsn 29 28 21 22 50u
+  rpsn 29 28 10e3
+*  cps   27 29 7E-15
+*  cps   27 29 7E-15
+* Output stages
+  Xp_OP  27 99  3  4  6 THS450x_OP
+  Xn_OP  29 99  3  4  5 THS450x_OP
+* Common mode output control
+  X_Vcm  7  99  5  6  28 THS4502VOCM
+ * X_Vcm  7  99  5  6  10 THS4502VOCM
+ * V_V102 28 99 0
+* Diode Models
+.model dx D(Is=800.00E-18)
+*
+* Transistor Models
+.model qx1 NPN(Is=800.00E-18 Bf=375)
+*
+.ends
+*
+* Output stage
+* connections:      non-inverting input
+*                   | inverting input
+*                   | | positive power supply
+*                   | | | negative power supply
+*                   | | | | output
+*                   | | | | |
+.subckt THS450x_OP  1 2 3 4 5
+* GAIN STAGE SWING LIMIT
+  DOPC   1 38  dx
+  VOPC   3 38  1.
+  DONC  48  1  dx
+  VONC  48  4  1.
+ * DOPC1 1 38 dx
+ *VOPC1 3 38 0.855
+ * DONC1 48 1 dx
+ * VONC1 48 4 0.855
+* UPPER DRIVE STAGE
+  ROP   3  34  8.5
+  HLP2 34  33  VLP 30
+  VOP  33  32  0
+  HLP1 35   0  VOP  8
+  RLP  35  36  8
+  DLP  36  37  dx
+  VLP  37   0  0
+  EOP  32  31  Poly(2)   2  1  3  4  -.8  1  .5
+  DOP  31   5  dx
+* LOWER DRIVE STAGE
+  DON   5  41  dx
+  EON  41  42  Poly(2)   1  2  3  4  -.8  1  .5
+  VON  42  43  0
+  HLN1 45   0  VON  15
+  RLN  45  46  8
+  DLN  46  47  dx
+  VLN  47   0  0
+  HLN2 43  44  VLN 45
+  RON  44   4  12
+* Diode Models
+.model dx D(Is=800.00E-18)
+*
+.ends
+*
+* VCM
+* connections:      Vocm
+*                   | Egnd
+*                   | | outputn
+*                   | | | outputp
+*                   | | | | Vcm
+*                   | | | | |
+.subckt THS4502VOCM 1 2 3 4 5
+  rcmp   3  6  10k
+  rcmn   4  6  10k
+  ccmp   3  6  2.5p
+  ccmn   4  6  2.5p
+  rcm    1  2  50k
+  *gcm    5  2  1  6  -31.6
+  gcm    5  2  1  6  -31.6
+  rocm   5  2  10
+  cocm   5  2  27n
+*
+.ends
+* THS4520
+*****************************************************************************
+* (C) Copyright 2010 Texas Instruments Incorporated. All rights reserved.
+*****************************************************************************
+** This model is designed as an aid for customers of Texas Instruments.
+** TI and its licensors and suppliers make no warrenties, either expressed
+** or implied, with respect to this model, including the warranties of 
+** merchantability or fitness for a particular purpose.  The model is
+** provided solely on an "as is" basis.  The entire risk as to its quality
+** and performance is with the customer
+*****************************************************************************
+*
+** Released by: Analog eLab Design Center, Texas Instruments Inc.
+* Part: THS4520
+* Date: 08/03/2010
+* Model Type: TINA
+* Simulator: TINA 
+* Simulator Version: 7.0.80.96 SF-TI
+* EVM Order Number: N/A
+* EVM Users Guide: N/A
+* Datasheet: SLOS503B - July 2007
+*
+* Model Version: REV B
+*
+*****************************************************************************
+*
+* Updates:
+* REV. A - Created 10/30/06 X-ramus2@ti.com
+* REV. B - Tweak the model to be compatible with Multisim 10.1 as well. 
+*
+*****************************************************************************
+* NOTES:
+*   1- This macromodel predicts well: DC, small-signal AC, noise,
+*      , and transient performance under a wide range
+*      of conditions.
+*   2- This macromodel does not predict well: distortion
+*      (harmonic, intermod, diff. gain & phase, ...),
+*      temperature effects, board parasitics, differences
+*      between package styles, and process changes
+*   3- For some simulators the subckt for the F statement need to be placed 
+*      inside the ends statement followed by carriage return  
+*   4- Known Problems: - Do not simulate Iout
+*****************************************************************************
+*                     NonInverting Input
+*                     |    Inverting Input
+*                     |    |     Positive Supply
+*                     |    |     |    Negative Supply
+*                     |    |     |     |     Negative Output
+*                     |    |     |     |     |      Positive Supply
+*                     |    |     |     |     |      |     Common Mode Input
+*                     |    |     |     |     |      |     |
+*                     |     |     |     |       |      |      |
+*                     |     |     |     |       |      |      |
+*
+.SUBCKT THS4520 In+ In- Vs+ Vs- Out- Out+ CM
+
+.PARAM Raol = 1.2k
+.PARAM Lp = 30n
+
+C_C1         Vmid N_0001  99.47n  
+R_R3         N_0002 N_0001  {Raol}  
+R_R5         N_0001 Vmid  100MEG  
+E_E2         N_0003 Vmid N_0001 Vmid 1
+R_R7         N_0003 N_0004  8  
+L_L1         N_0004 N_0005  0.5nH  
+C_C3         Vmid N_0005  250p  
+R_R1         N_0007 N_0006  30  
+R_R2         N_0009 N_0008  30  
+E_E1         N_0002 N_0010 N_0007 N_0009 1.02MEG
+G_G1         Vs+ N_0012 Vs+ N_0011 0.7m
+E_E10         N_0014 Vmid N_0013 Vmid 125u
+R_R4         N_0010 N_0015  {Raol}  
+E_E3         N_0016 Vmid N_0015 Vmid 1
+R_R8         N_0016 N_0017  8  
+L_L2         N_0017 N_0018  0.5nH  
+C_C4         N_0018 Vmid  250p  
+C_C2         N_0015 Vmid  99.47n  
+R_R6         Vmid N_0015  100MEG  
+C_C5         Vmid N_0019  1p  
+L_L5         CM N_0020  900nH  
+R_R9         N_0020 N_0019  900  
+E_E6         N_0021 N_0014 N_0019 Vmid 1
+E_U2         Out- N_0021  VALUE 
++ {LIMIT(V(N_0005,Vmid)*1,V(N_0022,Vmid),V(N_0023,Vmid))}
+V_V12         N_0022 Vs- DC 0.25 
+R_RV12        N_0022 Vmid 1e6
+E_U3         Out+ N_0021  VALUE 
++ {LIMIT(V(N_0018,Vmid)*1,V(N_0024,Vmid),V(N_0025,Vmid))}
+V_V14         N_0024 Vs- DC 0.25  
+R_RV14        N_0024 Vmid 1e6
+V_V13         Vs+ N_0025 DC 0.25  
+R_RV13  	   N_0025 Vmid 1e6
+E_E11         N_0013 Vmid POLY(2) In- Vmid  In+ Vmid  0 0.5 0.5
+Q_Q2         N_0009 In- N_0026 NPN8 1
+E_E4         Vmid Vs- Vs+ Vs- 0.5
+V_V6         N_0011 Vs- DC 3V  
+V_V7         N_0012 Vs- DC 0V
+I_I5         Vs+ Vs- DC 10.8mA  
+Q_Q1         N_0007 In+ N_0026 NPN8 1
+I_I2         Vs+ In+ DC 9.2uA  
+I_I3         Vs+ In- DC 9uA  
+L_L4         N_0008 Vs+  {Lp}  
+L_L3         N_0006 Vs+  {Lp}  
+V_V11         Vs+ N_0023 DC 0.25  
+R_RV11        N_0023 Vmid 1e6
+I_I4         CM Vs- DC 0.6uA  
+X_S2    Vs+ Vs- N_0027 Vs- THS4520_Model_S2
+R_R19         N_0027 N_0026  1m  
+
+.MODEL NPN8 NPN
++ IS = 7.604E-18 BF = 1.570E+02 NF = 1.000E+00 VAF= 7.871E+01
++ IKF= 3.975E-02 ISE= 3.219E-14 NE = 2.000E+00 BR = 7.614E-01
++ NR = 1.000E+00 VAR= 1.452E+00 IKR= 8.172E-02 ISC= 7.618E-21
++ NC = 1.847E+00 RB = 1.060E+02 IRB= 0.000E+00 RBM= 2.400E+00
++ RE = 2.520E+00 RC = 1.270E+02 CJE= 1.120E-13 VJE= 7.591E-01
++ MJE= 5.406E-01 TF = 1.213E-11 XTF= 2.049E+00 VTF= 1.813E+00
++ ITF= 4.293E-02 PTF= 0.000E+00 CJC= 8.208E-14 VJC= 6.666E-01
++ MJC= 4.509E-01 XCJC=8.450E-02 TR = 4.000E-11 CJS= 1.160E-13
++ VJS= 5.286E-01 MJS= 4.389E-01 XTB= 1.022E+00 EG = 1.120E+00
++ XTI= 1.780E+00 KF = 3.500E-16 AF = 1.000E+00 FC = 8.273E-01
+
+
+.ENDS    THS4520
+*
+
+.subckt THS4520_Model_S2 1 2 3 4  
+S_S2         3 4 1 2 _S2
+RS_S2         1 2 1G
+.MODEL         _S2 VSWITCH Roff=0.166748625431493 Ron=932.790061092598
++  Voff=-8.102659644524 Von=6.08261917857915
+.ends THS4520_Model_S2
+*
+*
+* THS4513
+* WIDEBAND, LOW-NOISE, LOW DISTORTION, FULLY DIFFERENTIAL AMPLIFIER
+*
+*****************************************************************************
+* (C) Copyright 2009 Texas Instruments Incorporated. All rights reserved.    
+*****************************************************************************
+** This model is designed as an aid for customers of Texas Instruments.      
+** TI and its licensors and suppliers make no warranties, either expressed   
+** or implied, with respect to this model, including the warranties of       
+** merchantability or fitness for a particular purpose. The model is         
+** provided solely on an "as is" basis. The entire risk as to its quality    
+** and performance is with the customer                                      
+*****************************************************************************
+*
+* Released by: Analog eLab Design Center, Texas Instruments Inc.
+* Part:        THS4513
+* Written:     02-7-06
+* Model Type:  TINA
+* Simulator:   Version 7.0.80.40 SF
+* Revision:    A
+* Datasheet:   SLOS472C–AUGUST 2005–REVISED MAY 2008
+*
+*****************************************************************************
+*
+* THIS MODEL SIMULATES TYPICAL VALUES FOR THE FOLLOWING:
+* FREQUENCY RESPONSE OF THE MAIN DIFFERENTIAL AMP, OUTPUT VOLTAGE LIMIT,   
+* INPUT VOLTAGE NOISE, INPUT BIAS CURRENT, INPUT OFFSET VOLTAGE, CM SET POINT, OFFSET, AND BANDWIDTH
+* THIS MODEL WILL NOT PROVIDE ACCURATE SIMULATION OF:  OUTPUT LOADING EFFECTS, SLEW RATE, SETTLING TIME
+* OUTPUT IMPEDANCE, INPUT CURRENT NOISE, DISTORTION, INPUT OFFSET vs INPUT COMMON-MODE VOLTAGE, CMRR AND PSRR
+* IN PSPICE THIS MODEL WILL NOT CONVERGE IN TRANSIENT ANALYSIS USING PULSES THAT CAUSE GREATER THAN 4000V/us SLEW RATE
+
+*$
+.SUBCKT THS4513 IN+ IN- Vs+ Vs- OUT- OUT+ CM
+
+*INPUT*
+Q9         Vs- 001 005 PNP_IN  2.5
+Q10         Vs- IN- 031 PNP_IN  2.505
+Q11         Vs+ IN- 006 NPN_IN  2.5
+Q12         Vs+ 001 002 NPN_IN  2.495
+Q19         039 005 008 NPN  5.198
+Q20         038 031 009 NPN  5
+Q21         033 006 009 PNP  5.198
+Q22         035 002 008 PNP  5
+R1          009 008  90  
+VI1         002 003 0.69995  
+VI2         004 005 0.701  
+VI3         006 007 0.701  
+VI10        036 031 0.70005  
+R20         036 Vs+  2.7k  
+R21         004 Vs+  2.7k  
+R22         Vs- 003  2.7k  
+R23         Vs- 007  2.7k  
+C1         0 001   0.3p  
+C2         0 IN-    0.3p  
+V1         001 IN+ 000u
+IB+	IN+ 0	8u
+IB-	IN- 0	8u
+
+*HIGH Z NODE*
+Q23         041 041 039 PNP  5
+Q24         027 041 038 PNP  5
+Q17         037 037 038 PNP  5
+Q18         029 037 039 PNP  5
+Q15         032 032 033 NPN  5
+Q16         034 034 035 NPN  5
+Q14         029 032 035 NPN  5
+Q13         027 034 033 NPN  5 
+I8         Vs+ 032 DC 750u  
+I9         Vs+ 034 DC 750u  
+I11         037 Vs- DC 750u  
+I12         041 Vs- DC 750u  
+R30         029 027  0.5meg 
+C5         029 027  0.7p  
+R16         038 Vs+  500  
+R17         039 Vs+  500  
+R18         038 Vs+  500  
+R19         039 Vs+  500  
+R24         Vs- 035  500  
+R25         Vs- 033  500  
+R26         Vs- 035  500  
+R27         Vs- 033  500  
+
+*VOLTAGE LIMIT*
+Q116         027 027 128 NPN  5
+V116         Vs+ 128   1.75 
+Q118         027 027 138 PNP  5
+V118         138 Vs-   1.75  
+Q216         029 029 228 NPN  5
+V216         Vs+ 228   1.75 
+Q218         029 029 238 PNP  5
+V218         238 Vs-   1.75  
+RQ	Vs+ Vs- 475
+
+*FREQUENCY SHAPING*
+E2         028 0 027 0 1
+E3         030 0 029 0 1
+C3         0 024  3p  
+C4         0 017  3p  
+L1         025 028  2n  
+L2         030 026  2n  
+R10         024 025  25  
+R11         017 026  25  
+
+*OUTPUT BUFFER*
+Q1         Vs+ 012 013 NPN  50
+Q2         Vs- 015 016 PNP  50
+Q3         Vs+ 017 015 NPN  13
+Q4         Vs- 017 012 PNP  13
+Q5         Vs+ 019 020 NPN  50
+Q6         Vs- 021 023 PNP  50
+Q7         Vs+ 024 021 NPN  13
+Q8         Vs- 024 019 PNP  13
+I4         011 012 DC 2m  
+I5         015 014 DC 2m  
+I6         018 019 DC 2m  
+I7         021 022 DC 2m 
+R4         Vs- 014  100  
+R7         018 Vs+  100  
+R12         011 Vs+  100  
+R13         Vs- 022  100  
+R5         OUT- 013  1  
+R6         016 OUT-  1  
+R8         OUT+ 020  1  
+R9         023 OUT+  1  
+
+*CM CIRCUIT*
+R2         OUT+ 010  10k  
+R3         010 OUT-  10k  
+*C102 	OUT+ 010 100p
+*C103 	010 OUT- 100p
+R114       CM CM2  100 
+C114 	   CM2 0 2.3p
+R14         Vs+ CM2  50k  
+R15         Vs- CM2  50k  
+V3         043 CM2 3m
+F2         041 Vs- VF2 1
+VF2        040 Vs- 0V
+F1         037 Vs- VF1 1
+VF1        042 040 0V
+G1         042 Vs+ 010 043 .002
+*R100	042 0 1meg
+*C100 	042 0 10p
+
+.MODEL NPN_IN NPN KF=1E-11
+.MODEL PNP_IN PNP KF=1E-11
+.MODEL NPN NPN
+.MODEL PNP PNP
+.ENDS
+
+
+
+*$
+* THS4521
+*****************************************************************************
+* (C) Copyright 2009 Texas Instruments Incorporated. All rights reserved.    
+*****************************************************************************
+** This model is designed as an aid for customers of Texas Instruments.      
+** TI and its licensors and suppliers make no warranties, either expressed  
+** or implied, with respect to this model, including the warranties of      
+** merchantability or fitness for a particular purpose. The model is         
+** provided solely on an "as is" basis. The entire risk as to its quality    
+** and performance is with the customer                                      
+*****************************************************************************
+*
+* Released by: Analog eLab Design Center, Texas Instruments Inc.
+* Part: THS4521
+* VERY LOW POWER, NEGATIVE RAIL INPUT, RAIL-TO-RAIL OUTPUT,
+* FULLY DIFFERENTIAL AMPLIFIER
+* Date: 2009-04-02
+* Model Type: TINA
+* Simulator: TINA-TI
+* Simulator Version: 7.0.30.267 SF-TI
+* Datasheet: SBOS458B–DECEMBER 2008–REVISED MAY 2009
+*
+*****************************************************************************
+* 1st. version released on 2009-03-05
+* 2nd. version released on 2009-03-10 due to some problems for single suppy applications
+* 3rd. version: slew rate was improved to match the data sheet
+*
+*****************************************************************************
+*  
+* THS4521 SUBCIRCUIT
+* HIGH SPEED MONOLITHIC FULLY DIFFERENTIAL AMPLIFIER 
+* THIS MODEL SIMULATES TYPICAL VALUES FOR THE FOLLOWING:
+* OUTPUT VOLTAGE LIMIT, INPUT VOLTAGE NOISE, INPUT BIAS CURRENT,
+* TYPICAL VALUES FOR INPUT OFFSET VOLTAGE AND OFFSET BIAS CURRENT,
+* CURRENT DRAW FROM POWER SUPPLY
+* BANDWIDTH IS RIGHT IN GAIN OF +1V/V 
+* SLEW RATE IS CLOSE TO WHAT IS REPORTED IN THE DATA SHEET
+* THIS MODEL WILL NOT PROVIDE ACCURATE SIMULATION OF: 
+* CMRR AND PSRR, INPUT CURRENT NOISE, INPUT OFFSET, OPEN LOOP GAIN
+* source THS4521
+
+.SUBCKT THS4521  VIN+ VIN- VCC VEE VOUT- VOUT+ VOCM PD
+R_R35         VABS N2912111  1000  
+Q_Q15         VCC VOCM N2663591 TI_NPN 
+E_E13         N2662667 VEE_BUF PD VEE 1
+R_R31         0 VOUT-  570k  
+R_R25         VMID VZNEG  330k  
+I_I6          VCC_BUF S3_4_DRAIN DC 40nAdc  
+*
+V_V11         VIN+ N2663033 0.2m
+C_C18         0 VABS  1p  
+X_F2          IQBL IQBN VCC IBMAIN THS4521_F2 
+R_R27         VOUT+ N2663001  200  
+V_V2          VCC N2662967 1.05Vdc
+X_F3          IQB7 IQBE VCC VEE THS4521_F3 
+C_C10         VMID VZPOS  50f  
+X_F4          VCC N2663643 VZPOS VEE THS4521_F4 
+E_E15         N2667791 VEE VABS 0 0.102
+C_C3          VOUT+ N2663883  40f  
+C_C11         0 VOUT-  400f  
+C_C16         VEE N2663663  20f  
+G_G5          N2663643 N2663649 N2664363 N2663663 2e-3
+R_R16         VEE N2666929  3k  
+R_R29         VMID VZPOS  330k  
+R_R33         N2663893 VCC  10Meg  
+D_D15         N2664095 VOUT+ TI_D 
+G_G3          VOUT- 0 N2664423 0 4e-3
+C_C13         N2662789 N2663001  40p  
+D_D19         VCC N2663191 TI_D 
+E_E7          N2908369 0 VIN+ VIN- -1
+V_V13         N2663051 S2_4_SOURCE 0Vdc
+R_R19         VOCM VCC_BUF  100K  
+I_I5          VCC_BUF S1_2_DRAIN DC 80uAdc  
+R_R36         PD VCC_BUF  5Meg  
+R_R28         0 N2664423  400k  
+R_R24         0 VOUT+  570k  
+R_R34         VEE N2663893  10Meg  
+Q_Q5          VVG IBMAIN N2663191 TI_PNP 
+R_R3          N2663191 VCC  2.5k  
+R_R17         VEE N2664055  3k  
+X_F7          IQBE IQBF N2664487 N2663201 THS4521_F7 
+X_F6          IQBF IQBL VCC N2664109 THS4521_F6 
+E_E1          N2666025 0 VMID VZNEG 1
+X_S2          N2662667 VEE_BUF S1_2_DRAIN N2663051 THS4521_S2 
+X_F9          N2664217 VEE N2664451 VEE THS4521_F9 
+G_G4          N2664423 0 N2666951 0 1.5e-3
+X_F10         IBMAIN IQB1 VCC N2664451 THS4521_F10 
+D_D16         N2666569 VOUT- TI_D 
+R_R20         VEE_BUF VOCM  100K  
+D_D18         VCC N2662671 TI_D 
+V_V15         N2667449 S1_3_SOURCE 0Vdc
+C_C2          0 VOUT+  400f  
+Q_Q16         VCC N2662993 N2664363 TI_NPN 
+X_F5          N2663649 VEE VZNEG VEE THS4521_F5 
+X_S3          N2662667 VEE_BUF S3_4_DRAIN N2667449 THS4521_S3 
+E_E4          N2666951 0 VMID VZPOS 1
+R_R15         N2662595 VCC  3k  
+C_C17         N2663663 VCC  20f  
+R_R10         N2663887 VCC  2.5k  
+D_D17         VOUT- N2666413 TI_D 
+R_R14         N2667561 VCC  3k  
+X_F13         IQB1 IQB7 VCC N2664223 THS4521_F13 
+D_D20         VCC N2663887 TI_D 
+Q_Q9          VVG IBMAIN N2663887 TI_PNP 
+D_D14         VOUT+ N2662967 TI_D 
+G_G2          VOUT+ 0 N2663883 0 4e-3
+X_S1          N2666021 VEE_BUF S1_2_DRAIN N2666129 THS4521_S1 
+Q_Q23         N2662993 N2664487 N2662595 TI_PNP 
+*V_V17        N2664451 VZNEG DC 0 AC 0 0
+R_V17         N2664451 VZNEG 1e-3
+Q_Q14         VEE VOCM N2662993 TI_PNP 
+Q_Q22         N2664487 N2664487 N2667561 TI_PNP 
+X_S4          N2666021 VEE_BUF S3_4_DRAIN N2665745 THS4521_S4 
+Q_Q1          N2664255 N2663033 N2662807 TI_PNP 
+V_V4          N2666569 VEE 1.05Vdc
+E_E5          VREF 0 N2663893 0 1
+C_C9          VOUT- VZPOS  2.7p  
+C_C1          0 N2663883  100f  
+E_E12         N2666021 VEE_BUF VCC PD 1
+G_G1          N2663883 0 N2666025 0 1.5e-3
+V_V6          VVG N2662807 100mVdc
+V_V5          VCC N2666413 1.05Vdc
+R_R21         N2663663 VOUT+  100K  
+Q_Q18         N2663201 N2663201 N2666929 TI_NPN 
+X_F8          N2664255 VEE N2664223 VEE THS4521_F8
+* 
+Q_Q2          N2664217 VIN- N2662731 TI_PNP 
+E_E6          N2855373 0 VIN+ VIN- 1
+Q_Q8          IBMAIN IBMAIN N2662671 TI_PNP 
+Q_Q19         N2663591 N2663201 N2664055 TI_NPN 
+E_E14         VMID VEE VCC VEE 0.5
+Q_Q24         N2664109 N2664109 N2667791 TI_NPN 
+R_R22         VOUT- N2663663  100K  
+C_C6          VOUT+ VZNEG  2.7p  
+*V_V18        N2664223 VZPOS DC 0 AC 0 0
+R_V18         N2664223 VZPOS 1e-3
+
+X_S6          N2908369 0 N2908369 N2912111 THS4521_S6 
+C_C7          0 N2664423  100f  
+Q_Q25         IBMAIN N2664109 VEE TI_NPN 
+E_E11         VEE_BUF 0 VEE 0 1
+X_F1          S2_4_SOURCE VEE_BUF IQBN VEE THS4521_F1 
+V_V9          S1_3_SOURCE VEE_BUF 0Vdc
+V_V7          VVG N2662731 100mVdc
+V_V12         N2666129 S1_3_SOURCE 0Vdc
+C_C4          VMID VZNEG  50f  
+R_R6          N2662671 VCC  2.5k  
+V_V3          N2664095 VEE 1.05Vdc
+C_C8          VOUT- N2664423  40f  
+X_S5          N2855373 0 N2855373 N2912111 THS4521_S5 
+R_R23         0 N2663883  400k  
+R_R30         VOUT- N2662789  200  
+V_V14         N2665745 S2_4_SOURCE 0Vdc
+E_E10         VCC_BUF 0 VCC 0 1
+Q_Q17         VEE N2663591 N2664363 TI_PNP 
+
+.MODEL TI_NPN NPN( BF=150 VA=120 RB=190 RE=20 TF=200E-15 CJC=100E-15 CJE=100E-15 KF=5.3E-15 )
+
+.MODEL TI_PNP PNP( BF=150 VA=120 RB=440 RE=20 TF=200E-15 CJC=100E-15 CJE=100E-15 KF=8.8E-15 )
+
+.MODEL TI_D D( IS=1.0e-13 VJ=0.4 CJO=600E-15 )
+
+.ENDS THS4521_Model 
+
+.subckt THS4521_F2 1 2 3 4  
+F_F2         3 4 VF_F2 1
+VF_F2         1 2 0V
+.ends THS4521_F2
+
+.subckt THS4521_F3 1 2 3 4  
+F_F3         3 4 VF_F3 2
+VF_F3         1 2 0V
+.ends THS4521_F3
+
+.subckt THS4521_F4 1 2 3 4  
+F_F4         3 4 VF_F4 1
+VF_F4         1 2 0V
+.ends THS4521_F4
+
+.subckt THS4521_F7 1 2 3 4  
+F_F7         3 4 VF_F7 1.2
+VF_F7         1 2 0V
+.ends THS4521_F7
+
+.subckt THS4521_F6 1 2 3 4  
+F_F6         3 4 VF_F6 1
+VF_F6         1 2 0V
+.ends THS4521_F6
+
+.subckt THS4521_S2 1 2 3 4  
+S_S2         3 4 1 2 _S2
+RS_S2         1 2 1G
+.MODEL         _S2 VSWITCH Roff=1e6 Ron=1.0 VH=0.3V VT=1.0V TD=0
+.ends THS4521_S2
+
+.subckt THS4521_F9 1 2 3 4  
+F_F9         3 4 VF_F9 1
+VF_F9         1 2 0V
+.ends THS4521_F9
+
+.subckt THS4521_F10 1 2 3 4  
+F_F10         3 4 VF_F10 1
+VF_F10         1 2 0V
+.ends THS4521_F10
+
+.subckt THS4521_F5 1 2 3 4  
+F_F5         3 4 VF_F5 1
+VF_F5         1 2 0V
+.ends THS4521_F5
+
+.subckt THS4521_S3 1 2 3 4  
+S_S3         3 4 1 2 _S3
+RS_S3         1 2 1G
+.MODEL         _S3 VSWITCH Roff=1e6 Ron=1.0 VH=0.3V VT=1.0V TD=0
+.ends THS4521_S3
+
+.subckt THS4521_F13 1 2 3 4  
+F_F13         3 4 VF_F13 1
+VF_F13         1 2 0V
+.ends THS4521_F13
+
+.subckt THS4521_S1 1 2 3 4  
+S_S1         3 4 1 2 _S1
+RS_S1         1 2 1G
+.MODEL         _S1 VSWITCH Roff=1e6 Ron=1.0 VH=0.3V VT=1.0V TD=0
+.ends THS4521_S1
+
+.subckt THS4521_S4 1 2 3 4  
+S_S4         3 4 1 2 _S4
+RS_S4         1 2 1G
+.MODEL         _S4 VSWITCH Roff=1e6 Ron=1.0 VH=0.3V VT=1.0V TD=0
+.ends THS4521_S4
+
+.subckt THS4521_F8 1 2 3 4  
+F_F8         3 4 VF_F8 1
+VF_F8         1 2 0V
+.ends THS4521_F8
+
+.subckt THS4521_S6 1 2 3 4  
+S_S6         3 4 1 2 _S6
+RS_S6         1 2 1G
+.MODEL         _S6 VSWITCH Roff=1e6 Ron=1.0 Voff=0.0V Von=1.0e-5
+.ends THS4521_S6
+
+.subckt THS4521_F1 1 2 3 4  
+F_F1         3 4 VF_F1 1
+VF_F1         1 2 0V
+.ends THS4521_F1
+
+.subckt THS4521_S5 1 2 3 4  
+S_S5         3 4 1 2 _S5
+RS_S5         1 2 1G
+.MODEL         _S5 VSWITCH Roff=1e6 Ron=1.0 Voff=0.0V Von=1.0e-5
+.ends THS4521_S5
+* THS4508 
+* WIDEBAND, LOW NOISE, LOW DISTORTION FULLY DIFFERENTIAL AMPLIFIER
+*
+*****************************************************************************
+* (C) Copyright 2009 Texas Instruments Incorporated. All rights reserved.    
+*****************************************************************************
+** This model is designed as an aid for customers of Texas Instruments.      
+** TI and its licensors and suppliers make no warranties, either expressed   
+** or implied, with respect to this model, including the warranties of       
+** merchantability or fitness for a particular purpose. The model is         
+** provided solely on an "as is" basis. The entire risk as to its quality    
+** and performance is with the customer                                      
+*****************************************************************************
+*
+* Released by: Analog eLab Design Center, Texas Instruments Inc.
+* Part:        THS4508
+* WRITTEN:     01-23-06
+* Model Type:  TINA
+* Simulator:   Version 7.0.80.40 SF
+* Revision:    A
+* Datasheet:   SLAS459E–SEPTEMBER 2005–REVISED SEPTEMBER 2008
+*
+*****************************************************************************
+*
+* THIS MODEL SIMULATES TYPICAL VALUES FOR THE FOLLOWING:
+* FREQUENCY RESPONSE OF THE MAIN DIFFERENTIAL AMP, 
+* OUTPUT VOLTAGE LIMIT   
+* INPUT VOLTAGE NOISE, INPUT CURRENT NOISE
+* INPUT BIAS CURRENT, INPUT OFFSET VOLTAGE   
+* CM SET POINT, CM GAIN, CM OFFSET, CM BANDWIDTH
+* 
+* THIS MODEL WILL NOT PROVIDE ACCURATE SIMULATION OF:  
+* OUTPUT LOADING EFFECTS, SLEW RATE, SETTLING TIME
+* OUTPUT IMPEDANCE, DISTORTION 
+* INPUT OFFSET vs INPUT COMMON-MODE VOLTAGE
+* CMRR AND PSRR
+
+* IN PSPICE THIS MODEL WILL NOT CONVERGE IN TRANSIENT ANALYSIS USING PULSES THAT 
+* CAUSE GREATER THAN 4000V/us SLEW RATE
+
+*$
+.SUBCKT THS4508 IN+ IN- Vs+ Vs- OUT- OUT+ CM	
+
+*Level Shift Input	
+QLS+	   NCQLS+ 001 NEQLS+ PNP 2.5
+QLS-	   NCQLS- IN- NEQLS- PNP  2.5
+ILs+       NILs+ INs+ 500u	
+ILs-	   NILs- INs- 500u
+QDLS+C	   NCQLS+ NCQLS+ Vs- NPN  2.5 
+QDLS-C	   NCQLS- NCQLS- Vs- NPN  2.5 
+QDLS+E	   INs+ INs+ NEQLS+ NPN  2.5 
+QDLS-E	   INs- INs- NEQLS- NPN  2.5 
+RLs+	   Vs+ NILs+ 500
+RLs-	   Vs- NILs- 500
+
+*INPUT*	
+Q9          Vs- INs+ 005 PNP_IN  2.5	
+Q10         Vs- INs- 031 PNP_IN  2.505
+Q11         Vs+ INs- 006 NPN_IN  2.5
+Q12         Vs+ INs+ 002 NPN_IN  2.495
+
+Q19         039 005 008 NPN  5.198
+Q20         038 031 009 NPN  5
+Q21         033 006 009 PNP  5.198
+Q22         035 002 008 PNP  5
+R1          009 008 90 
+VI1          002 003 DC 0.69995  
+VI2          004 005 DC 0.701  
+VI3          006 007 DC 0.701  
+VI10         036 031 DC 0.70005  
+R20         036 Vs+  2.7k  
+R21         004 Vs+  2.7k  
+R22         Vs- 003  2.7k  
+R23         Vs- 007  2.7k  	
+C1          0 001  0.3p  	
+C2          0 IN-  0.3p  	
+V1          001 IN+ 000u	
+IB+	    IN+ 0 13u
+IB-	    IN- 0 13u
+
+*HIGH Z NODE*	
+Q23         041 041 039 PNP  5	
+Q24         027 041 038 PNP  5	
+Q17         037 037 038 PNP  5	
+Q18         029 037 039 PNP  5	
+Q15         032 032 033 NPN  5	
+Q16         034 034 035 NPN  5	
+Q14         029 032 035 NPN  5	
+Q13         027 034 033 NPN  5	
+I8         Vs+ 032 DC 750u  
+I9         Vs+ 034 DC 750u  
+I11         037 Vs- DC 750u  
+I12         041 Vs- DC 750u  
+R30         029 027  1meg 
+C5         029 027  0.45p  
+R16         038 Vs+  500  
+R17         039 Vs+  500  
+R18         038 Vs+  500  
+R19         039 Vs+  500  
+R24         Vs- 035  500  
+R25         Vs- 033  500  
+R26         Vs- 035  500  	
+R27         Vs- 033  500  	
+
+*VOLTAGE LIMIT*	
+Q116         027 027 128 NPN  5	
+V116         Vs+ 128   1.75 	
+Q118         027 027 138 PNP  5	
+V118         138 Vs-   1.75  	
+Q216         029 029 228 NPN  5	
+V216         Vs+ 228   1.75 	
+Q218         029 029 238 PNP  5	
+V218         238 Vs-   1.75  	
+RQ	Vs+ Vs- 1000
+
+*FREQUENCY SHAPING*	
+E2         028 0 027 0 1	
+E3         030 0 029 0 1
+C3         0 024  3p  
+C4         0 017  3p  
+L1         025 028  2n  
+L2         030 026  2n  
+R10         024 025  25  
+R11         017 026  25  
+
+*OUTPUT BUFFER*
+Q1         Vs+ 012 013 NPN  50
+Q2         Vs- 015 016 PNP  50
+Q3         Vs+ 017 015 NPN  13
+Q4         Vs- 017 012 PNP  13
+Q5         Vs+ 019 020 NPN  50
+Q6         Vs- 021 023 PNP  50
+Q7         Vs+ 024 021 NPN  13
+Q8         Vs- 024 019 PNP  13
+I4         011 012 DC 2m  
+I5         015 014 DC 2m  
+I6         018 019 DC 2m  
+I7         021 022 DC 2m  
+R4         Vs- 014  100  
+R7         018 Vs+  100  
+R12         011 Vs+  100  
+R13         Vs- 022  100  
+R5         OUT- 013  1  
+R6         016 OUT-  1  
+R8         OUT+ 020  1  
+R9         023 OUT+  1  
+
+*CM CIRCUIT*
+R2         OUT+ 010  10k  
+R3         010 OUT-  10k  	
+*C102 	OUT+ 010 100p
+*C103 	010 OUT- 100p
+R114       CM CM2  100 	
+C114 	   CM2 0 2.3p
+R14         Vs+ CM2  50k  	
+R15         Vs- CM2  50k  	
+V3         043 CM2 5m	
+F2         041 Vs- VF2 1	
+VF2        040 Vs- 0V	
+F1         037 Vs- VF1 1	
+VF1        042 040 0V	
+G1         042 Vs+ 010 043 .002	
+*R100	042 0 1meg
+*C100 	042 0 10p
+
+.MODEL NPN_IN NPN KF=1E-11
+.MODEL PNP_IN PNP KF=1E-11
+.MODEL NPN NPN
+.MODEL PNP PNP
+.ENDS
+*
+*
+*$
+
+* THS4511
+* WIDEBAND, LOW-NOISE, LOW DISTORTION, FULLY DIFFERENTIAL AMPLIFIER
+*
+*****************************************************************************
+* (C) Copyright 2009 Texas Instruments Incorporated. All rights reserved.    
+*****************************************************************************
+** This model is designed as an aid for customers of Texas Instruments.      
+** TI and its licensors and suppliers make no warranties, either expressed   
+** or implied, with respect to this model, including the warranties of       
+** merchantability or fitness for a particular purpose. The model is         
+** provided solely on an "as is" basis. The entire risk as to its quality    
+** and performance is with the customer                                      
+*****************************************************************************
+*
+* Released by: Analog eLab Design Center, Texas Instruments Inc.
+* Part:        THS4511
+* Written:     01-24-06
+* Model Type:  TINA
+* Simulator:   Version 7.0.80.40 SF
+* Revision:    A
+* Datasheet:   SLOS471D–SEPTEMBER 2005–REVISED MAY 2007
+*
+*****************************************************************************
+*
+* THIS MODEL SIMULATES TYPICAL VALUES FOR THE FOLLOWING:
+* FREQUENCY RESPONSE OF THE MAIN DIFFERENTIAL AMP, OUTPUT VOLTAGE LIMIT,   "
+* INPUT VOLTAGE NOISE, INPUT BIAS CURRENT, INPUT OFFSET VOLTAGE, CM SET POINT, 
+* OFFSET, AND BANDWIDTH"
+* THIS MODEL WILL NOT PROVIDE ACCURATE SIMULATION OF:  OUTPUT LOADING EFFECTS, 
+* SLEW RATE, SETTLING TIME, OUTPUT IMPEDANCE, INPUT CURRENT NOISE, DISTORTION,
+* INPUT OFFSET vs INPUT COMMON-MODE VOLTAGE, CMRR AND PSRR"
+* IN PSPICE THIS MODEL WILL NOT CONVERGE IN TRANSIENT ANALYSIS USING PULSES THAT 
+* CAUSE GREATER THAN 4000V/us SLEW RATE
+
+*$
+.SUBCKT THS4511 IN+ IN- Vs+ Vs- OUT- OUT+ CM	
+
+*Level Shift Input	
+QLS+	   NCQLS+ 001 NEQLS+ PNP 2.5
+QLS-	   NCQLS- IN- NEQLS- PNP  2.5
+ILs+       NILs+ INs+ 500u	
+ILs-	   NILs- INs- 500u
+QDLS+C	   NCQLS+ NCQLS+ Vs- NPN  2.5 
+QDLS-C	   NCQLS- NCQLS- Vs- NPN  2.5 
+QDLS+E	   INs+ INs+ NEQLS+ NPN  2.5 
+QDLS-E	   INs- INs- NEQLS- NPN  2.5 
+RLs+	   Vs+ NILs+ 500
+RLs-	   Vs- NILs- 500
+
+*INPUT*	
+Q9          Vs- INs+ 005 PNP_IN  2.5	
+Q10         Vs- INs- 031 PNP_IN  2.505
+Q11         Vs+ INs- 006 NPN_IN  2.5
+Q12         Vs+ INs+ 002 NPN_IN  2.495
+
+Q19         039 005 008 NPN  5.198
+Q20         038 031 009 NPN  5
+Q21         033 006 009 PNP  5.198
+Q22         035 002 008 PNP  5
+*R1          009 008 225 
+R1          009 008 90 
+VI1          002 003 DC 0.69995  
+VI2          004 005 DC 0.701  
+VI3          006 007 DC 0.701  
+VI10         036 031 DC 0.70005  
+R20         036 Vs+  2.7k  
+R21         004 Vs+  2.7k  
+R22         Vs- 003  2.7k  
+R23         Vs- 007  2.7k  	
+C1          0 001  0.3p  	
+C2          0 IN-  0.3p  	
+V1          001 IN+ 000u	
+IB+	    IN+ 0 13u
+IB-	    IN- 0 13u
+
+*HIGH Z NODE*	
+Q23         041 041 039 PNP  5	
+Q24         027 041 038 PNP  5	
+Q17         037 037 038 PNP  5	
+Q18         029 037 039 PNP  5	
+Q15         032 032 033 NPN  5	
+Q16         034 034 035 NPN  5	
+Q14         029 032 035 NPN  5	
+Q13         027 034 033 NPN  5	
+I8         Vs+ 032 DC 750u  
+I9         Vs+ 034 DC 750u  
+I11         037 Vs- DC 750u  
+I12         041 Vs- DC 750u   
+R30         029 027  0.5meg 
+C5         029 027  0.7p  
+R16         038 Vs+  500  
+R17         039 Vs+  500  
+R18         038 Vs+  500  
+R19         039 Vs+  500  
+R24         Vs- 035  500  
+R25         Vs- 033  500  
+R26         Vs- 035  500  	
+R27         Vs- 033  500  	
+
+*VOLTAGE LIMIT*	
+Q116         027 027 128 NPN  5	
+V116         Vs+ 128   1.75 	
+Q118         027 027 138 PNP  5	
+V118         138 Vs-   1.75  	
+Q216         029 029 228 NPN  5	
+V216         Vs+ 228   1.75 	
+Q218         029 029 238 PNP  5	
+V218         238 Vs-   1.75  	
+RQ	Vs+ Vs- 1000
+
+*FREQUENCY SHAPING*	
+E2         028 0 027 0 1	
+E3         030 0 029 0 1
+C3         0 024  3p  
+C4         0 017  3p  
+L1         025 028  2n  
+L2         030 026  2n  
+R10         024 025  25  
+R11         017 026  25  
+
+*OUTPUT BUFFER*
+Q1         Vs+ 012 013 NPN  50
+Q2         Vs- 015 016 PNP  50
+Q3         Vs+ 017 015 NPN  13
+Q4         Vs- 017 012 PNP  13
+Q5         Vs+ 019 020 NPN  50
+Q6         Vs- 021 023 PNP  50
+Q7         Vs+ 024 021 NPN  13
+Q8         Vs- 024 019 PNP  13
+I4         011 012 DC 2m  
+I5         015 014 DC 2m  
+I6         018 019 DC 2m  
+I7         021 022 DC 2m  
+R4         Vs- 014  100  
+R7         018 Vs+  100  
+R12         011 Vs+  100  
+R13         Vs- 022  100  
+R5         OUT- 013  1  
+R6         016 OUT-  1  
+R8         OUT+ 020  1  
+R9         023 OUT+  1  
+
+*CM CIRCUIT*
+R2         OUT+ 010  10k  
+R3         010 OUT-  10k  	
+*C102 	OUT+ 010 100p
+*C103 	010 OUT- 100p
+R114       CM CM2  100 	
+C114 	   CM2 0 2.3p
+R14         Vs+ CM2  50k  	
+R15         Vs- CM2  50k  	
+V3         043 CM2 3m	
+F2         041 Vs- VF2 1	
+VF2        040 Vs- 0V	
+F1         037 Vs- VF1 1	
+VF1        042 040 0V	
+G1         042 Vs+ 010 043 .002	
+*R100	042 0 1meg
+*C100 	042 0 10p
+
+Ix	Vs+ Vs- 1.2m
+
+.MODEL NPN_IN NPN KF=1E-11
+.MODEL PNP_IN PNP KF=1E-11
+.MODEL NPN NPN
+.MODEL PNP PNP
+.ENDS
+*
+*
+*$

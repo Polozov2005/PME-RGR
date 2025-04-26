@@ -1,0 +1,23 @@
+Texas Instruments
+SUBCKT TPS61000        EN VBAT GND LBI SW FB VOUT LBO COMP  TinaICs:TPS61000  [SMPS]  ; No processable comment
+SUBCKT TPS61001        EN VBAT GND LBI SW VOUT LBO COMP  TinaICs:TPS61001_6  [SMPS]  ; No processable comment
+SUBCKT TPS61002        EN VBAT GND LBI SW VOUT LBO COMP  TinaICs:TPS61001_6  [SMPS] ; No processable comment
+SUBCKT TPS61003        EN VBAT GND LBI SW VOUT LBO COMP  TinaICs:TPS61001_6  [SMPS] ; No processable comment
+SUBCKT TPS61004        EN VBAT GND LBI SW VOUT LBO COMP  TinaICs:TPS61001_6  [SMPS] ; No processable comment
+SUBCKT TPS61005        EN VBAT GND LBI SW VOUT LBO COMP  TinaICs:TPS61001_6  [SMPS] ; No processable comment
+SUBCKT TPS61006        EN VBAT GND LBI SW VOUT LBO COMP  TinaICs:TPS61001_6  [SMPS] ; No processable comment
+SUBCKT TPS61007        EN VBAT GND LBI SW FB VOUT LBO COMP FBGND  TinaICs:TPS61007  [SMPS]  ; No processable comment
+SUBCKT TPS6100X        EN VBAT GND LBI SW FB VOUT LBO COMP  <AutoShape>  [Internal]  ; No processable comment
+SUBCKT TPS61000_AVG    EN VBAT GND LBI SW FB VOUT LBO COMP  TinaICs:TPS61000  [SMPS]  ; No processable comment
+SUBCKT Current_Sense__Current_Limit__Slope_Compensation_0 CSOut ISlope CS CSOn GND  <AutoShape>  [Internal]  ; No processable comment
+SUBCKT UVLO_0          GND VBAT UVLO  <AutoShape>  [Internal]  ; No processable comment
+SUBCKT Control_Logic__Oscillator__Gate_Drive_0 EN UVLO CSOn CSCOMP DRV VDD ISlope Sleep SW VBAT ShDown IEN GND DRV_  <AutoShape>  [Internal]  ; No processable comment
+SUBCKT VCO_0            INP INM GND OUTSIN OUTTRI OUTSQR   <AutoShape>  [Internal]  ; No processable comment
+SUBCKT VDUTY_0          SHDOWN VBAT VOUT VCOMP GND   <AutoShape>  [Internal]  ; No processable comment
+SUBCKT GAIN_STAGE_0    In+ In- Out Gnd  <AutoShape>  [Internal]
+SUBCKT DRVMOS_0        D G S TinaICs:<NMOSE> [Internal]
+SUBCKT Control_Logic__Oscillator__Gate_Drive_Avg EN UVLO VDD VBAT ShDown IEN GND  <AutoShape>  [Internal]  ; No processable comment
+SUBCKT AVG_SW_MOD_CCM_DCM1  TP TM DC DA DCP DCM    <AutoShape>  [Internal]  ; No processable comment
+SUBCKT DIV             VNP VNM VDP VDM VOP VOM    <AutoShape>  [Internal]  ; No processable comment
+SUBCKT CURRPROGMODE     CONT CURR V1 V2 D G DD D2 M1 M2   <AutoShape>  [Internal]  ; No processable comment
+LOCKED 00w=

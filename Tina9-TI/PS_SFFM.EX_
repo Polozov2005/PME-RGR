@@ -1,0 +1,9 @@
+{PS_SFFM template for PSpice import}
+function Signal(t);
+begin
+  vampl:=@;
+  fc:=@;
+  mod:=@;
+  fm:=@;
+  Signal:=vampl*sin(2*pi*fc*t+mod*sin(2*pi*fm*t));
+end;

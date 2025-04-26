@@ -1,0 +1,6 @@
+Texas Instruments
+SUBCKT UCC28C42_STARTUP  COMP   FB   CS   RTCT    GND    OUT   VDD   VREF  Texas:UCC28C42_STARTUP  [SMPS]  ; No processable comment
+LOCKED NlQ=
+
+
+

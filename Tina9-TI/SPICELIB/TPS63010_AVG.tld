@@ -1,0 +1,3 @@
+Texas Instruments
+SUBCKT TPS63010_AVG    L1 VIN FB VOUT L2  Texas:TPS63010_AVG  [SMPS]  ; No processable comment
+LOCKED bJg=

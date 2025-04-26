@@ -1,0 +1,3 @@
+Texas Instruments
+subckt PGA870 INP INN OUTN OUTP VCC VEE VMID B0 B1 B2 B3 B4 B5 Texas:PGA870  [Misc]  ; No comment
+LOCKED mRg=

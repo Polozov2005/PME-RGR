@@ -1,0 +1,4 @@
+Texas Instruments
+SUBCKT BUF634          In+ V+ V- Out  Texas:Buffer4-TI  [Buffer]
+LOCKED n4A=
+

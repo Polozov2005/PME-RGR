@@ -1,0 +1,26 @@
+Texas Instruments
+SUBCKT TPS51117        ENPSV TON VOUT V5FILT VFB PGOOD GND VBST DRVH LL TRIP V5DRV DRVL PGND TEXAS:TPS51117  [SMPS]                        
+SUBCKT NSW             D G S TinaICs:<NMOSE> [Internal]
+SUBCKT PSW             D G S TinaICs:<NMOSE> [Internal]
+SUBCKT INV             A Y DVDD DVSS   <AutoShape>  [Internal]  ; No processable comment
+SUBCKT BUF             A Y DVDD DVSS   <AutoShape>  [Internal]  ; No processable comment
+SUBCKT NA2             A B Y DVDD DVSS   <AutoShape>  [Internal]  ; No processable comment
+SUBCKT AN2             A B Y DVDD DVSS   <AutoShape>  [Internal]  ; No processable comment
+SUBCKT NO2             A B Y DVDD DVSS   <AutoShape>  [Internal]  ; No processable comment
+SUBCKT OR2             A B Y DVDD DVSS   <AutoShape>  [Internal]  ; No processable comment
+SUBCKT NA3             A B C Y DVDD DVSS   <AutoShape>  [Internal]  ; No processable comment
+SUBCKT AN3             A B C Y DVDD DVSS   <AutoShape>  [Internal]  ; No processable comment
+SUBCKT NO3             A B C Y DVDD DVSS   <AutoShape>  [Internal]  ; No processable comment
+SUBCKT OR3             A B C Y DVDD DVSS   <AutoShape>  Internal]  ; No processable comment
+SUBCKT OR4             A B C D Y DVDD DVSS   <AutoShape>  [Internal]  ; No processable comment
+SUBCKT LLDLY           A Y DVDD DVSS   <AutoShape>  [Internal]  ; No processable comment
+SUBCKT HHDLY           A Y DVDD DVSS   <AutoShape>  [Internal]  ; No processable comment
+SUBCKT NA3FF           SB1 SB2 RB1 RB2 Q QB DVDD DVSS  <AutoShape>  [Internal]  ; No processable comment
+SUBCKT DRVR            IN OUT DVDD DVSS   <AutoShape>  [Internal]  ; No processable comment
+SUBCKT LVL             IN OUT DVDD DVSS VBST SWN  <AutoShape>  [Internal]  ; No processable comment
+LOCKED T+Y=
+
+
+
+
+

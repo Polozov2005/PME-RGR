@@ -1,0 +1,4 @@
+Texas Instruments
+SUBCKT TPS40193_AVG    COMP BP5 FB VIN SW  Texas:TPS40193_AVG  [SMPS]  ; No processable comment
+LOCKED n6w=
+

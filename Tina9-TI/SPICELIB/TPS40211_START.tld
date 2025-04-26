@@ -1,0 +1,4 @@
+Texas Instruments
+SUBCKT TPS40211_STARTUP DIS VIN RC FB SS GDRV BP COMP GND ISNS  Texas:TPS40211  [SMPS]  ; No processable comment
+LOCKED dOA=
+

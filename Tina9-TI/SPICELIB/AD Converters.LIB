@@ -1,0 +1,179 @@
+.SUBCKT ADS61XX_HS INP INM VCM GND CLKP CLKM
+V5          7 GND 5
+V3          VCM GND 1.5
+R11         8 7 5K 
+SW1         8 GND 9 GND  S_VSWITCH_1
+R9          GND 10 100 
+C7          GND 11 1P IC=0 
+C6          GND 12 1P IC=0 
+C5          VCM GND 2P IC=0 
+C4          11 12 2P IC=0 
+C3          13 14 1P IC=0 
+C1          10 15 1P IC=0 
+R8          11 VCM 5K 
+R7          VCM 12 5K 
+R6          GND 13 100 
+R5          14 11 20 
+R4          15 12 20 
+L2          CLKM 14 1N IC=0 
+L1          CLKP 15 1N IC=0 
+EClock      9 GND 12 11  1
+CNoname     16 17 2P IC=0 
+CNoname_2   18 19 2P IC=0 
+Switch      19 17 8 GND  S_VSWITCH_2
+Sampling    16 20 8 GND  S_VSWITCH_3
+Sampling_2  18 21 8 GND  S_VSWITCH_4
+CNoname_3   GND 20 500F IC=0 
+CNoname_4   GND 21 500F IC=0 
+CNoname_5   20 21 250F IC=0 
+CNoname_6   22 GND 3P IC=0 
+CNoname_7   GND 23 3P IC=0 
+RNoname     20 22 100 
+RNoname_2   23 21 100 
+RNoname_3   24 20 10 
+RNoname_4   GND 25 200 
+RNoname_5   GND 26 200 
+RNoname_6   27 21 10 
+CNoname_8   25 24 1P IC=0 
+CNoname_9   26 27 1P IC=0 
+LNoname     INM 24 1N IC=0 
+LNoname_2   INP 27 1N IC=0 
+.MODEL S_VSWITCH_1 VSWITCH (RON=1G ROFF=1 VON=1M VOFF=0)
+.MODEL S_VSWITCH_2 VSWITCH (RON=10 ROFF=1G VON=1 VOFF=0)
+.MODEL S_VSWITCH_3 VSWITCH (RON=15 ROFF=1G VON=1 VOFF=0)
+.MODEL S_VSWITCH_4 VSWITCH (RON=15 ROFF=1G VON=1 VOFF=0)
+.ENDS
+.SUBCKT ADS62C17 INP INM VCM GND CLKP CLKM
+V2          7 GND 5
+V3          VCM GND 1.5
+R20         8 7 5K 
+SW2         8 GND 9 GND  S_VSWITCH_1
+R19         GND 10 100 
+C21         GND 11 1P IC=0 
+C20         GND 12 1P IC=0 
+C19         VCM GND 2P IC=0 
+C18         11 12 2P IC=0 
+C17         13 14 1P IC=0 
+C16         10 15 1P IC=0 
+R18         11 VCM 5K 
+R17         VCM 12 5K 
+R16         GND 13 100 
+R15         14 11 20 
+R14         15 12 20 
+L6          CLKM 14 2N IC=0 
+L5          CLKP 15 2N IC=0 
+EClock      9 GND 12 11  1
+C15         16 17 2P IC=0 
+C14         18 19 2P IC=0 
+Switch      19 17 8 GND  S_VSWITCH_2
+Sampling    16 20 8 GND  S_VSWITCH_3
+Sampling_2  18 21 8 GND  S_VSWITCH_4
+C13         GND 20 500F IC=0 
+C12         GND 21 500F IC=0 
+C11         20 21 250F IC=0 
+C10         22 GND 3P IC=0 
+C9          GND 23 3P IC=0 
+R13         20 22 100 
+R12         23 21 100 
+R10         24 20 10 
+R3          GND 25 200 
+R2          GND 26 200 
+R1          27 21 10 
+C8          25 24 1P IC=0 
+C2          26 27 1P IC=0 
+L4          INM 24 2N IC=0 
+L3          INP 27 2N IC=0 
+.MODEL S_VSWITCH_1 VSWITCH (RON=1G ROFF=1 VON=1M VOFF=0)
+.MODEL S_VSWITCH_2 VSWITCH (RON=10 ROFF=1G VON=1 VOFF=0)
+.MODEL S_VSWITCH_3 VSWITCH (RON=15 ROFF=1G VON=1 VOFF=0)
+.MODEL S_VSWITCH_4 VSWITCH (RON=15 ROFF=1G VON=1 VOFF=0)
+.ENDS
+.SUBCKT ADS62PXX_HS INP INM VCM GND CLKP CLKM
+V5          7 GND 5
+V3          VCM GND 1.5
+R13         8 7 5K 
+SW1         8 GND 9 GND  S_VSWITCH_1
+R12         GND 10 100 
+C15         GND 11 1P IC=0 
+C14         GND 12 1P IC=0 
+C13         VCM GND 2P IC=0 
+C12         11 12 2P IC=0 
+C11         13 14 1P IC=0 
+C10         10 15 1P IC=0 
+R11         11 VCM 5K 
+R10         VCM 12 5K 
+R9          GND 13 100 
+R8          14 11 20 
+R7          15 12 20 
+L3          CLKM 14 2N IC=0 
+L2          CLKP 15 2N IC=0 
+EClock      9 GND 12 11  1
+C9          16 17 2P IC=0 
+C8          18 19 2P IC=0 
+Switch      19 17 8 GND  S_VSWITCH_2
+Sampling    16 20 8 GND  S_VSWITCH_3
+Sampling_2  18 21 8 GND  S_VSWITCH_4
+C7          GND 20 500F IC=0 
+C6          GND 21 500F IC=0 
+C5          20 21 250F IC=0 
+C4          22 GND 3P IC=0 
+C3          GND 23 3P IC=0 
+R6          20 22 100 
+R5          23 21 100 
+R4          24 20 10 
+R3          GND 25 200 
+R2          GND 26 200 
+R1          27 21 10 
+C2          25 24 1P IC=0 
+C1          26 27 1P IC=0 
+L1          INM 24 1N IC=0 
+LNoname     INP 27 1N IC=0 
+.MODEL S_VSWITCH_1 VSWITCH (RON=1G ROFF=1 VON=1M VOFF=0)
+.MODEL S_VSWITCH_2 VSWITCH (RON=10 ROFF=1G VON=1 VOFF=0)
+.MODEL S_VSWITCH_3 VSWITCH (RON=15 ROFF=1G VON=1 VOFF=0)
+.MODEL S_VSWITCH_4 VSWITCH (RON=15 ROFF=1G VON=1 VOFF=0)
+.ENDS
+.SUBCKT ADS62PXX INP INM VCM GND CLKP CLKM
+V2          7 GND 5
+V3          VCM GND 1.5
+R20         8 7 5K 
+SW2         8 GND 9 GND  S_VSWITCH_1
+R19         GND 10 100 
+C21         GND 11 1P IC=0 
+C20         GND 12 1P IC=0 
+C19         VCM GND 2P IC=0 
+C18         11 12 2P IC=0 
+C17         13 14 1P IC=0 
+C16         10 15 1P IC=0 
+R18         11 VCM 5K 
+R17         VCM 12 5K 
+R16         GND 13 100 
+R15         14 11 10 
+R14         15 12 10 
+L6          CLKM 14 2N IC=0 
+L5          CLKP 15 2N IC=0 
+EClock      9 GND 12 11  1
+C15         16 17 4P IC=0 
+C14         18 19 4P IC=0 
+Switch      19 17 8 GND  S_VSWITCH_2
+Sampling    16 20 8 GND  S_VSWITCH_3
+Sampling_2  18 21 8 GND  S_VSWITCH_4
+C13         GND 20 1P IC=0 
+C12         GND 21 1P IC=0 
+C11         20 21 800F IC=0 
+C9          22 23 2P IC=0 
+R13         20 22 50 
+R12         23 21 50 
+R10         24 20 25 
+R3          GND 25 100 
+R2          GND 26 100 
+R1          27 21 25 
+C8          25 24 1P IC=0 
+C2          26 27 1P IC=0 
+L4          INM 24 2N IC=0 
+L3          INP 27 2N IC=0 
+.MODEL S_VSWITCH_1 VSWITCH (RON=1G ROFF=1 VON=1M VOFF=0)
+.MODEL S_VSWITCH_2 VSWITCH (RON=10 ROFF=1G VON=1 VOFF=0)
+.MODEL S_VSWITCH_3 VSWITCH (RON=15 ROFF=1G VON=1 VOFF=0)
+.MODEL S_VSWITCH_4 VSWITCH (RON=15 ROFF=1G VON=1 VOFF=0)
+.ENDS

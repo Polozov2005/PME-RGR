@@ -1,0 +1,4 @@
+Texas Instruments
+SUBCKT TPS40007   BOOT COMP FB GND HDRV ILIM LDRV SS_SD SW VDD   Texas:TPS40007_TRANS  [SMPS]  ; No processable comment
+LOCKED x2w=
+

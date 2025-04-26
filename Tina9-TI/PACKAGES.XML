@@ -1,0 +1,12 @@
+﻿<Update>
+  <Info>
+    <Name>Tina-TI V9</Name>
+    <Latest_URL>http://focus.ti.com/en/download/aap/Tina/updateru.xml</Latest_URL>
+  </Info>
+  <PackageList>
+    <Package>
+      <Name>Tina-TI V9</Name>
+      <Version>9.3.50.40</Version>
+    </Package>
+  </PackageList>
+</Update>

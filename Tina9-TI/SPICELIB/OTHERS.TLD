@@ -1,0 +1,90 @@
+Texas Instruments
+SUBCKT DRV134          1 2 3 4 5 6 7 8  TEXAS:DRV134  [Misc]
+SUBCKT OP1             In+ In- V+ V- Out  <AutoShape>  [Internal]
+SUBCKT DRV135          1 2 3 4 5 6 7 8  TEXAS:DRV135  [Misc]
+SUBCKT OP2             In+ In- V+ V- Out  <AutoShape>  [Internal]
+SUBCKT IVC102M         1 2 3 4 5 6 9 10 11 12 13 14  TEXAS:IVC102  [Misc]
+SUBCKT OPA             In- In+ Out V- V+  <AutoShape>  [Internal]
+SUBCKT OPT101          VS IN VPD FEED VOUT COM  TEXAS:OPT101  [Misc]
+SUBCKT OPT301          8 2 1 3 5 4  TEXAS:OPT301  [Misc]
+SUBCKT OPAMP            1 2 3 4 5  <AutoShape>  [Internal]
+SUBCKT UAF42E          1 2 3 4 5 6 7 8 9 10 11 12 13 14  TEXAS:UAF42  [Misc]
+SUBCKT AMP_UAFE        In+ In- V+ V- Out  <AutoShape>  [Internal]
+SUBCKT OPA875         Ch0 Ch1 ENbar GND OUT SEL V+ V- TEXAS:OPA875  [Misc]
+SUBCKT VCA820_Model    +Vcc VG +Vin +Rg -Rg -Vin -Vcc Vref Out Gnd FB  Texas:VCA820_Model  [Misc]  ; No processable comment
+SUBCKT VCA82X_INPUT_BUFFER_U6_F1      1 2 3 4  <AutoShape>  [Internal]  ; No processable comment
+SUBCKT VCA82X_BIAS_U7_F8      1 2 3 4  <AutoShape>  [Internal]  ; No processable comment
+SUBCKT VCA82X_BIAS_U7_F1      1 2 3 4  <AutoShape>  [Internal]  ; No processable comment
+SUBCKT VCA82X_BIAS_U7_F6      1 2 3 4  <AutoShape>  [Internal]  ; No processable comment
+SUBCKT VCA82X_BIAS_U7_F3      1 2 3 4  <AutoShape>  [Internal]  ; No processable comment
+SUBCKT VCA82X_BIAS_U7_F4      1 2 3 4  <AutoShape>  [Internal]  ; No processable comment
+SUBCKT VCA82X_BIAS_U7_F2      1 2 3 4  <AutoShape>  [Internal]  ; No processable comment
+SUBCKT VCA82X_BIAS_U7_F7      1 2 3 4  <AutoShape>  [Internal]  ; No processable comment
+SUBCKT VCA82X_BIAS_U7_F5      1 2 3 4  <AutoShape>  [Internal]  ; No processable comment
+SUBCKT VCA820_2_OUTPUT_STAGE_U8_F1      1 2 3 4  <AutoShape>  [Internal]  ; No processable comment
+SUBCKT VCA821_Model +Vcc VG +Vin +Rg -Rg -Vin -Vcc Vref Out Gnd FB Texas:VCA821  [Misc]  ; No processable comment
+SUBCKT VCA82X_INPUT_BUFFER_U6_F1      1 2 3 4  <AutoShape>  [Internal]  ; No processable comment
+SUBCKT VCA82X_BIAS_U7_F8      1 2 3 4  <AutoShape>  [Internal]  ; No processable comment
+SUBCKT VCA82X_BIAS_U7_F1      1 2 3 4  <AutoShape>  [Internal]  ; No processable comment
+SUBCKT VCA82X_BIAS_U7_F6      1 2 3 4  <AutoShape>  [Internal]  ; No processable comment
+SUBCKT VCA82X_BIAS_U7_F3      1 2 3 4  <AutoShape>  [Internal]  ; No processable comment
+SUBCKT VCA82X_BIAS_U7_F4      1 2 3 4  <AutoShape>  [Internal]  ; No processable comment
+SUBCKT VCA82X_BIAS_U7_F2      1 2 3 4  <AutoShape>  [Internal]  ; No processable comment
+SUBCKT VCA82X_BIAS_U7_F7      1 2 3 4  <AutoShape>  [Internal]  ; No processable comment
+SUBCKT VCA82X_BIAS_U7_F5      1 2 3 4  <AutoShape>  [Internal]  ; No processable comment
+SUBCKT VCA821_4_OUTPUT_STAGE_U8_F1      1 2 3 4  <AutoShape>  [Internal]  ; No processable comment
+SUBCKT VCA822_Model    +Vcc VG +Vin +Rg -Rg -Vin -Vcc Vref Out Gnd FB  Texas:VCA822_Model  [Misc]  ; No processable comment
+SUBCKT VCA82X_BIAS_U5_F8      1 2 3 4  <AutoShape>  [Internal]  ; No processable comment
+SUBCKT VCA82X_BIAS_U5_F1      1 2 3 4  <AutoShape>  [Internal]  ; No processable comment
+SUBCKT VCA82X_BIAS_U5_F6      1 2 3 4  <AutoShape>  [Internal]  ; No processable comment
+SUBCKT VCA82X_BIAS_U5_F3      1 2 3 4  <AutoShape>  [Internal]  ; No processable comment
+SUBCKT VCA82X_BIAS_U5_F4      1 2 3 4  <AutoShape>  [Internal]  ; No processable comment
+SUBCKT VCA82X_BIAS_U5_F2      1 2 3 4  <AutoShape>  [Internal]  ; No processable comment
+SUBCKT VCA82X_BIAS_U5_F5      1 2 3 4  <AutoShape>  [Internal]  ; No processable comment
+SUBCKT VCA82X_INPUT_BUFFER_U6_F1      1 2 3 4  <AutoShape>  [Internal]  ; No processable comment
+SUBCKT VCA820_2_OUTPUT_STAGE_U8_F1      1 2 3 4  <AutoShape>  [Internal]  ; No processable comment
+SUBCKT VCA824_Model +Vcc VG +Vin +Rg -Rg -Vin -Vcc Vref Out Gnd FB Texas:VCA824  [Misc]  ; No processable comment
+SUBCKT VCA82X_BIAS_U5_F8      1 2 3 4  <AutoShape>  [Internal]  ; No processable comment
+SUBCKT VCA82X_BIAS_U5_F1      1 2 3 4  <AutoShape>  [Internal]  ; No processable comment
+SUBCKT VCA82X_BIAS_U5_F6      1 2 3 4  <AutoShape>  [Internal]  ; No processable comment
+SUBCKT VCA82X_BIAS_U5_F3      1 2 3 4  <AutoShape>  [Internal]  ; No processable comment
+SUBCKT VCA82X_BIAS_U5_F4      1 2 3 4  <AutoShape>  [Internal]  ; No processable comment
+SUBCKT VCA82X_BIAS_U5_F2      1 2 3 4  <AutoShape>  [Internal]  ; No processable comment
+SUBCKT VCA82X_BIAS_U5_F5      1 2 3 4  <AutoShape>  [Internal]  ; No processable comment
+SUBCKT VCA82X_INPUT_BUFFER_U6_F1      1 2 3 4  <AutoShape>  [Internal]  ; No processable comment
+SUBCKT VCA821_4_OUTPUT_STAGE_U8_F1      1 2 3 4  <AutoShape>  [Internal]  ; No processable
+SUBCKT DRV103          1 2 3 4 5 6 7 8 194 195  Texas:DRV103  [Misc]  ; No processable comment
+SUBCKT DRV104          1 2 3 4 5 6 8 10 11 12 13 14  Texas:DRV104  [Misc]  ; No processable comment
+SUBCKT LOG104          1 3 4 5 6 8  Texas:LOG104  [Misc]  ; No processable comment
+SUBCKT LA104 3 2 7 4 6 <AutoShape>  [Internal]
+SUBCKT LOG114          1 3 4 5 6 7 8 9 10 11 12 13 14 15 16  Texas:LOG114  [Misc]  ; No processable comment
+SUBCKT LOG114_Output_Clamp_Macro_0 Vin Vout Vpos Vneg <AutoShape>  [Internal]
+SUBCKT LOG114_Output_Clamp_Macro_1 Vin Vout Vpos Vneg <AutoShape>  [Internal]
+SUBCKT LOG114_Output_Clamp_Macro_2 Vin Vout Vpos Vneg <AutoShape>  [Internal]
+SUBCKT LOG114_Vref_Macro_0 Vin Gnd Vout <AutoShape>  [Internal]
+SUBCKT LOG114_Opamp_A5_Macro_0 Vinp Vinn Vout <AutoShape>  [Internal]
+SUBCKT LOG114_Opamp_A4_Macro_0 Vinp Vinn Vout <AutoShape>  [Internal]
+SUBCKT LOG114_Opamp_A3_Macro_0 Vinp Vinn Vout <AutoShape>  [Internal]
+SUBCKT LOG114_Opamp_A2_Macro_0 Vinp Vinn Vout <AutoShape>  [Internal]
+SUBCKT LOG114_Opamp_A1_Macro_0 Vinp Vinn Vout <AutoShape>  [Internal]
+SUBCKT IDEAL_COMPARATOR_0  VIN VOUT <AutoShape>  [Internal]
+SUBCKT REF3212     1 2 3 4 5 6  Texas:REF3212  [Misc]  ; No processable comment
+SUBCKT REF3220     1 2 3 4 5 6  Texas:REF3220  [Misc]  ; No processable comment
+SUBCKT REF3225     1 2 3 4 5 6  Texas:REF3225  [Misc]  ; No processable comment
+SUBCKT REF3230     1 2 3 4 5 6  Texas:REF3230  [Misc]  ; No processable comment
+SUBCKT REF3233     1 2 3 4 5 6  Texas:REF3233  [Misc]  ; No processable comment
+SUBCKT REF3240     1 2 3 4 5 6  Texas:REF3240  [Misc]  ; No processable comment
+SUBCKT REF3312         1 2 3  Texas:REF3312  [Misc]  ; No processable comment
+SUBCKT REF3318         1 2 3  Texas:REF3318  [Misc]  ; No processable comment
+SUBCKT REF3320         1 2 3  Texas:REF3320  [Misc]  ; No processable comment
+SUBCKT REF3325         1 2 3  Texas:REF3325  [Misc]  ; No processable comment
+SUBCKT REF3330         1 2 3  Texas:REF3330  [Misc]  ; No processable comment
+SUBCKT REF3333         1 2 3  Texas:REF3333  [Misc]  ; No processable comment
+SUBCKT REF5010         2 3 4 5 6  Texas:REF5010  [Misc]  ; No processable comment
+SUBCKT REF5020         2 3 4 5 6  Texas:REF5020  [Misc]  ; No processable comment
+SUBCKT REF5025         2 3 4 5 6  Texas:REF5025  [Misc]  ; No processable comment
+SUBCKT REF5030         2 3 4 5 6  Texas:REF5030  [Misc]  ; No processable comment
+SUBCKT REF5040         2 3 4 5 6  Texas:REF5040  [Misc]  ; No processable comment
+SUBCKT REF5045         2 3 4 5 6  Texas:REF5045  [Misc]  ; No processable comment
+SUBCKT REF5050         2 3 4 5 6  Texas:REF5050  [Misc]  ; No processable comment
+LOCKED Es0=

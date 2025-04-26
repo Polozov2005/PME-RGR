@@ -1,0 +1,29 @@
+Texas Instruments
+SUBCKT TPS51124H       EN1 VFB1 VO1 PGOOD1 DRVH1 DRVL1 LL1 TRIP1 TONSEL VBST1 V5IN V5FILT GND PGND1 TEXAS:TPS51124_dual  [SMPS]
+SUBCKT NSW             D G S TinaICs:<NMOSE> [Internal]
+SUBCKT PSW             D G S TinaICs:<NMOSE> [Internal]
+SUBCKT INV             A Y DVDD DVSS   <AutoShape>  [Internal]  ; No processable comment
+SUBCKT BUF             A Y DVDD DVSS   <AutoShape>  [Internal]  ; No processable comment
+SUBCKT NA2             A B Y DVDD DVSS   <AutoShape>  [Internal]  ; No processable comment
+SUBCKT AN2             A B Y DVDD DVSS   <AutoShape>  [Internal]  ; No processable comment
+SUBCKT NO2             A B Y DVDD DVSS   <AutoShape>  [Internal]  ; No processable comment
+SUBCKT OR2             A B Y DVDD DVSS   <AutoShape>  [Internal]  ; No processable comment
+SUBCKT NA3             A B C Y DVDD DVSS   <AutoShape>  [Internal]  ; No processable comment
+SUBCKT AN3             A B C Y DVDD DVSS   <AutoShape>  [Internal]  ; No processable comment
+SUBCKT NO3             A B C Y DVDD DVSS   <AutoShape>  [Internal]  ; No processable comment
+SUBCKT OR3             A B C Y DVDD DVSS   <AutoShape>  [Internal]  ; No processable comment
+SUBCKT OR4             A B C D Y DVDD DVSS   <AutoShape>  [Internal]  ; No processable comment
+SUBCKT LLDLY           A Y DVDD DVSS   <AutoShape>  [Internal]  ; No processable comment
+SUBCKT HHDLY           A Y DVDD DVSS   <AutoShape>  [Internal]  ; No processable comment
+SUBCKT NA3FF           SB1 SB2 RB1 RB2 Q QB DVDD DVSS  <AutoShape>  [Internal]  ; No processable comment
+SUBCKT DRVR            IN OUT DVDD DVSS   <AutoShape>  [Internal]  ; No processable comment
+SUBCKT LVL             IN OUT DVDD DVSS VBST1 SWN  <AutoShape>  [Internal]  ; No processable comment
+SUBCKT UTD51124        1 2   <AutoShape>  [Internal]  ; No processable comment
+SUBCKT SWhyste2        NodeMinus NodePlus Plus Minus   <AutoShape>  [Internal]  ; No processable comment
+SUBCKT FETAMP51124     2    3  6   7   4  <AutoShape>  [Internal]  ; No processable comment
+SUBCKT SSFWD           1   7   5 4    6   <AutoShape>  [Internal]  ; No processable comment
+SUBCKT TPS51124A       Vin 9           FB 1   <AutoShape>  [Internal]  ; No processable comment
+SUBCKT TPS51124SST     Vin1 Fb Vin2  <AutoShape>  [Internal]
+SUBCKT irf7821         1 2 3 <AutoShape>  [Internal]
+SUBCKT irf8113         1 2 3 <AutoShape>  [Internal]
+LOCKED xVI=

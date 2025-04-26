@@ -1,0 +1,13 @@
+{PS_SIN template for PSpice import}
+function Signal(t);
+begin
+  vampl:=@;
+  freq:=@;
+  td:=@;
+  df:=@;
+  phase:=@;
+  if (0<=t) and (t<=td) then
+    Signal:=vampl*sin(2*pi*phase/360)
+  else
+    Signal:=vampl*sin(2*pi*(freq*(t-td)+phase/360))*exp(-(t-td)*df);
+end;

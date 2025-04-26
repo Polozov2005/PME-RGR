@@ -1,0 +1,716 @@
+Texas Instruments
+SUBCKT OPA1013        1 2 3 4 5  Texas:OPA1013  [OpAmp]  ; No processable comment
+SUBCKT OPA111          1 2 3 4 5  Texas:OPA111  [OpAmp]  ; No processable comment
+SUBCKT OPA121           1 2 3 4 5  Texas:OPA121  [OpAmp]  ; No processable comment
+SUBCKT OPA124           1 2 3 4 5  Texas:OPA124  [OpAmp]  ; No processable comment
+SUBCKT OPA128          1 2 3 4 5  Texas:OPA128  [OpAmp]  ; No processable comment
+SUBCKT OPA129          1 2 3 4 5  Texas:OPA129  [OpAmp]  ; No processable comment
+SUBCKT OPA130            1 2 3 4 5  Texas:OPA130  [OpAmp]  ; No processable comment
+SUBCKT OPA131           1 2 3 4 5  Texas:OPA131  [OpAmp]  ; No processable comment
+SUBCKT OPA132            1 2 3 4 5  Texas:OPA132  [OpAmp]  ; No processable comment
+SUBCKT OPA134            1 2 3 4 5  Texas:OPA134  [OpAmp]  ; No processable comment
+SUBCKT OPA137            1 2 3 4 5  Texas:OPA137  [OpAmp]  ; No processable comment
+SUBCKT OPA177E         In+ In- V+ V- Out  TEXAS:Amp5-TI  [OpAmp]
+SUBCKT OPA2137         In+ In- V+ V- Out  TEXAS:Amp5-TI  [OpAmp]
+SUBCKT OPA227          In+ In- V+ V- Out  TEXAS:Amp5-TI  [OpAmp]
+SUBCKT OPA228          In+ In- V+ V- Out  TEXAS:Amp5-TI  [OpAmp]
+SUBCKT OPA234E         In+ In- V+ V- Out  TEXAS:Amp5-TI  [OpAmp]
+SUBCKT OPA2347         In+ In- V+ V- Out  TEXAS:Amp5-TI  [OpAmp]
+SUBCKT OPA2350         In+ In- V+ V- Out  TEXAS:Amp5-TI  [OpAmp]
+SUBCKT OPA243          In+ In- V+ V- Out  TEXAS:Amp5-TI  [OpAmp]
+SUBCKT OPA244          In+ In- V+ V- Out  TEXAS:Amp5-TI  [OpAmp]
+SUBCKT OPA2604E        In+ In- V+ V- Out  TEXAS:Amp5-TI  [OpAmp]
+SUBCKT OPA277          In+ In- V+ V- Out  TEXAS:Amp5-TI  [OpAmp]
+SUBCKT OPA27            1 2 3 4 5  Texas:OPA27  [OpAmp]  ; No processable comment
+SUBCKT OPA300          3 2 7 4 6 8  TEXAS:OPA300  [OpAmp]
+SUBCKT OPA335          3 4 6 2 1  TEXAS:OPA335  [OpAmp]
+SUBCKT OPA340          In+ In- V+ V- Out  TEXAS:Amp5-TI  [OpAmp]
+SUBCKT OPA342          In+ In- V+ V- Out  TEXAS:Amp5-TI  [OpAmp]
+SUBCKT OPA343          In+ In- V+ V- Out  TEXAS:Amp5-TI  [OpAmp]
+SUBCKT OPA344          In+ In- V+ V- Out  TEXAS:Amp5-TI  [OpAmp]
+SUBCKT OPA345          In+ In- V+ V- Out  TEXAS:Amp5-TI  [OpAmp]
+SUBCKT OPA347          In+ In- V+ V- Out  TEXAS:Amp5-TI  [OpAmp]
+SUBCKT OPA348          1 3 5 2 4  TEXAS:OPA348  [OpAmp]
+SUBCKT OPA349          In+ In- V+ V- Out  TEXAS:Amp5-TI  [OpAmp]
+SUBCKT OPA350          In+ In- V+ V- Out  TEXAS:Amp5-TI  [OpAmp]
+SUBCKT OPA353            +  - V+ V-  OUT  Texas:OPA353  [OpAmp]  ; No processable comment
+SUBCKT OPA354          In+ In- V+ V- Out  TEXAS:Amp5-TI  [OpAmp]
+SUBCKT OPA355          1 2 3 4 5 6  TEXAS:OPA355  [OpAmp]
+SUBCKT OPA357          1 2 3 4 5 6  TEXAS:OPA357  [OpAmp]
+SUBCKT OPA360          1 3 6 2 4 5  TEXAS:OPA360  [OpAmp]
+SUBCKT OPA363          3 4 6 2 1 5  Texas:OPA363  [OpAmp]  ; No processable comment
+SUBCKT OPA364          3 4 6 2 1  TEXAS:OPA364  [OpAmp]
+SUBCKT OPA373          3 4 6 2 1 5  TEXAS:OPA373  [OpAmp]
+SUBCKT OPA374          3 4 5 2 1  TEXAS:OPA374  [OpAmp]
+SUBCKT OPA37E          In+ In- V+ V- Out  TEXAS:Amp5-TI  [OpAmp]
+SUBCKT OPA380          3 2 1 4 6  TEXAS:OPA380  [OpAmp]
+SUBCKT OPA404E         In+ In- V+ V- Out  TEXAS:Amp5-TI  [OpAmp]
+SUBCKT OPA445E         In+ In- V+ V- Out  TEXAS:Amp5-TI  [OpAmp]
+SUBCKT OPA452          1 2 5 4 6 7  TEXAS:OPA452  [OpAmp]
+SUBCKT OPA453          1 2 5 4 6 7  TEXAS:OPA453  [OpAmp]
+SUBCKT OPA547          1 2 3 4 5 6 7  TEXAS:OPA547  [OpAmp]
+SUBCKT OPA548          1 2 3 4 5 6 7  TEXAS:OPA548  [OpAmp]
+MODEL  VSM             <VSWITCH> [Internal]
+SUBCKT OPA569          3 4 5 6 7 8 12 14 17 19  TEXAS:OPA569  [OpAmp]
+SUBCKT OPA604E         In+ In- V+ V- Out  TEXAS:Amp5-TI  [OpAmp]
+SUBCKT OPA637E         In+ In- V+ V- Out  TEXAS:Amp5-TI  [OpAmp]
+SUBCKT OPA693          + - Out V+ V- DisA  TEXAS:OPA693  [OpAmp]
+SUBCKT OPA693_F1       1 2 3 4  <AutoShape>  [Internal]
+SUBCKT OPA693_F3       1 2 3 4  <AutoShape>  [Internal]
+SUBCKT OPA693_F2       1 2 3 4  <AutoShape>  [Internal]
+SUBCKT OPA693_F4       1 2 3 4  <AutoShape>  [Internal]
+SUBCKT OPA698          + - V+ V- Out Vh Vl  TEXAS:OPA698  [OpAmp]
+SUBCKT OPA699          + - V+ V- Out Vh Vl  TEXAS:OPA698  [OpAmp]
+SUBCKT OPA703          3 2 7 4 6  Texas:OPA703  [OpAmp]  ; No processable comment
+SUBCKT OPA704          In+ In- V+ V- Out  TEXAS:Amp5-TI  [OpAmp]
+SUBCKT OPA725          3 2 7 4 6  TEXAS:OPA725  [OpAmp]
+SUBCKT OPA726          3 2 7 4 6 8 1  TEXAS:OPA726  [OpAmp]
+SUBCKT OPA734          1 2 3 4 5 6  TEXAS:OPA734  [OpAmp]
+SUBCKT OPA735          3 4 6 2 1  TEXAS:OPA735  [OpAmp]
+SUBCKT OPA843          In+ In- V+ V- Out  TEXAS:Amp5-TI  [OpAmp]
+SUBCKT OPA847          + - V+ V- Out Dis TEXAS:OPA847  [OpAmp]
+SUBCKT OPA847_Model_F1       1 2 3 4  <AutoShape>  [Internal]
+SUBCKT OPA847_Model_F4       1 2 3 4  <AutoShape>  [Internal]
+SUBCKT OPA847_Model_F3       1 2 3 4  <AutoShape>  [Internal]
+SUBCKT OPA847_Model_F2       1 2 3 4  <AutoShape>  [Internal]
+SUBCKT OPA847_Model_F5       1 2 3 4  <AutoShape>  [Internal]
+SUBCKT OPA847_Model_F8       1 2 3 4  <AutoShape>  [Internal]
+SUBCKT OPA847_Model_F6       1 2 3 4  <AutoShape>  [Internal]
+SUBCKT OPA847_Model_F7       1 2 3 4  <AutoShape>  [Internal]
+SUBCKT OPA847_Model_F9       1 2 3 4  <AutoShape>  [Internal]
+SUBCKT OPA847_Model_S1       1 2 3 4  <AutoShape>  [Internal]
+SUBCKT THS3001         In+ In- V+ V- Out  TEXAS:Amp5-TI  [OpAmp]
+SUBCKT THS3061         In+ In- Out V+ V-  TEXAS:Amp5-TI  [OpAmp]         
+SUBCKT THS3061_SCHEMATIC1_F1   1 2 3 4  <AutoShape>  [Internal]
+SUBCKT THS3061_SCHEMATIC1_F2   1 2 3 4  <AutoShape>  [Internal]
+SUBCKT THS3122         In+ In- V+ V- Out  TEXAS:Amp5-TI  [OpAmp]
+SUBCKT THS4001         In+ In- V+ V- Out  TEXAS:Amp5-TI  [OpAmp]
+SUBCKT THS4011         In+ In- V+ V- Out  TEXAS:Amp5-TI  [OpAmp]
+SUBCKT THS4012         In+ In- V+ V- Out  TEXAS:Amp5-TI  [OpAmp]
+SUBCKT THS4021         In+ In- V+ V- Out  TEXAS:Amp5-TI  [OpAmp]
+SUBCKT THS4022         In+ In- V+ V- Out  TEXAS:Amp5-TI  [OpAmp]
+SUBCKT THS4031         In+ In- V+ V- Out  TEXAS:Amp5-TI  [OpAmp]
+SUBCKT THS4032         In+ In- V+ V- Out  TEXAS:Amp5-TI  [OpAmp]
+SUBCKT THS4041         In+ In- V+ V- Out  TEXAS:Amp5-TI  [OpAmp]
+SUBCKT THS4042         In+ In- V+ V- Out  TEXAS:Amp5-TI  [OpAmp]
+SUBCKT THS4051         In+ In- V+ V- Out  TEXAS:Amp5-TI  [OpAmp]
+SUBCKT THS4052         In+ In- V+ V- Out  TEXAS:Amp5-TI  [OpAmp]
+SUBCKT THS4061         In+ In- V+ V- Out  TEXAS:Amp5-TI  [OpAmp]
+SUBCKT THS4062         In+ In- V+ V- Out  TEXAS:Amp5-TI  [OpAmp]
+SUBCKT THS4081         In+ In- V+ V- Out  TEXAS:Amp5-TI  [OpAmp]
+SUBCKT THS4082         In+ In- V+ V- Out  TEXAS:Amp5-TI  [OpAmp]
+SUBCKT THS4211G1       1 2 5 3 4  TEXAS:THS4082  [OpAmp]                 
+SUBCKT THS4211G1_SCHEMATIC1_F4   1 2 3 4  <AutoShape>  [Internal]
+SUBCKT THS4211G1_SCHEMATIC1_F3   1 2 3 4  <AutoShape>  [Internal]
+SUBCKT ths4302         IN+ IN- Vs+ Vs- OUT PD  TEXAS:THS4302  [OpAmp]
+SUBCKT THS430X_OP      Out1 In+ In- V+ V- Out2  <AutoShape>  [Internal]
+SUBCKT ths4303         IN+ IN- Vs+ Vs- OUT PD  TEXAS:THS4302  [OpAmp]
+SUBCKT THS4303_OP      Out1 In+ In- V+ V- Out2  <AutoShape>  [Internal]
+SUBCKT THS4304         3 4 6 2 1  TEXAS:OPA364  [OpAmp]
+SUBCKT THS4601         3 4 6 2 1  TEXAS:OPA364  [OpAmp]
+SUBCKT Gmaxin            1 2 3 4  <AutoShape>  [Internal]
+SUBCKT THS6002D        In+ In- V+ V- Out  TEXAS:Amp5-TI  [OpAmp]
+SUBCKT THS6007D        In+ In- V+ V- Out  TEXAS:Amp5-TI  [OpAmp]
+SUBCKT THS6007R        In+ In- V+ V- Out  TEXAS:Amp5-TI  [OpAmp]
+SUBCKT THS6012         In+ In- V+ V- Out  TEXAS:Amp5-TI  [OpAmp]
+SUBCKT THS6022         In+ In- V+ V- Out  TEXAS:Amp5-TI  [OpAmp]
+SUBCKT THS6032         1 2 3 4 5 6 7 8 9  TEXAS:THS6032  [OpAmp]
+SUBCKT THS6042         In+ In- V+ V- Out  TEXAS:Amp5-TI  [OpAmp]
+SUBCKT THS6043         In+ In- V+ V- Out Q1=Shutdown Q2=Gnd  TEXAS:Amplifier7-TI  [OpAmp]
+SUBCKT THS6052         In+ In- V+ V- Out  TEXAS:Amp5-TI  [OpAmp]
+SUBCKT THS6053         In+ In- V+ V- Out  TEXAS:Amp5-TI  [OpAmp]
+SUBCKT THS6062         In+ In- V+ V- Out  TEXAS:Amp5-TI  [OpAmp]
+SUBCKT THS6072         In+ In- V+ V- Out  TEXAS:Amp5-TI  [OpAmp]
+SUBCKT THS6092         In+ In- V+ V- Out  TEXAS:Amp5-TI  [OpAmp]
+SUBCKT THS6093         In+ In- V+ V- Out Q1=Shutdown Q2=Gnd  TEXAS:Amplifier7-TI  [OpAmp]
+SUBCKT THS7001_PGA     1 2 3 4 5 6 7 8 9 10 11 12  TEXAS:THS7001  [OpAmp]
+SUBCKT TL3472-X        In+ In- V+ V- Out  TEXAS:Amp5-TI  [OpAmp]
+SUBCKT TLC081          In+ In- V+ V- Out  TEXAS:Amp5-TI  [OpAmp]
+SUBCKT OPA842          In+ In- V+ V- Out  TEXAS:Amp5-TI  [OpAmp]
+SUBCKT TL071           In+ In- V+ V- Out  TEXAS:Amp5-TI  [OpAmp]
+SUBCKT TL071B          In+ In- V+ V- Out  TEXAS:Amp5-TI  [OpAmp]
+SUBCKT TLC2652         In+ In- V+ V- Out  TEXAS:Amp5-TI  [OpAmp]
+SUBCKT TLC274          In+ In- V+ V- Out  TEXAS:Amp5-TI  [OpAmp]
+SUBCKT OPA358          1 3 6 2 4 5  TEXAS:OPA358  [OpAmp]
+SUBCKT TL061           In+ In- V+ V- Out  TEXAS:Amp5-TI  [OpAmp]
+SUBCKT TL062           In+ In- V+ V- Out  TEXAS:Amp5-TI  [OpAmp]
+SUBCKT TLE2141         In+ In- V+ V- Out  TEXAS:Amp5-TI  [OpAmp]
+SUBCKT TLE2141A        In+ In- V+ V- Out  TEXAS:Amp5-TI  [OpAmp]
+SUBCKT TLE2142         In+ In- V+ V- Out  TEXAS:Amp5-TI  [OpAmp]
+SUBCKT TLE2142A        In+ In- V+ V- Out  TEXAS:Amp5-TI  [OpAmp]
+SUBCKT TLE2144         In+ In- V+ V- Out  TEXAS:Amp5-TI  [OpAmp]
+SUBCKT TLE2144A        In+ In- V+ V- Out  TEXAS:Amp5-TI  [OpAmp]
+SUBCKT TLE2161         In+ In- V+ V- Out  TEXAS:Amp5-TI  [OpAmp]
+SUBCKT TLE2161A        In+ In- V+ V- Out  TEXAS:Amp5-TI  [OpAmp]
+SUBCKT TLE2161B        In+ In- V+ V- Out  TEXAS:Amp5-TI  [OpAmp]
+SUBCKT OPA334          1 2 3 4 5 6  TEXAS:OPA334  [OpAmp]
+SUBCKT OPA549          OUT OUT2 - + V- REF V-2 LIM ES V+ V+2  TEXAS:OPA549  [OpAmp]
+SUBCKT OPA627E         1 2 3 4 5  TEXAS:OPA627E  [OpAmp]
+SUBCKT THS3062         INP INN OUT VCC VEE  TEXAS:THS3061  [OpAmp]
+SUBCKT A1_3062         1 2 3 4  <AutoShape>  [Internal]
+SUBCKT A2_3062         1 2 3 4  <AutoShape>  [Internal]
+SUBCKT ths3201         INP INN OUT VCC VEE  TEXAS:THS3061  [OpAmp]
+SUBCKT A1_3201         1 2 3 4 5 6  <AutoShape>  [Internal]
+SUBCKT ths3202         1 2 5 3 4  TEXAS:OpAmp5-TI  [OpAmp]
+SUBCKT A1_3202         1 2 3 4  <AutoShape>  [Internal]
+SUBCKT THS4211         1 2 5 3 4  TEXAS:OpAmp5-TI  [OpAmp]
+SUBCKT A1_4211         1 2 3 4  <AutoShape>  [Internal]
+SUBCKT A2_4211         1 2 3 4  <AutoShape>  [Internal]
+SUBCKT THS4215         1 2 5 3 4  TEXAS:OpAmp5-TI  [OpAmp]
+SUBCKT A1_4215         1 2 3 4  <AutoShape>  [Internal]
+SUBCKT A2_4215         1 2 3 4  <AutoShape>  [Internal]
+SUBCKT THS4221         1 2 5 3 4  TEXAS:OpAmp5-TI  [OpAmp]
+SUBCKT A1_4221         1 2 3 4  <AutoShape>  [Internal]
+SUBCKT A2_4221         1 2 3 4  <AutoShape>  [Internal]
+SUBCKT A3_4221           1 2 3 4  <AutoShape>  [Internal]
+SUBCKT THS4222         1 2 5 3 4  TEXAS:OpAmp5-TI  [OpAmp]
+SUBCKT A1_4222         1 2 3 4  <AutoShape>  [Internal]
+SUBCKT A2_4222         1 2 3 4  <AutoShape>  [Internal]
+SUBCKT A3_4222           1 2 3 4  <AutoShape>  [Internal]
+SUBCKT THS4225         1 2 5 3 4  TEXAS:OpAmp5-TI  [OpAmp]
+SUBCKT A1_4225         1 2 3 4  <AutoShape>  [Internal]
+SUBCKT A2_4225         1 2 3 4  <AutoShape>  [Internal]
+SUBCKT A3_4225           1 2 3 4  <AutoShape>  [Internal]
+SUBCKT THS4226         1 2 5 3 4  TEXAS:OpAmp5-TI  [OpAmp]
+SUBCKT A1_4226         1 2 3 4  <AutoShape>  [Internal]
+SUBCKT A2_4226         1 2 3 4  <AutoShape>  [Internal]
+SUBCKT A3_4226           1 2 3 4  <AutoShape>  [Internal]
+SUBCKT THS6182         inp inn out vcc vee iadj b1 b2 gnd  TEXAS:THS6182  [OpAmp]
+SUBCKT A1_6182         1 2 3 4  <AutoShape>  [Internal]
+SUBCKT A3_6182         1 2 3 4  <AutoShape>  [Internal]
+SUBCKT A4_6182         1 2 3 4  <AutoShape>  [Internal]
+SUBCKT A6_6182         1 2 3 4  <AutoShape>  [Internal]
+SUBCKT A5_6182         1 2 3 4  <AutoShape>  [Internal]
+SUBCKT A2_6182            1 2 3 4  <AutoShape>  [Internal]
+SUBCKT TLC074          In+ In- V+ V- Out  TEXAS:Amp5-TI  [OpAmp]
+SUBCKT opa241          1 2 3 4 5  TEXAS:OpAmp5-TI  [OpAmp]
+SUBCKT opa251          1 2 3 4 5  TEXAS:OpAmp5-TI  [OpAmp]
+SUBCKT OPA2541E        1 2 3 4 5  TEXAS:OpAmp5-TI  [OpAmp]
+SUBCKT OPA2544         1 2 3 4 5  TEXAS:OpAmp5-TI  [OpAmp]
+SUBCKT OPA2613         + - V+ V- OUT  TEXAS:OPA277  [OpAmp]
+SUBCKT OPA2652         3 2 8 4 1  TEXAS:Amp5-32841  [OpAmp]
+SUBCKT OPA2658X        9 8 6 7 10  Texas:Amp5-9867_10  [OpAmp]
+SUBCKT OPA2677         + - V+ V- OUT DISA  TEXAS:OpAmp6-3  [OpAmp]
+SUBCKT OPA2677_F1      In+ Out V+ V-  Texas:<Buffer4>  [Internal]
+SUBCKT OPA2677_F3      In+ Out V+ V-  Texas:<Buffer4>  [Internal]
+SUBCKT OPA2677_F2      In+ Out V+ V-  Texas:<Buffer4>  [Internal]
+SUBCKT OPA2677_F4      In+ Out V+ V-  Texas:<Buffer4>  [Internal]
+SUBCKT OPA2684         + - V+ V- OUT  TEXAS:OPA277  [OpAmp]
+SUBCKT OPA2684_F1      In+ Out V+ V-  Texas:<Buffer4>  [Internal]
+SUBCKT OPA2684_F3      In+ Out V+ V-  Texas:<Buffer4>  [Internal]
+SUBCKT OPA2684_F5      In+ Out V+ V-  Texas:<Buffer4>  [Internal]
+SUBCKT OPA2684_F2      In+ Out V+ V-  Texas:<Buffer4>  [Internal]
+SUBCKT OPA2684_F4      In+ Out V+ V-  Texas:<Buffer4>  [Internal]
+SUBCKT OPA2684_F6      In+ Out V+ V-  Texas:<Buffer4>  [Internal]
+SUBCKT OPA2690         + - V+ V- OUT DISA  TEXAS:OpAmp6-3  [OpAmp]
+SUBCKT OPA2690_F9      In+ Out V+ V-  Texas:<Buffer4>  [Internal]
+SUBCKT OPA2690_F10     In+ Out V+ V-  Texas:<Buffer4>  [Internal]
+SUBCKT OPA2690_F3      In+ Out V+ V-  Texas:<Buffer4>  [Internal]
+SUBCKT OPA2690_F4      In+ Out V+ V-  Texas:<Buffer4>  [Internal]
+SUBCKT OPA2690_F6      In+ Out V+ V-  Texas:<Buffer4>  [Internal]
+SUBCKT OPA2690_F5      In+ Out V+ V-  Texas:<Buffer4>  [Internal]
+SUBCKT OPA2690_F1      In+ Out V+ V-  Texas:<Buffer4>  [Internal]
+SUBCKT OPA2690_F2      In+ Out V+ V-  Texas:<Buffer4>  [Internal]
+SUBCKT OPA2691         + - V+ V- OUT DISA  TEXAS:OpAmp6-3  [OpAmp]
+SUBCKT OPA2691_F1      In+ Out V+ V-  Texas:<Buffer4>  [Internal]
+SUBCKT OPA2691_F2      In+ Out V+ V-  Texas:<Buffer4>  [Internal]
+SUBCKT OPA2691_F3      In+ Out V+ V-  Texas:<Buffer4>  [Internal]
+SUBCKT OPA2691_F4      In+ Out V+ V-  Texas:<Buffer4>  [Internal]
+SUBCKT OPA2822         + - V+ V- OUT  TEXAS:OPA277  [OpAmp]
+SUBCKT OPA3684         + - V+ V- OUT DISA  TEXAS:OpAmp6-3  [OpAmp]
+SUBCKT OPA3684_F9      In+ Out V+ V-  Texas:<Buffer4>  [Internal]
+SUBCKT OPA3684_F10     In+ Out V+ V-  Texas:<Buffer4>  [Internal]
+SUBCKT OPA3684_F3      In+ Out V+ V-  Texas:<Buffer4>  [Internal]
+SUBCKT OPA3684_F4      In+ Out V+ V-  Texas:<Buffer4>  [Internal]
+SUBCKT OPA3684_F6      In+ Out V+ V-  Texas:<Buffer4>  [Internal]
+SUBCKT OPA3684_F5      In+ Out V+ V-  Texas:<Buffer4>  [Internal]
+SUBCKT OPA3684_F1      In+ Out V+ V-  Texas:<Buffer4>  [Internal]
+SUBCKT OPA3684_F2      In+ Out V+ V-  Texas:<Buffer4>  [Internal]
+SUBCKT OPA3691         + - V+ V- OUT DISA  TEXAS:OpAmp6-3  [OpAmp]
+SUBCKT OPA3691_F1      In+ Out V+ V-  Texas:<Buffer4>  [Internal]
+SUBCKT OPA3691_F2      In+ Out V+ V-  Texas:<Buffer4>  [Internal]
+SUBCKT OPA3691_F3      In+ Out V+ V-  Texas:<Buffer4>  [Internal]
+SUBCKT OPA3691_F4      In+ Out V+ V-  Texas:<Buffer4>  [Internal]
+SUBCKT OPA3692         + - V+ V- OUT DISA  TEXAS:OpAmp6-3  [OpAmp]
+SUBCKT OPA3692_F1      In+ Out V+ V-  Texas:<Buffer4>  [Internal]
+SUBCKT OPA3692_F2      In+ Out V+ V-  Texas:<Buffer4>  [Internal]
+SUBCKT OPA3692_F3      In+ Out V+ V-  Texas:<Buffer4>  [Internal]
+SUBCKT OPA3692_F4      In+ Out V+ V-  Texas:<Buffer4>  [Internal]
+SUBCKT OPA4130         1 2 3 4 5  TEXAS:OpAmp5-TI  [OpAmp]
+SUBCKT OPA4131E        1 2 3 4 5  TEXAS:OpAmp5-TI  [OpAmp]
+SUBCKT OPA4132         1 2 3 4 5  TEXAS:OpAmp5-TI  [OpAmp]
+SUBCKT OPA4134         1 2 3 4 5  TEXAS:OpAmp5-TI  [OpAmp]
+SUBCKT OPA4137         1 2 3 4 5  TEXAS:OpAmp5-TI  [OpAmp]
+SUBCKT OPA4227         3 2 7 4 6  TEXAS:Amp5-32746  [OpAmp]
+SUBCKT OPA4228         3 2 7 4 6  TEXAS:Amp5-32746  [OpAmp]
+SUBCKT OPA4234E        1 2 3 4 5  TEXAS:OpAmp5-TI  [OpAmp]
+SUBCKT OPA4241         1 2 3 4 5  TEXAS:OpAmp5-TI  [OpAmp]
+SUBCKT OPA4243         1 2 3 4 5  TEXAS:OpAmp5-TI  [OpAmp]
+SUBCKT OPA4244         1 2 3 4 5  TEXAS:OpAmp5-TI  [OpAmp]
+SUBCKT OPA4251         1 2 3 4 5  TEXAS:OpAmp5-TI  [OpAmp]
+SUBCKT OPA4277         + - V+ V- OUT  TEXAS:OPA277  [OpAmp]
+SUBCKT OPA4340         + - V+ V- OUT  Texas:OPA4340  [OpAmp]  ; No processable comment
+SUBCKT OPA4342         + - V+ V- OUT  TEXAS:OPA277  [OpAmp]
+SUBCKT OPA4343         + - V+ V- OUT  TEXAS:OPA277  [OpAmp]
+SUBCKT OPA4347         1 2 3 4 5  TEXAS:OpAmp5-TI  [OpAmp]
+SUBCKT OPA4348         1 2 3 4 5  TEXAS:OpAmp5-TI  [OpAmp]
+SUBCKT OPA4350         + - V+ V- OUT  TEXAS:OPA277  [OpAmp]
+SUBCKT OPA4353         + - V+ V- OUT  TEXAS:OPA277  [OpAmp]
+SUBCKT OPA4658X        9 8 6 7 10  Texas:Amp5-9867_10  [OpAmp]
+SUBCKT OPA4684         + - V+ V- OUT  TEXAS:OPA277  [OpAmp]
+SUBCKT OPA4684_F1      In+ Out V+ V-  Texas:<Buffer4>  [Internal]
+SUBCKT OPA4684_F3      In+ Out V+ V-  Texas:<Buffer4>  [Internal]
+SUBCKT OPA4684_F5      In+ Out V+ V-  Texas:<Buffer4>  [Internal]
+SUBCKT OPA4684_F2      In+ Out V+ V-  Texas:<Buffer4>  [Internal]
+SUBCKT OPA4684_F4      In+ Out V+ V-  Texas:<Buffer4>  [Internal]
+SUBCKT OPA4684_F6      In+ Out V+ V-  Texas:<Buffer4>  [Internal]
+SUBCKT OPA4820         + - V+ V- OUT  TEXAS:OPA277  [OpAmp]
+SUBCKT OPA512E         1 2 3 4 5  TEXAS:OpAmp5-TI  [OpAmp]
+SUBCKT OPA541E         1 2 3 4 5  TEXAS:OpAmp5-TI  [OpAmp]
+SUBCKT OPA544          1 2 3 4 5  TEXAS:OpAmp5-TI  [OpAmp]
+SUBCKT OPA602E         1 2 3 4 5  TEXAS:OpAmp5-TI  [OpAmp]
+SUBCKT OPA606E         1 2 3 4 5  TEXAS:OpAmp5-TI  [OpAmp]
+SUBCKT OPA656          + - V+ V- OUT  TEXAS:OPA277  [OpAmp]
+SUBCKT OPA657          + - V+ V- OUT  TEXAS:OPA277  [OpAmp]
+SUBCKT OPA658X         9 8 6 7 10  Texas:Amp5-9867_10  [OpAmp]
+SUBCKT OPA683          + - V+ V- OUT DISA  TEXAS:OpAmp6-3  [OpAmp]
+SUBCKT OPA683_F5       In+ Out V+ V-  Texas:<Buffer4>  [Internal]
+SUBCKT OPA683_F6       In+ Out V+ V-  Texas:<Buffer4>  [Internal]
+SUBCKT OPA683_F3       In+ Out V+ V-  Texas:<Buffer4>  [Internal]
+SUBCKT OPA683_F4       In+ Out V+ V-  Texas:<Buffer4>  [Internal]
+SUBCKT OPA683_F1       In+ Out V+ V-  Texas:<Buffer4>  [Internal]
+SUBCKT OPA683_F2       In+ Out V+ V-  Texas:<Buffer4>  [Internal]
+SUBCKT OPA684          + - V+ V- OUT DISA  TEXAS:OpAmp6-3  [OpAmp]
+SUBCKT OPA684_F1       In+ Out V+ V-  Texas:<Buffer4>  [Internal]
+SUBCKT OPA684_F3       In+ Out V+ V-  Texas:<Buffer4>  [Internal]
+SUBCKT OPA684_F5       In+ Out V+ V-  Texas:<Buffer4>  [Internal]
+SUBCKT OPA684_F2       In+ Out V+ V-  Texas:<Buffer4>  [Internal]
+SUBCKT OPA684_F4       In+ Out V+ V-  Texas:<Buffer4>  [Internal]
+SUBCKT OPA684_F6       In+ Out V+ V-  Texas:<Buffer4>  [Internal]
+SUBCKT OPA690          + - V+ V- OUT DISA  TEXAS:OpAmp6-3  [OpAmp]
+SUBCKT OPA690_F9       In+ Out V+ V-  Texas:<Buffer4>  [Internal]
+SUBCKT OPA690_F10      In+ Out V+ V-  Texas:<Buffer4>  [Internal]
+SUBCKT OPA690_F3       In+ Out V+ V-  Texas:<Buffer4>  [Internal]
+SUBCKT OPA690_F4       In+ Out V+ V-  Texas:<Buffer4>  [Internal]
+SUBCKT OPA690_F6       In+ Out V+ V-  Texas:<Buffer4>  [Internal]
+SUBCKT OPA690_F5       In+ Out V+ V-  Texas:<Buffer4>  [Internal]
+SUBCKT OPA690_F1       In+ Out V+ V-  Texas:<Buffer4>  [Internal]
+SUBCKT OPA690_F2       In+ Out V+ V-  Texas:<Buffer4>  [Internal]
+SUBCKT OPA691          + - V+ V- OUT DISA  TEXAS:OpAmp6-3  [OpAmp]
+SUBCKT Opa691_F1       In+ Out V+ V-  Texas:<Buffer4>  [Internal]
+SUBCKT Opa691_F2       In+ Out V+ V-  Texas:<Buffer4>  [Internal]
+SUBCKT Opa691_F3       In+ Out V+ V-  Texas:<Buffer4>  [Internal]
+SUBCKT Opa691_F4       In+ Out V+ V-  Texas:<Buffer4>  [Internal]
+SUBCKT OPA692          + - V+ V- OUT DISA  TEXAS:OpAmp6-3  [OpAmp]
+SUBCKT Opa692_F1       In+ Out V+ V-  Texas:<Buffer4>  [Internal]
+SUBCKT Opa692_F2       In+ Out V+ V-  Texas:<Buffer4>  [Internal]
+SUBCKT Opa692_F3       In+ Out V+ V-  Texas:<Buffer4>  [Internal]
+SUBCKT Opa692_F4       In+ Out V+ V-  Texas:<Buffer4>  [Internal]
+SUBCKT OPA820          + - V+ V- OUT  TEXAS:OPA277  [OpAmp]
+SUBCKT OPA846          + - V+ V- OUT  TEXAS:OPA277  [OpAmp]
+SUBCKT THS3091         inp inn vcc vee out  TEXAS:OpAmp5-3  [OpAmp]
+SUBCKT THS3091SCH1_F1  In+ Out V+ V-  Texas:<Buffer4>  [Internal]
+SUBCKT THS3091SCH1_F2  In+ Out V+ V-  Texas:<Buffer4>  [Internal]
+SUBCKT TL022C          1 2 3 4 5  TEXAS:OpAmp5-TI  [OpAmp]
+SUBCKT TL031           1 2 3 4 5  TEXAS:OpAmp5-TI  [OpAmp]
+SUBCKT TL032           1 2 3 4 5  TEXAS:OpAmp5-TI  [OpAmp]
+SUBCKT TL034           1 2 3 4 5  TEXAS:OpAmp5-TI  [OpAmp]
+SUBCKT TL051           1 2 3 4 5  TEXAS:OpAmp5-TI  [OpAmp]
+SUBCKT TL052           1 2 3 4 5  TEXAS:OpAmp5-TI  [OpAmp]
+SUBCKT TL054           1 2 3 4 5  TEXAS:OpAmp5-TI  [OpAmp]
+SUBCKT TL064           1 2 3 4 5  TEXAS:OpAmp5-TI  [OpAmp]
+SUBCKT TL070           1 2 3 4 5 6 7  TEXAS:NE5534  [OpAmp]
+SUBCKT TL072           1 2 3 4 5  TEXAS:OpAmp5-TI  [OpAmp]
+SUBCKT TL074           1 2 3 4 5  TEXAS:OpAmp5-TI  [OpAmp]
+SUBCKT TL081           1 2 3 4 5  TEXAS:OpAmp5-TI  [OpAmp]
+SUBCKT TL082           1 2 3 4 5  TEXAS:OpAmp5-TI  [OpAmp]
+SUBCKT TL084           1 2 3 4 5  TEXAS:OpAmp5-TI  [OpAmp]
+SUBCKT TL322           1 2 3 4 5  TEXAS:OpAmp5-TI  [OpAmp]
+SUBCKT TLC1078         1 2 3 4 5  TEXAS:OpAmp5-TI  [OpAmp]
+SUBCKT TLC1079         1 2 3 4 5  TEXAS:OpAmp5-TI  [OpAmp]
+SUBCKT TLC2201         1 2 3 4 5  TEXAS:OpAmp5-TI  [OpAmp]
+SUBCKT TLC2252         1 2 3 4 5  TEXAS:OpAmp5-TI  [OpAmp]
+SUBCKT TLC2254         1 2 3 4 5  TEXAS:OpAmp5-TI  [OpAmp]
+SUBCKT TLC2262         1 2 3 4 5  TEXAS:OpAmp5-TI  [OpAmp]
+SUBCKT TLC2264         1 2 3 4 5  TEXAS:OpAmp5-TI  [OpAmp]
+SUBCKT TLC2272         1 2 3 4 5  TEXAS:OpAmp5-TI  [OpAmp]
+SUBCKT TLC2274         1 2 3 4 5  TEXAS:OpAmp5-TI  [OpAmp]
+SUBCKT TLC251H         1 2 3 4 5  TEXAS:OpAmp5-TI  [OpAmp]
+SUBCKT TLC251L         1 2 3 4 5  TEXAS:OpAmp5-TI  [OpAmp]
+SUBCKT TLC251M         1 2 3 4 5  TEXAS:OpAmp5-TI  [OpAmp]
+SUBCKT TLC252C         1 2 3 4 5  TEXAS:OpAmp5-TI  [OpAmp]
+SUBCKT TLC254C         1 2 3 4 5  TEXAS:OpAmp5-TI  [OpAmp]
+SUBCKT TLC25L2C        1 2 3 4 5  TEXAS:OpAmp5-TI  [OpAmp]
+SUBCKT TLC25L4C        1 2 3 4 5  TEXAS:OpAmp5-TI  [OpAmp]
+SUBCKT TLC25M2C        1 2 3 4 5  TEXAS:OpAmp5-TI  [OpAmp]
+SUBCKT TLC25M4C        1 2 3 4 5  TEXAS:OpAmp5-TI  [OpAmp]
+SUBCKT TLC2654         1 2 3 4 5  TEXAS:OpAmp5-TI  [OpAmp]
+SUBCKT TLC271H         1 2 3 4 5  TEXAS:OpAmp5-TI  [OpAmp]
+SUBCKT TLC271L         1 2 3 4 5  TEXAS:OpAmp5-TI  [OpAmp]
+SUBCKT TLC271M         1 2 3 4 5  TEXAS:OpAmp5-TI  [OpAmp]
+SUBCKT TLC272          1 2 3 4 5  TEXAS:OpAmp5-TI  [OpAmp]
+SUBCKT TLC277          1 2 3 4 5  TEXAS:OpAmp5-TI  [OpAmp]
+SUBCKT TLC279          1 2 3 4 5  TEXAS:OpAmp5-TI  [OpAmp]
+SUBCKT TLC27L2         1 2 3 4 5  TEXAS:OpAmp5-TI  [OpAmp]
+SUBCKT TLC27L4         1 2 3 4 5  TEXAS:OpAmp5-TI  [OpAmp]
+SUBCKT TLC27L7         1 2 3 4 5  TEXAS:OpAmp5-TI  [OpAmp]
+SUBCKT TLC27L9         1 2 3 4 5  TEXAS:OpAmp5-TI  [OpAmp]
+SUBCKT TLC27M2         1 2 3 4 5  TEXAS:OpAmp5-TI  [OpAmp]
+SUBCKT TLC27M4         1 2 3 4 5  TEXAS:OpAmp5-TI  [OpAmp]
+SUBCKT TLC27M7         1 2 3 4 5  TEXAS:OpAmp5-TI  [OpAmp]
+SUBCKT TLC27M9         1 2 3 4 5  TEXAS:OpAmp5-TI  [OpAmp]
+SUBCKT TLE2021         1 2 3 4 5  TEXAS:OpAmp5-TI  [OpAmp]
+SUBCKT TLE2022         1 2 3 4 5  TEXAS:OpAmp5-TI  [OpAmp]
+SUBCKT TLE2024         1 2 3 4 5  TEXAS:OpAmp5-TI  [OpAmp]
+SUBCKT TLE2027         1 2 3 4 5  TEXAS:OpAmp5-TI  [OpAmp]
+SUBCKT TLE2037         1 2 3 4 5  TEXAS:OpAmp5-TI  [OpAmp]
+SUBCKT TLE2061         1 2 3 4 5  TEXAS:OpAmp5-TI  [OpAmp]
+SUBCKT TLE2062         1 2 3 4 5  TEXAS:OpAmp5-TI  [OpAmp]
+SUBCKT TLE2064         1 2 3 4 5  TEXAS:OpAmp5-TI  [OpAmp]
+SUBCKT TLE2071         1 2 3 4 5  TEXAS:OpAmp5-TI  [OpAmp]
+SUBCKT TLE2072         1 2 3 4 5  TEXAS:OpAmp5-TI  [OpAmp]
+SUBCKT TLE2074         1 2 3 4 5  TEXAS:OpAmp5-TI  [OpAmp]
+SUBCKT TLE2081         1 2 3 4 5  TEXAS:OpAmp5-TI  [OpAmp]
+SUBCKT TLE2082         1 2 3 4 5  TEXAS:OpAmp5-TI  [OpAmp]
+SUBCKT TLE2084         1 2 3 4 5  TEXAS:OpAmp5-TI  [OpAmp]
+SUBCKT TLV2211         1 2 3 4 5  TEXAS:OpAmp5-TI  [OpAmp]
+SUBCKT TLV2221         1 2 3 4 5  TEXAS:OpAmp5-TI  [OpAmp]
+SUBCKT TLV2231         1 2 3 4 5  TEXAS:OpAmp5-TI  [OpAmp]
+SUBCKT TLV2252         1 2 3 4 5  TEXAS:OpAmp5-TI  [OpAmp]
+SUBCKT TLV2254         1 2 3 4 5  TEXAS:OpAmp5-TI  [OpAmp]
+SUBCKT TLV2262         1 2 3 4 5  TEXAS:OpAmp5-TI  [OpAmp]
+SUBCKT TLV2264         1 2 3 4 5  TEXAS:OpAmp5-TI  [OpAmp]
+SUBCKT TLV2322I        1 2 3 4 5  TEXAS:OpAmp5-TI  [OpAmp]
+SUBCKT TLV2324I        1 2 3 4 5  TEXAS:OpAmp5-TI  [OpAmp]
+SUBCKT TLV2332I        1 2 3 4 5  TEXAS:OpAmp5-TI  [OpAmp]
+SUBCKT TLV2334I        1 2 3 4 5  TEXAS:OpAmp5-TI  [OpAmp]
+SUBCKT TLV2341H        1 2 3 4 5  TEXAS:OpAmp5-TI  [OpAmp]
+SUBCKT TLV2342I        1 2 3 4 5  TEXAS:OpAmp5-TI  [OpAmp]
+SUBCKT TLV2344I        1 2 3 4 5  TEXAS:OpAmp5-TI  [OpAmp]
+SUBCKT TLV2361         1 2 3 4 5  TEXAS:OpAmp5-TI  [OpAmp]
+SUBCKT TLV2362         1 2 3 4 5  TEXAS:OpAmp5-TI  [OpAmp]
+SUBCKT TLV2401_5V-X    1 2 3 4 5  TEXAS:OpAmp5-TI  [OpAmp]  
+SUBCKT TLV2402_15V-X   1 2 3 4 5  TEXAS:OpAmp5-TI  [OpAmp]
+SUBCKT TLV2432A        1 2 3 4 5  TEXAS:OpAmp5-TI  [OpAmp]
+SUBCKT TLV2434A        1 2 3 4 5  TEXAS:OpAmp5-TI  [OpAmp]
+SUBCKT TLV2442         1 2 3 4 5  TEXAS:OpAmp5-TI  [OpAmp]
+SUBCKT TLV2444         1 2 3 4 5  TEXAS:OpAmp5-TI  [OpAmp]
+SUBCKT TLV245XA        1 2 3 4 5  TEXAS:OpAmp5-TI  [OpAmp]
+SUBCKT TLV247xA        1 2 3 4 5  TEXAS:OpAmp5-TI  [OpAmp]
+SUBCKT TLV276x         1 2 3 4 5  TEXAS:OpAmp5-TI  [OpAmp]
+SUBCKT TLV2772         1 2 3 4 5  TEXAS:OpAmp5-TI  [OpAmp]
+SUBCKT TLV278xA        1 2 3 4 5  TEXAS:OpAmp5-TI  [OpAmp]
+SUBCKT TLV411xA        1 2 3 4 5  TEXAS:OpAmp5-TI  [OpAmp]
+SUBCKT THS7002_PGA     1 2 3 4 5 6 7 8 9 10 11 12  TEXAS:PGA-1  [OpAmp]
+SUBCKT OPA2614         + - V+ V- OUT  TEXAS:OPA340  [OpAmp]
+SUBCKT OPA301          3 2 7 4 6  TEXAS:OPA344  [OpAmp]
+SUBCKT OPA381          3 2 1 4 6  TEXAS:OPA380  [OpAmp]
+SUBCKT OPA695          + -  V+ V- Out DisA  Texas:OPA695  [OpAmp]
+SUBCKT OPA695_model       + - Dis OUT V+ V-  <AutoShape>  [Internal]
+SUBCKT OPA695_model_S1       1 2 3 4  <AutoShape>  [Internal]
+SUBCKT OPA695_model_F1       1 2 3 4  <AutoShape>  [Internal]
+SUBCKT OPA743          3 2 7 4 6  TEXAS:OPA345  [OpAmp]
+SUBCKT THS4631         + - V+ V- OUT  TEXAS:OPA340  [OpAmp]
+SUBCKT THS6184_FULLBIAS VS+ VIN- VIN+ VS- OUT   Texas:THS6184  [OpAmp]
+SUBCKT THS6184_SCHEMATIC_F1      1 2 3 4  <AutoShape>  [Internal]
+SUBCKT THS6184_SCHEMATIC_F2      1 2 3 4  <AutoShape>  [Internal]
+SUBCKT TLC070          3 2 7 4 6 8  TEXAS:OPA300  [OpAmp]
+SUBCKT TLC071          3 2 7 4 6  TEXAS:OPA228  [OpAmp]
+SUBCKT TLV2370         3 4 6 2 1 5  TEXAS:OPA363  [OpAmp]
+SUBCKT TLV2371         3 4 6 2 1  TEXAS:OPA364  [OpAmp]
+SUBCKT TLV2372         3 4 6 2 1  TEXAS:OPA364  [OpAmp]
+SUBCKT TLV2373         3 4 6 2 1 5  TEXAS:OPA363  [OpAmp]
+SUBCKT TLV2374         3 4 6 2 1  TEXAS:OPA364  [OpAmp]
+SUBCKT TLV2375         3 4 6 2 1 5  TEXAS:OPA363  [OpAmp]
+SUBCKT TLV2460         3 4 6 2 1 5  TEXAS:OPA363  [OpAmp]
+SUBCKT TLV2461         3 4 6 2 1  TEXAS:OPA364  [OpAmp]
+SUBCKT TL3474-X        3 4 6 2 1  TEXAS:OPA364  [OpAmp]
+SUBCKT THS4281         3 4 6 2 1  TEXAS:OPA364  [OpAmp]        
+SUBCKT THS3111        IN+ IN- Vs+ Vs- OUT  Texas:THS3111  [OpAmp]     
+SUBCKT THS3121        In+ In- V+ V- Out  TEXAS:Amp5-TI  [OpAmp]     
+SUBCKT OPAy337         In+ In- V+ V- Out    TEXAS:Amp5-TI  [OpAmp] 
+SUBCKT OPAy338         In+ In- V+ V- Out    TEXAS:Amp5-TI  [OpAmp]
+SUBCKT OPA2673        Vs+ Vs- InA+ InB+ InA- InB- OutA OutB GND A0 A1 TEXAS:OPA2673 [OpAmp]
+SUBCKT OPA2673_Bias_U1_F8 1 2 3 4  <AutoShape>  [Internal]  ; No processable comment
+SUBCKT OPA2673_Bias_U1_F9 1 2 3 4  <AutoShape>  [Internal]  ; No processable comment
+SUBCKT OPA2673_Bias_U1_F6 1 2 3 4  <AutoShape>  [Internal]  ; No processable comment
+SUBCKT OPA2673_Bias_U1_F5 1 2 3 4  <AutoShape>  [Internal]  ; No processable comment
+SUBCKT OPA2673_Bias_U1_F3 1 2 3 4  <AutoShape>  [Internal]  ; No processable comment
+SUBCKT OPA659          IN+ IN- Vcc+ Vcc- OUT  TEXAS:OPA659  [OpAmp] ; No comment
+SUBCKT OPA561          2 3 4 5 6 7 8 9  Texas:OPA561  [OpAmp]  ; No comment
+SUBCKT OPA653 IN+ IN- Vcc+ Vcc- OUT   Texas:OPA653  [OpAmp]  ; No comment
+SUBCKT OPA694 + - Out V+ V- Texas:OPA694  [OpAmp]  ; No comment
+SUBCKT OPA694_F1 1 2 3 4  <AutoShape>  [Internal]  ; No processable comment
+SUBCKT OPA694_F2 1 2 3 4  <AutoShape>  [Internal]  ; No processable comment
+SUBCKT OPA694_F3 1 2 3 4  <AutoShape>  [Internal]  ; No processable comment
+SUBCKT OPA694_F4 1 2 3 4  <AutoShape>  [Internal]  ; No processable comment
+SUBCKT OPA830 IN+ IN- VCC VEE VOUT  TEXAS:OPA830 [OpAmp] ; No comment 
+SUBCKT OPA830_IDEAL_D_0 A C <AutoShape>  [Internal]  ; No processable comment
+SUBCKT OPA830_RNOISE_FREE_0  1 2 <AutoShape>  [Internal]  ; No processable comment
+SUBCKT OPA830_RNOISE_FREE_1  1 2 <AutoShape>  [Internal]  ; No processable comment
+SUBCKT OPA830_VCVS_LIMIT_0  VC+ VC- VOUT+ VOUT- <AutoShape>  [Internal]  ; No processable comment
+SUBCKT OPA830_VCVS_LIMIT_1  VC+ VC- VOUT+ VOUT- <AutoShape>  [Internal]  ; No processable comment
+SUBCKT OPA830_VCVS_LIMIT_2  VC+ VC- VOUT+ VOUT- <AutoShape>  [Internal]  ; No processable comment
+SUBCKT OPA830_FEMT_0 1 2 <AutoShape>  [Internal]  ; No processable comment
+SUBCKT OPA830_VNSE_0 1 2 <AutoShape>  [Internal]  ; No processable comment
+SUBCKT OPA830_VCCS_LIMIT_0  VC+ VC- IOUT+ IOUT- <AutoShape>  [Internal]  ; No processable comment
+SUBCKT OPA830_VCCS_LIMIT_1  VC+ VC- IOUT+ IOUT- <AutoShape>  [Internal]  ; No processable comment
+SUBCKT OPA830_VCVS_LIMIT_3  VC+ VC- VOUT+ VOUT- <AutoShape>  [Internal]  ; No processable comment
+SUBCKT OPA830_VCVS_LIMIT_4  VC+ VC- VOUT+ VOUT- <AutoShape>  [Internal]  ; No processable comment
+SUBCKT OPA830_VCVS_LIMIT_5  VC+ VC- VOUT+ VOUT- <AutoShape>  [Internal]  ; No processable comment
+SUBCKT OPA830_RNOISE_FREE_2  1 2 <AutoShape>  [Internal]  ; No processable comment
+SUBCKT OPA4872    CH0 CH1 CH2 CH3 Vcc Vee OUT NFB A0 A1 ENBAR GND  Texas:OPA4872  [Misc]  ; No processable comment 
+SUBCKT OPA4872_SCHEMATIC1_F8_u1 1 2 3 4  <AutoShape>  [Internal]  ; No processable comment
+SUBCKT OPA4872_SCHEMATIC1_F11_u1 1 2 3 4  <AutoShape>  [Internal]  ; No processable comment
+SUBCKT OPA4872_SCHEMATIC1_F5_u1 1 2 3 4  <AutoShape>  [Internal]  ; No processable comment
+SUBCKT OPA4872_SCHEMATIC1_F9_u1 1 2 3 4  <AutoShape>  [Internal]  ; No processable comment
+SUBCKT OPA4872_SCHEMATIC1_F12_u1 1 2 3 4  <AutoShape>  [Internal]  ; No processable comment
+SUBCKT OPA4872_SCHEMATIC1_F2_u1 1 2 3 4  <AutoShape>  [Internal]  ; No processable comment
+SUBCKT OPA4872_SCHEMATIC1_F6_u1 1 2 3 4  <AutoShape>  [Internal]  ; No processable comment
+SUBCKT OPA4872_SCHEMATIC1_F3_u1 1 2 3 4  <AutoShape>  [Internal]  ; No processable comment
+SUBCKT OPA4872_AN2_0 A B Y DVDD DVSS  <AutoShape>  [Internal]  ; No processable comment
+SUBCKT OPA4872_INV_1 A Y DVDD DVSS  <AutoShape>  [Internal]  ; No processable comment
+SUBCKT OPAy211 INP INN Vcc Vee OUT Texas:OPAy211  [OpAmp]  ; No comment 
+SUBCKT THS3095 inp inn out vcc vee ref pd   Texas:THS3095  [OpAmp]  ; No comment 
+SUBCKT THS3095_SCHEMATIC1_F1 1 2 3 4  <AutoShape>  [Internal]  ; No processable comment
+SUBCKT THS3095_SCHEMATIC1_F2 1 2 3 4  <AutoShape>  [Internal]  ; No processable comment
+SUBCKT THS3110  In+ In- Vcc+ Vcc- Out PD Ref   Texas:THS3110  [OpAmp]  ; No comments 
+SUBCKT THS3110_Shutdown_Shutdown_F4 1 2 3 4  <AutoShape>  [Internal]  ; No processable comment
+SUBCKT THS3110_Shutdown_Shutdown_F5 1 2 3 4  <AutoShape>  [Internal]  ; No processable comment
+SUBCKT THS3110_Shutdown_Shutdown_F1 1 2 3 4  <AutoShape>  [Internal]  ; No processable comment
+SUBCKT THS3110_Shutdown_Shutdown_F6 1 2 3 4  <AutoShape>  [Internal]  ; No processable comment
+SUBCKT THS3110_Shutdown_Shutdown_F2 1 2 3 4  <AutoShape>  [Internal]  ; No processable comment
+SUBCKT THS3110_Shutdown_Shutdown_S1 1 2 3 4  <AutoShape>  [Internal]  ; No processable comment
+SUBCKT THS3110_Shutdown_Shutdown_F3 1 2 3 4  <AutoShape>  [Internal]  ; No processable comment
+SUBCKT THS3110_Shutdown_Shutdown_S2 1 2 3 4  <AutoShape>  [Internal]  ; No processable comment
+SUBCKT SUBCKT THS3120     1 2 3 4 5 6 7   Texas:THS3120  [OpAmp]  ; No comments 
+SUBCKT TLV342		1 2 3 4 5 6 7 8  Texas:TLV342  [OpAmp]  ; No comment 
+SUBCKT TLV34x		1 2 3 4 5  <AutoShape>  [Internal]  ; No comment 
+SUBCKT TLV34x_opamp		1 2 3 4 5  <AutoShape>  [Internal]  ; No comment
+subckt TLV34x_rnoiseless a b  <AutoShape>  [Internal]
+SUBCKT OPA140          -IN +IN V- V+ Vout  Texas:OPA140  [OpAmp]  ; No processable comment 
+SUBCKT OPA140_IDEAL_D_0  A C  <AutoShape>  [Internal]
+SUBCKT OPA140_FEMT_0  1 2  <AutoShape>  [Internal]
+SUBCKT OPA140_RNOISE_FREE_0  1 2  <AutoShape>  [Internal]
+SUBCKT OPA140_VNSE_0  1 2  <AutoShape>  [Internal]
+SUBCKT OPA140_VCVS_LIMIT_0  VC+ VC- VOUT+ VOUT-  <AutoShape>  [Internal]
+SUBCKT OPA140_IDEAL_D_1  A C  <AutoShape>  [Internal]
+SUBCKT OPA140_RNOISE_FREE_1  1 2  <AutoShape>  [Internal]
+SUBCKT OPA140_VARICAP_0  1 2 3 4  <AutoShape>  [Internal]
+SUBCKT OPA140_VC_RES_0  1      2      3    4  <AutoShape>  [Internal]
+SUBCKT OPA140_VCVS_LIMIT_1  VC+ VC- VOUT+ VOUT-  <AutoShape>  [Internal]
+SUBCKT OPA140_VCVS_LIMIT_2  VC+ VC- VOUT+ VOUT-  <AutoShape>  [Internal]
+SUBCKT OPA140_VCVS_LIMIT_3  VC+ VC- VOUT+ VOUT-  <AutoShape>  [Internal]
+SUBCKT OPA140_VCCS_LIMIT_0  VC+ VC- IOUT+ IOUT-  <AutoShape>  [Internal]
+SUBCKT OPA140_VCCS_LIMIT_1  VC+ VC- IOUT+ IOUT-  <AutoShape>  [Internal]
+SUBCKT OPA140_VCVS_LIMIT_4  VC+ VC- VOUT+ VOUT-  <AutoShape>  [Internal]
+SUBCKT OPA140_VCVS_LIMIT_5  VC+ VC- VOUT+ VOUT-  <AutoShape>  [Internal]
+SUBCKT OPA140_VCVS_LIMIT_6  VC+ VC- VOUT+ VOUT-  <AutoShape>  [Internal]
+SUBCKT OPA140_RNOISE_FREE_2  1 2  <AutoShape>  [Internal]
+SUBCKT OPA141          -IN +IN V- V+ Vout  Texas:OPA141  [OpAmp]  ; No processable comment
+SUBCKT OPA141_VCVS_LIMIT_0  VC+ VC- VOUT+ VOUT-  <AutoShape>  [Internal]
+SUBCKT OPA141_RNOISE_FREE_0  1 2  <AutoShape>  [Internal]
+SUBCKT OPA141_VCVS_LIMIT_1  VC+ VC- VOUT+ VOUT-  <AutoShape>  [Internal]
+SUBCKT OPA141_IDEAL_D_0  A C  <AutoShape>  [Internal]
+SUBCKT OPA141_IDEAL_D_1  A C  <AutoShape>  [Internal]
+SUBCKT OPA141_FEMT_0  1 2  <AutoShape>  [Internal]
+SUBCKT OPA141_VNSE_0  1 2  <AutoShape>  [Internal]
+SUBCKT OPA141_VCCS_LIMIT_0  VC+ VC- IOUT+ IOUT-  <AutoShape>  [Internal]
+SUBCKT OPA141_VCCS_LIMIT_1  VC+ VC- IOUT+ IOUT-  <AutoShape>  [Internal]
+SUBCKT OPA141_VCVS_LIMIT_2  VC+ VC- VOUT+ VOUT-  <AutoShape>  [Internal]
+SUBCKT OPA141_VCVS_LIMIT_3  VC+ VC- VOUT+ VOUT-  <AutoShape>  [Internal]
+SUBCKT OPA141_VCVS_LIMIT_4  VC+ VC- VOUT+ VOUT-  <AutoShape>  [Internal]
+SUBCKT OPA141_VCVS_LIMIT_5  VC+ VC- VOUT+ VOUT-  <AutoShape>  [Internal]
+SUBCKT OPA141_RNOISE_FREE_1  1 2  <AutoShape>  [Internal]
+SUBCKT OPA209          -IN +IN V- V+ Vout  Texas:OPA209  [OpAmp]  ; No processable comment
+SUBCKT OPA209_FEMT_0  1 2  <AutoShape>  [Internal]
+SUBCKT OPA209_VCVS_LIMIT_0  VC+ VC- VOUT+ VOUT-  <AutoShape>  [Internal]
+SUBCKT OPA209_IDEAL_D_0  A C  <AutoShape>  [Internal]
+SUBCKT OPA209_RNOISE_FREE_0  1 2  <AutoShape>  [Internal]
+SUBCKT OPA209_VARICAP_0  1 2 3 4  <AutoShape>  [Internal]
+SUBCKT OPA209_VC_RES_0  1      2      3    4  <AutoShape>  [Internal]
+SUBCKT OPA209_VCVS_LIMIT_1  VC+ VC- VOUT+ VOUT-  <AutoShape>  [Internal]
+SUBCKT OPA209_VCVS_LIMIT_2  VC+ VC- VOUT+ VOUT-  <AutoShape>  [Internal]
+SUBCKT OPA209_IDEAL_D_1  A C  <AutoShape>  [Internal]
+SUBCKT OPA209_VNSE_0  1 2  <AutoShape>  [Internal]
+SUBCKT OPA209_VCCS_LIMIT_0  VC+ VC- IOUT+ IOUT-  <AutoShape>  [Internal]
+SUBCKT OPA209_VCCS_LIMIT_1  VC+ VC- IOUT+ IOUT-  <AutoShape>  [Internal]
+SUBCKT OPA209_VCVS_LIMIT_3  VC+ VC- VOUT+ VOUT-  <AutoShape>  [Internal]
+SUBCKT OPA209_VCVS_LIMIT_4  VC+ VC- VOUT+ VOUT-  <AutoShape>  [Internal]
+SUBCKT OPA209_VCVS_LIMIT_5  VC+ VC- VOUT+ VOUT-  <AutoShape>  [Internal]
+SUBCKT OPA209_RNOISE_FREE_1  1 2  <AutoShape>  [Internal]
+SUBCKT OPA330 3 4 5 2 1  Texas:OPA330  [OpAmp]  ; No processable comment
+SUBCKT OPA333 3 4 5 2 1  Texas:OPA333  [OpAmp]  ; No processable comment
+SUBCKT OPA337  1  2  3   4   5  Texas:OPA337  [OpAmp]  ; No processable comment
+SUBCKT OPA338  1  2  3   4   5  Texas:OPA338  [OpAmp]  ; No processable comment
+SUBCKT OPA369         1 3 5 2 4  Texas:OPA369  [OpAmp]  ; No processable comment
+SUBCKT OPA376          3 4 5 2 1  Texas:OPA376  [OpAmp]  ; No processable comment
+SUBCKT OPA377          3 4 5 2 1  Texas:OPA377  [OpAmp]  ; No processable comment
+SUBCKT OPA378          1 3 5 2 4  Texas:OPA378  [OpAmp]  ; No processable comment
+SUBCKT OPA379          1 3 5 2 4  Texas:OPA379  [OpAmp]  ; No processable comment
+SUBCKT OPA454          3 2 7 4 6 8 1 5  Texas:OPA454  [OpAmp]  ; No processable comment
+SUBCKT OPA551          3 2 7 4 6 8  Texas:OPA551  [OpAmp]  ; No processable comment
+SUBCKT OPA552          3 2 7 4 6 8  Texas:OPA552  [OpAmp]  ; No processable comment
+SUBCKT OPA564          16 15 19 11 5 14 17 12 18 13 9  Texas:OPA564  [OpAmp]  ; No processable comment
+SUBCKT OPA567          3 4 5 6 7 8 12 14 17  Texas:OPA567  [OpAmp]  ; No processable comment
+SUBCKT OPA727          3 2 7 4 6  Texas:OPA727  [OpAmp]  ; No processable comment
+SUBCKT OPA728          3 2 7 4 6 8 1  Texas:OPA728  [OpAmp]  ; No processable comment
+SUBCKT OPA827          3 2 7 4 6  Texas:OPA827  [OpAmp]  ; No processable comment
+SUBCKT OPA1611         3 2 7 4 6  Texas:OPA1611  [OpAmp]  ; No processable comment
+SUBCKT OPA1612         3 2 7 4 6  Texas:OPA1612  [OpAmp]  ; No processable comment
+SUBCKT OPA1642         -IN +IN V- V+ Vout  Texas:OPA1642  [OpAmp]  ; No processable comment
+SUBCKT OPA1642_RNOISE_FREE_0  1 2  <AutoShape>  [Internal]
+SUBCKT OPA1642_VCVS_LIMIT_0  VC+ VC- VOUT+ VOUT-  <AutoShape>  [Internal]
+SUBCKT OPA1642_IDEAL_D_0  A C  <AutoShape>  [Internal]
+SUBCKT OPA1642_IDEAL_D_1  A C  <AutoShape>  [Internal]
+SUBCKT OPA1642_FEMT_0  1 2  <AutoShape>  [Internal]
+SUBCKT OPA1642_VNSE_0  1 2  <AutoShape>  [Internal]
+SUBCKT OPA1642_VCCS_LIMIT_0  VC+ VC- IOUT+ IOUT-  <AutoShape>  [Internal]
+SUBCKT OPA1642_VCCS_LIMIT_1  VC+ VC- IOUT+ IOUT-  <AutoShape>  [Internal]
+SUBCKT OPA1642_VCVS_LIMIT_1  VC+ VC- VOUT+ VOUT-  <AutoShape>  [Internal]
+SUBCKT OPA1642_VCVS_LIMIT_2  VC+ VC- VOUT+ VOUT-  <AutoShape>  [Internal]
+SUBCKT OPA1642_VCVS_LIMIT_3  VC+ VC- VOUT+ VOUT-  <AutoShape>  [Internal]
+SUBCKT OPA1642_VCVS_LIMIT_4  VC+ VC- VOUT+ VOUT-  <AutoShape>  [Internal]
+SUBCKT OPA1642_VCVS_LIMIT_5  VC+ VC- VOUT+ VOUT-  <AutoShape>  [Internal]
+SUBCKT OPA1642_RNOISE_FREE_1  1 2  <AutoShape>  [Internal]
+SUBCKT OPA1644         -IN +IN V- V+ Vout  Texas:OPA1644  [OpAmp]  ; No processable comment
+SUBCKT OPA1644_RNOISE_FREE_0  1 2  <AutoShape>  [Internal]
+SUBCKT OPA1644_VCVS_LIMIT_0  VC+ VC- VOUT+ VOUT-  <AutoShape>  [Internal]
+SUBCKT OPA1644_IDEAL_D_0  A C  <AutoShape>  [Internal]
+SUBCKT OPA1644_IDEAL_D_1  A C  <AutoShape>  [Internal]
+SUBCKT OPA1644_FEMT_0  1 2  <AutoShape>  [Internal]
+SUBCKT OPA1644_VNSE_0  1 2  <AutoShape>  [Internal]
+SUBCKT OPA1644_VCCS_LIMIT_0  VC+ VC- IOUT+ IOUT-  <AutoShape>  [Internal]
+SUBCKT OPA1644_VCCS_LIMIT_1  VC+ VC- IOUT+ IOUT-  <AutoShape>  [Internal]
+SUBCKT OPA1644_VCVS_LIMIT_1  VC+ VC- VOUT+ VOUT-  <AutoShape>  [Internal]
+SUBCKT OPA1644_VCVS_LIMIT_2  VC+ VC- VOUT+ VOUT-  <AutoShape>  [Internal]
+SUBCKT OPA1644_VCVS_LIMIT_3  VC+ VC- VOUT+ VOUT-  <AutoShape>  [Internal]
+SUBCKT OPA1644_VCVS_LIMIT_4  VC+ VC- VOUT+ VOUT-  <AutoShape>  [Internal]
+SUBCKT OPA1644_VCVS_LIMIT_5  VC+ VC- VOUT+ VOUT-  <AutoShape>  [Internal]
+SUBCKT OPA1644_RNOISE_FREE_1  1 2  <AutoShape>  [Internal]
+SUBCKT OPA2130           1 2 3 4 5  Texas:OPA2130  [OpAmp]  ; No processable comment
+SUBCKT OPA2131          1 2 3 4 5  Texas:OPA2131  [OpAmp]  ; No processable comment
+SUBCKT OPA2132           1 2 3 4 5  Texas:OPA2132  [OpAmp]  ; No processable comment
+SUBCKT OPA2134           1 2 3 4 5  Texas:OPA2134  [OpAmp]  ; No processable comment
+SUBCKT OPA2140          -IN +IN V- V+ Vout  Texas:OPA2140  [OpAmp]  ; No processable comment
+SUBCKT OPA2140_IDEAL_D_0  A C  <AutoShape>  [Internal]
+SUBCKT OPA2140_FEMT_0  1 2  <AutoShape>  [Internal]
+SUBCKT OPA2140_RNOISE_FREE_0  1 2  <AutoShape>  [Internal]
+SUBCKT OPA2140_VNSE_0  1 2  <AutoShape>  [Internal]
+SUBCKT OPA2140_VCVS_LIMIT_0  VC+ VC- VOUT+ VOUT-  <AutoShape>  [Internal]
+SUBCKT OPA2140_IDEAL_D_1  A C  <AutoShape>  [Internal]
+SUBCKT OPA2140_RNOISE_FREE_1  1 2  <AutoShape>  [Internal]
+SUBCKT OPA2140_VARICAP_0  1 2 3 4  <AutoShape>  [Internal]
+SUBCKT OPA2140_VC_RES_0  1      2      3    4  <AutoShape>  [Internal]
+SUBCKT OPA2140_VCVS_LIMIT_1  VC+ VC- VOUT+ VOUT-  <AutoShape>  [Internal]
+SUBCKT OPA2140_VCVS_LIMIT_2  VC+ VC- VOUT+ VOUT-  <AutoShape>  [Internal]
+SUBCKT OPA2140_VCVS_LIMIT_3  VC+ VC- VOUT+ VOUT-  <AutoShape>  [Internal]
+SUBCKT OPA2140_VCCS_LIMIT_0  VC+ VC- IOUT+ IOUT-  <AutoShape>  [Internal]
+SUBCKT OPA2140_VCCS_LIMIT_1  VC+ VC- IOUT+ IOUT-  <AutoShape>  [Internal]
+SUBCKT OPA2140_VCVS_LIMIT_4  VC+ VC- VOUT+ VOUT-  <AutoShape>  [Internal]
+SUBCKT OPA2140_VCVS_LIMIT_5  VC+ VC- VOUT+ VOUT-  <AutoShape>  [Internal]
+SUBCKT OPA2140_VCVS_LIMIT_6  VC+ VC- VOUT+ VOUT-  <AutoShape>  [Internal]
+SUBCKT OPA2140_RNOISE_FREE_2  1 2  <AutoShape>  [Internal]
+SUBCKT OPA2141          -IN +IN V- V+ Vout  Texas:OPA2141  [OpAmp]  ; No processable comment
+SUBCKT OPA2141_VCVS_LIMIT_0  VC+ VC- VOUT+ VOUT-  <AutoShape>  [Internal]
+SUBCKT OPA2141_RNOISE_FREE_0  1 2  <AutoShape>  [Internal]
+SUBCKT OPA2141_VCVS_LIMIT_1  VC+ VC- VOUT+ VOUT-  <AutoShape>  [Internal]
+SUBCKT OPA2141_IDEAL_D_0  A C  <AutoShape>  [Internal]
+SUBCKT OPA2141_IDEAL_D_1  A C  <AutoShape>  [Internal]
+SUBCKT OPA2141_FEMT_0  1 2  <AutoShape>  [Internal]
+SUBCKT OPA2141_VNSE_0  1 2  <AutoShape>  [Internal]
+SUBCKT OPA2141_VCCS_LIMIT_0  VC+ VC- IOUT+ IOUT-  <AutoShape>  [Internal]
+SUBCKT OPA2141_VCCS_LIMIT_1  VC+ VC- IOUT+ IOUT-  <AutoShape>  [Internal]
+SUBCKT OPA2141_VCVS_LIMIT_2  VC+ VC- VOUT+ VOUT-  <AutoShape>  [Internal]
+SUBCKT OPA2141_VCVS_LIMIT_3  VC+ VC- VOUT+ VOUT-  <AutoShape>  [Internal]
+SUBCKT OPA2141_VCVS_LIMIT_4  VC+ VC- VOUT+ VOUT-  <AutoShape>  [Internal]
+SUBCKT OPA2141_VCVS_LIMIT_5  VC+ VC- VOUT+ VOUT-  <AutoShape>  [Internal]
+SUBCKT OPA2141_RNOISE_FREE_1  1 2  <AutoShape>  [Internal]
+SUBCKT OPA2209         -IN +IN V- V+ Vout  Texas:OPA2209  [OpAmp]  ; No processable comment
+SUBCKT OPA2209_FEMT_0  1 2  <AutoShape>  [Internal]
+SUBCKT OPA2209_VCVS_LIMIT_0  VC+ VC- VOUT+ VOUT-  <AutoShape>  [Internal]
+SUBCKT OPA2209_IDEAL_D_0  A C  <AutoShape>  [Internal]
+SUBCKT OPA2209_RNOISE_FREE_0  1 2  <AutoShape>  [Internal]
+SUBCKT OPA2209_VARICAP_0  1 2 3 4  <AutoShape>  [Internal]
+SUBCKT OPA2209_VC_RES_0  1      2      3    4  <AutoShape>  [Internal]
+SUBCKT OPA2209_VCVS_LIMIT_1  VC+ VC- VOUT+ VOUT-  <AutoShape>  [Internal]
+SUBCKT OPA2209_VCVS_LIMIT_2  VC+ VC- VOUT+ VOUT-  <AutoShape>  [Internal]
+SUBCKT OPA2209_IDEAL_D_1  A C  <AutoShape>  [Internal]
+SUBCKT OPA2209_VNSE_0  1 2  <AutoShape>  [Internal]
+SUBCKT OPA2209_VCCS_LIMIT_0  VC+ VC- IOUT+ IOUT-  <AutoShape>  [Internal]
+SUBCKT OPA2209_VCCS_LIMIT_1  VC+ VC- IOUT+ IOUT-  <AutoShape>  [Internal]
+SUBCKT OPA2209_VCVS_LIMIT_3  VC+ VC- VOUT+ VOUT-  <AutoShape>  [Internal]
+SUBCKT OPA2209_VCVS_LIMIT_4  VC+ VC- VOUT+ VOUT-  <AutoShape>  [Internal]
+SUBCKT OPA2209_VCVS_LIMIT_5  VC+ VC- VOUT+ VOUT-  <AutoShape>  [Internal]
+SUBCKT OPA2209_RNOISE_FREE_1  1 2  <AutoShape>  [Internal]
+SUBCKT OPA2234           1 2 3 4 5  Texas:OPA2234  [OpAmp]  ; No processable comment
+SUBCKT OPA2241         1 2 3 4 5  TEXAS:OPA2241  [OpAmp] ; No processable comment         
+SUBCKT OPA2343          +  -  V+  V- OUT  Texas:OPA2343  [OpAmp]  ; No processable comment
+SUBCKT OPA2244           1 2 3 4 5  Texas:OPA2244  [OpAmp]  ; No processable comment
+SUBCKT OPA2251          1 2 3 4 5  Texas:OPA2251  [OpAmp]  ; No processable comment
+SUBCKT OPA2300         3   2   7  4  6   8  Texas:OPA2300  [OpAmp]
+SUBCKT OPA2301 3 2 7 4 6  Texas:OPA2301  [OpAmp]  ; No processable comment
+SUBCKT OPA2330         3 4 5 2 1  Texas:OPA2330  [OpAmp]  ; No processable comment
+SUBCKT OPA2333         3 4 5 2 1  Texas:OPA2333  [OpAmp]  ; No processable comment
+SUBCKT OPA2334 1 2 3 4 5 6  Texas:OPA2334  [OpAmp]  ; No processable comment
+SUBCKT OPA2335 3 4 6 2 1  Texas:OPA2335  [OpAmp]  ; No processable comment
+SUBCKT OPA2337           3  4  6   2   1  Texas:OPA2337  [OpAmp]  ; No processable comment
+SUBCKT OPA2338           3  4  6   2   1  Texas:OPA2338  [OpAmp]  ; No processable comment
+SUBCKT OPA2340            3  4  6   2   1  Texas:OPA2340  [OpAmp]  ; No processable comment
+SUBCKT OPA2342            3  4  6   2   1  Texas:OPA2342  [OpAmp]  ; No processable comment
+SUBCKT OPA2344 3  4  6   2   1  Texas:OPA2344 [OpAmp]  ; No processable comment
+SUBCKT OPA2345           3 2 7 4 6  Texas:OPA2345  [OpAmp]  ; No processable comment
+SUBCKT OPA2349 3  4  6   2   1  Texas:OPA2349  [OpAmp]  ; No processable comment
+SUBCKT OPA2353           +  - V+ V-  OUT  Texas:OPA2353  [OpAmp]  ; No processable comment
+SUBCKT OPA2354        3 4 5 2 1  Texas:OPA2354  [OpAmp]  ; No processable comment
+SUBCKT OPA2355         1 2 3 4 5 6  Texas:OPA2355  [OpAmp]  ; No processable comment
+SUBCKT OPA2357         1 2 3 4 5 6  Texas:OPA2357  [OpAmp]  ; No processable comment
+SUBCKT OPA2363         3 4 6 2 1 5  Texas:OPA2363  [OpAmp]  ; No processable comment
+SUBCKT OPA2369         1 3 5 2 4  Texas:OPA2369  [OpAmp]  ; No processable comment
+SUBCKT OPA2373         3 4 6 2 1 5  Texas:OPA2373  [OpAmp]  ; No processable comment
+SUBCKT OPA2374         3 4 5 2 1  Texas:OPA2374  [OpAmp]  ; No processable comment
+SUBCKT OPA2376         3 4 5 2 1  Texas:OPA2376  [OpAmp]  ; No processable comment
+SUBCKT OPA2377         3 4 5 2 1  Texas:OPA2377  [OpAmp]  ; No processable comment
+SUBCKT OPA2378         1 3 5 2 4  Texas:OPA2378  [OpAmp]  ; No processable comment
+SUBCKT OPA2379         1 3 5 2 4  Texas:OPA2379  [OpAmp]  ; No processable comment
+SUBCKT OPA2380         3 2 1 4 6  Texas:OPA2380  [OpAmp]  ; No processable comment
+SUBCKT OPA2381         3 2 1 4 6  Texas:OPA2381  [OpAmp]  ; No processable comment
+SUBCKT OPA2703          3 2 7 4 6  Texas:OPA2703  [OpAmp]  ; No processable comment
+SUBCKT OPA2704         3 2 7 4 6  Texas:OPA2704  [OpAmp]  ; No processable comment
+SUBCKT OPA2725         3 2 7 4 6  Texas:OPA2725  [OpAmp]  ; No processable comment
+SUBCKT OPA2726         3 2 7 4 6 8 1  Texas:OPA2726  [OpAmp]  ; No processable comment
+SUBCKT OPA2727          3 2 7 4 6  Texas:OPA2727  [OpAmp]  ; No processable comment
+SUBCKT OPA2734         1 2 3 4 5 6  Texas:OPA2734  [OpAmp]  ; No processable comment
+SUBCKT OPA2735         3 4 6 2 1  Texas:OPA2735  [OpAmp]  ; No processable comment
+SUBCKT OPA2743         3 2 7 4 6  Texas:OPA2743  [OpAmp]  ; No processable comment
+SUBCKT OPA3355         1 2 3 4 5 6  Texas:OPA3355  [OpAmp]  ; No processable comment
+SUBCKT OPA4209         -IN +IN V- V+ Vout  Texas:OPA4209  [OpAmp]  ; No processable comment
+SUBCKT OPA4209_FEMT_0  1 2   <AutoShape> [Internal]
+SUBCKT OPA4209_VCVS_LIMIT_0  VC+ VC- VOUT+ VOUT-   <AutoShape> [Internal]
+SUBCKT OPA4209_IDEAL_D_0  A C   <AutoShape> [Internal]
+SUBCKT OPA4209_RNOISE_FREE_0  1 2   <AutoShape> [Internal]
+SUBCKT OPA4209_VARICAP_0  1 2 3 4   <AutoShape> [Internal]
+SUBCKT OPA4209_VC_RES_0  1      2      3    4   <AutoShape> [Internal]
+SUBCKT OPA4209_VCVS_LIMIT_1  VC+ VC- VOUT+ VOUT-   <AutoShape> [Internal]
+SUBCKT OPA4209_VCVS_LIMIT_2  VC+ VC- VOUT+ VOUT-   <AutoShape> [Internal]
+SUBCKT OPA4209_IDEAL_D_1  A C   <AutoShape> [Internal]
+SUBCKT OPA4209_VNSE_0  1 2   <AutoShape> [Internal]
+SUBCKT OPA4209_VCCS_LIMIT_0  VC+ VC- IOUT+ IOUT-   <AutoShape> [Internal]
+SUBCKT OPA4209_VCCS_LIMIT_1  VC+ VC- IOUT+ IOUT-   <AutoShape> [Internal]
+SUBCKT OPA4209_VCVS_LIMIT_3  VC+ VC- VOUT+ VOUT-   <AutoShape> [Internal]
+SUBCKT OPA4209_VCVS_LIMIT_4  VC+ VC- VOUT+ VOUT-   <AutoShape> [Internal]
+SUBCKT OPA4209_VCVS_LIMIT_5  VC+ VC- VOUT+ VOUT-   <AutoShape> [Internal]
+SUBCKT OPA4209_RNOISE_FREE_1  1 2   <AutoShape> [Internal]
+SUBCKT OPA4344 3  4  6   2   1  Texas:OPA4344 [OpAmp]  ; No processable comment
+SUBCKT OPA4345           3 2 7 4 6  Texas:OPA4345  [OpAmp]  ; No processable comment
+SUBCKT OPA4354        3 4 5 2 1  Texas:OPA4354  [OpAmp]  ; No processable comment
+SUBCKT OPA4374         3 4 5 2 1  Texas:OPA4374  [OpAmp]  ; No processable comment
+SUBCKT OPA4376         3 4 5 2 1  Texas:OPA4376  [OpAmp]  ; No processable comment
+SUBCKT OPA4377         3 4 5 2 1  Texas:OPA4377  [OpAmp]  ; No processable comment
+SUBCKT OPA4379         1 3 5 2 4  Texas:OPA4379  [OpAmp]  ; No processable comment
+SUBCKT OPA4703          3 2 7 4 6  Texas:OPA4703  [OpAmp]  ; No processable comment
+SUBCKT OPA4704         3 2 7 4 6  Texas:OPA4704  [OpAmp]  ; No processable comment
+SUBCKT OPA4727          3 2 7 4 6  Texas:OPA4727  [OpAmp]  ; No processable comment
+SUBCKT OPA4743         3 2 7 4 6  Texas:OPA4743  [OpAmp]  ; No processable comment
+SUBCKT amp_tlv27x_highVdd 1 2 3 4 5  Texas:TLV271  [OpAmp]  ; No processable comment
+LOCKED gYg=

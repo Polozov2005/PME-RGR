@@ -1,0 +1,3 @@
+Texas Instruments
+SUBCKT TPS51200        EN GND PGND PGOOD REFIN REFOUT VIN VLDOIN VO VOSNS  Texas:TPS51200_AVG  [SMPS]  ; No processable comment
+LOCKED p9A=

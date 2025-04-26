@@ -1,0 +1,4 @@
+Texas Instruments
+SUBCKT TL431           1 2 3  Texas:TL431  [VoltageReg]                                  
+LOCKED NWA=
+

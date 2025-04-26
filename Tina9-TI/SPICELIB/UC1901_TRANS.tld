@@ -1,0 +1,4 @@
+Texas Instruments
+SUBCKT UC1901          CT EXTCLK NC DRIVERB DRIVERA NC1 GND VIN STATUS COMP INV NINV VREF RT  Texas:UCx901  [SMPS]  ; No processable comment
+LOCKED v8w=
+

@@ -1,0 +1,7 @@
+{ Use this template to create your
+  own signals }
+Function Signal(x);
+Begin
+   T:= 1e-4;
+   Signal := exp(-0.5*x/T)*sin(7*x/T);
+End;

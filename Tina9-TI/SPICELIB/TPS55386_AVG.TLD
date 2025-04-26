@@ -1,0 +1,4 @@
+Texas Instruments
+SUBCKT TPS55386_AVG Comp Vin Fb Out Gnd  Texas:TPS55386AVG  [SMPS]
+LOCKED pYQ=
+

@@ -1,0 +1,4 @@
+Texas Instruments
+SUBCKT TPS40009_AVG    FB COMP GND SW VDD  Texas:TPS40009_AVG  [SMPS]  ; No processable comment
+LOCKED wZY=
+

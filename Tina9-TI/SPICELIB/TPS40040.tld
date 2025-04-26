@@ -1,0 +1,4 @@
+Texas Instruments
+SUBCKT TPS40040        BOOT COMP N_EN FB GND HDRV LDRV SW VDD    Texas:TPS40040  [SMPS]  ; No processable comment
+LOCKED a2c=
+

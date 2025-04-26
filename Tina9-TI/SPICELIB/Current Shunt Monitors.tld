@@ -1,0 +1,39 @@
+Texas Instruments
+SUBCKT INA138          + - VS GND OUT  TEXAS:INA138  [CurrShuntMon]                                
+SUBCKT INA168          + - VS GND OUT  TEXAS:INA168  [CurrShuntMon]                                
+SUBCKT INA169          1 2 3 4 5  TEXAS:INA169  [CurrShuntMon]              
+SUBCKT INA170          1 2 3 4 5 6 8  TEXAS:INA170  [CurrShuntMon]                               
+SUBCKT INA193          1 2 3 4 5  TEXAS:INA193  [CurrShuntMon]              
+SUBCKT INA194          1 2 3 4 5  TEXAS:INA194  [CurrShuntMon]              
+SUBCKT INA195          1 2 3 4 5  TEXAS:INA195  [CurrShuntMon]              
+SUBCKT INA210          IN+ IN- V+ GND OUT REF  TEXAS:INA210  [CurrShuntMon] 
+SUBCKT INA211          IN+ IN- V+ GND OUT REF  TEXAS:INA211  [CurrShuntMon] 
+SUBCKT INA212          IN+ IN- V+ GND OUT REF  TEXAS:INA212  [CurrShuntMon] 
+SUBCKT INA213          IN+ IN- V+ GND OUT REF  TEXAS:INA213  [CurrShuntMon] 
+SUBCKT INA214          IN+ IN- V+ GND OUT REF  TEXAS:INA214  [CurrShuntMon] 
+SUBCKT INA21Xopa       VBus1 VBus2 GND IN+ OUT AVDD IN-  <AutoShape>  [Internal]  ; No processable comment
+SUBCKT D_D                   1    2  <AutoShape>  [Internal]  ; No processable comment
+SUBCKT DRVMOS_1        D G S <NMOSE> [Internal]
+SUBCKT D_ZR_2V               1    2  <AutoShape>  [Internal]  ; No processable comment
+SUBCKT D_D_1                 1    2  <AutoShape>  [Internal]  ; No processable comment
+SUBCKT DRVPMOS         D G S B  <AutoShape>  [Internal]
+SUBCKT DRVPMOS_1       D G S B  <AutoShape>  [Internal]
+SUBCKT DRVMOS          D G S <NMOSE> [Internal]
+SUBCKT D_D10                 1    2  <AutoShape>  [Internal]  ; No processable comment
+SUBCKT VOST             1 2 3  <AutoShape>  [Internal]  ; No processable comment
+SUBCKT D_D10_1               1    2  <AutoShape>  [Internal]  ; No processable comment
+SUBCKT HYSTCOMP        In+ In- Out Gnd  <AutoShape>  [Internal]
+SUBCKT D_D9                  1    2  <AutoShape>  [Internal]  ; No processable comment
+SUBCKT D_ZB1                  1    2  <AutoShape>  [Internal]  ; No processable comment
+SUBCKT D_DB1                 1    2  <AutoShape>  [Internal]  ; No processable comment
+SUBCKT D_DR                  1    2  <AutoShape>  [Internal]  ; No processable comment
+SUBCKT D_ZR_2_1V             1    2  <AutoShape>  [Internal]  ; No processable comment
+SUBCKT Q_NMOS          D G S <NMOSE> [Internal]
+SUBCKT D_DIS1PN0_1           1    2  <AutoShape>  [Internal]  ; No processable comment
+SUBCKT D_Z26V                1    2  <AutoShape>  [Internal]  ; No processable comment
+SUBCKT D_DIS1PN0_52          1    2  <AutoShape>  [Internal]  ; No processable comment
+LOCKED YdM=
+
+
+
+

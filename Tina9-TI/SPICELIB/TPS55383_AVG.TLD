@@ -1,0 +1,4 @@
+Texas Instruments
+SUBCKT tps55383_AVG   Comp Vin Gnd Out Fb  Texas:TPS55383AVG  [SMPS]
+LOCKED Zro=
+

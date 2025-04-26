@@ -1,0 +1,4 @@
+Texas Instruments
+SUBCKT TPS54383_AVG     RTN VIN OUT FB  Texas:TPS54383AVG  [SMPS]  ; No processable comment
+LOCKED m+s=
+

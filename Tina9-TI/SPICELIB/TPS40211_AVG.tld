@@ -1,0 +1,4 @@
+Texas Instruments
+SUBCKT TPS40211_AVG     VOUT FB GND IND VIN COMP  Texas:TPS40211AVG  [SMPS]  ; No processable comment
+LOCKED EYI=
+

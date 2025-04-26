@@ -1,0 +1,4 @@
+Texas Instruments
+SUBCKT UCC28C42  COMP   FB   CS   RTCT    GND    OUT   VDD   VREF  Texas:UCC28C42_STEADY  [SMPS]  ; No processable comment
+LOCKED oaA=
+

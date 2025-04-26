@@ -1,0 +1,23 @@
+DesignSoft
+SUBCKT Ampli           IN+ IN- OUT  V+ V-  702  [Internal]  ; No processable comment
+SUBCKT AmpliGndRef     IN+ IN- OUT GND  703  [Internal]  ; No processable comment
+SUBCKT Comp            IN+ IN- OUT  V+ V-  704  [Internal]  ; No processable comment
+SUBCKT CompGndRef      IN+ IN- OUT GND  705  [Internal]  ; No processable comment
+SUBCKT Comp2InpAnd     IN1+ IN1- IN2+ IN2- OUT GND  706  [Internal]  ; No processable comment
+SUBCKT Comp3InpAnd     IN1+ IN1- IN2+ IN2- IN3+ IN3- OUT GND  707  [Internal]  ; No processable comment
+SUBCKT Comp4InpAnd     IN1+ IN1- IN2+ IN2- IN3+ IN3- IN4+ IN4- OUT GND  708  [Internal]  ; No processable comment
+SUBCKT VCO InP InM Gnd OutSin OutTri OutSqr  <AutoShape>  [Internal]  ; No processable comment
+SUBCKT SINEVCO InP InM Gnd Out <AutoShape>  [Internal]  ; No processable comment
+SUBCKT TRIVCO InP InM Gnd Out <AutoShape>  [Internal]  ; No processable comment
+SUBCKT SQRVCO InP InM Gnd Out <AutoShape>  [Internal]  ; No processable comment
+SUBCKT NCOUNTER_UDSR   CLK UD CE S R MIN MAX  GND VCC NCOUNT  [Internal] 
+SUBCKT StdOpamp INP INM VP VM Out  TinaICs:<Amplifier5>  [Internal]
+SUBCKT DFFLOP PREB CLRB CLK D Q QB TinaICs:DFF  [Internal]   
+SUBCKT DFFLOP_P PREB CLRB CLK D Q QB DPWR DGND TinaICs:DFF_P  [Internal]   
+SUBCKT RSFFLOP  S  R  Q  QB  TinaICs:RSFF  [Internal]   
+SUBCKT RSFFLOP_P  S  R  Q  QB DPWR DGND  TinaICs:RSFF_P  [Internal]   
+SUBCKT TFFLOP PREB CLRB CLKB T Q QB TinaICs:TFF  [Internal]   
+SUBCKT TFFLOP_P PREB CLRB CLKB T Q QB DPWR DGND TinaICs:TFF_P  [Internal]   
+SUBCKT JKFFLOP PREB CLRB CLKB J K Q QB TinaICs:JKFF  [Internal]   
+SUBCKT JKFFLOP_P PREB CLRB CLKB J K Q QB DPWR DGND TinaICs:JKFF_P  [Internal]   
+LOCKED Pmg=

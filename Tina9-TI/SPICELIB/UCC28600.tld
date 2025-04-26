@@ -1,0 +1,23 @@
+Texas Instruments
+SUBCKT UCC28600        SS FB CS GND OUT VDD OVP STATUS  Texas:UCC28600  [SMPS]  ; No processable comment
+SUBCKT QR_detect_0     OVP CS CLK_130k OUT_ Burst LINE_OVP LOAD_OVP REF QR_DONE  <AutoShape>  [Internal]  ; No processable comment
+SUBCKT HYSTCOMP-QR_0   In+ In- Out Gnd  <AutoShape>  [Internal]
+SUBCKT VCVS-2-QR_0     In1 In2 Out Gnd  <AutoShape>  [Internal]
+SUBCKT 2N7002-QR_0     D G S <AutoShape>  [Internal]
+SUBCKT D_D_0                 1    2  <AutoShape>  [Internal]  ; No processable comment
+SUBCKT OSC_0           QR_DONE OSC_CL RUN CLK clk_130k SS_ovr  <AutoShape>  [Internal]  ; No processable comment
+SUBCKT VCVS-2-OSC_0    In1 In2 Out Gnd  <AutoShape>  [Internal]
+SUBCKT VCVS-2-OSC_1    In1 In2 Out Gnd  <AutoShape>  [Internal]
+SUBCKT Fault_Logic_0   LOAD_OVP LINE_OVP Thermal_shutdn FB SS_ovr CS REF_OK_ BURST SS-DIS RUN UVLO REF STATUS  <AutoShape>  [Internal]  ; No processable comment
+SUBCKT Latch_0         R S Q QB  <AutoShape>  [Internal]  ; No processable comment
+SUBCKT VCVS-2-FD_0     In1 In2 Out Gnd  <AutoShape>  [Internal]
+SUBCKT HYSTCOMP-FD_0   In+ In- Out Gnd  <AutoShape>  [Internal]
+SUBCKT 2N7002-FL_0     D G S <AutoShape>  [Internal]
+SUBCKT Mode_clamp_0    FB FB_CL OSC_CL  <AutoShape>  [Internal]  ; No processable comment
+SUBCKT 2N7002_0        D G S <AutoShape>  [Internal]
+SUBCKT VCVS-2FB_0      In1 In2 Out Gnd  <AutoShape>  [Internal]
+SUBCKT VCVS-2FB_1      In1 In2 Out Gnd  <AutoShape>  [Internal]
+SUBCKT VCVS-2FB_2      In1 In2 Out Gnd  <AutoShape>  [Internal]
+SUBCKT VCVS-2FB_3      In1 In2 Out Gnd  <AutoShape>  [Internal]
+SUBCKT HYSTCOMP_0      In+ In- Out Gnd  <AutoShape>  [Internal]
+LOCKED TGI=

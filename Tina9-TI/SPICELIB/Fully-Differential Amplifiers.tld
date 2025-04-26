@@ -1,0 +1,60 @@
+Texas Instruments
+SUBCKT OPA1632         1 2 3 4 5 5b 17  TEXAS:Fully_Differential_Amplifier  [FullDiffAmp]
+SUBCKT THS4120         inp1 inn1 vdd vss outp outn vocm  TEXAS:FDA-2  [FullDiffAmp]
+SUBCKT A1_4120         1 2 3 4  <AutoShape>  [Internal]
+SUBCKT THS4121         inp1 inn1 vdd vss outp outn vocm  TEXAS:FDA-2  [FullDiffAmp]
+SUBCKT A1_4121         1 2 3 4  <AutoShape>  [Internal]
+SUBCKT THS4130         1 2 3 4 5 6 7 8   Texas:THS4130-2  [FullDiffAmp]
+SUBCKT THS4131         1 2 3 4 5 5b 17  TEXAS:Fully_Differential_Amplifier  [FullDiffAmp]
+SUBCKT THS4140         1 2 3 4 5 5b 17  TEXAS:Fully_Differential_Amplifier  [FullDiffAmp]
+SUBCKT THS4141         1 2 3 4 5 5b 17  TEXAS:Fully_Differential_Amplifier  [FullDiffAmp]
+SUBCKT THS4150         1 2 3 4 5 5b 17  TEXAS:Fully_Differential_Amplifier  [FullDiffAmp]
+SUBCKT THS4151         1 2 3 4 5 5b 17  TEXAS:Fully_Differential_Amplifier  [FullDiffAmp]
+SUBCKT THS7530         1 2 3 4 5 6 7 8  TEXAS:FDPGA  [FullDiffAmp]
+SUBCKT THS4505         1 2 3 4 5 6 7  TEXAS:FDA-4  [FullDiffAmp]
+SUBCKT VOCM                   1 2 3 4 5  <AutoShape>  [Internal]
+SUBCKT THS4505_OP      Out In+ In- V+ V-  <AutoShape>  [Internal]
+SUBCKT THS4503         VIN+ VIN- VS+ VS- VOUT- VOUT+ VOCM  TEXAS:FDA-5  [FullDiffAmp]
+SUBCKT THS450x_OP      In+ In- V+ V- Out  <AutoShape>  [Internal]
+SUBCKT THS4503VOCM     1 2 3 4 5  <AutoShape>  [Internal]
+SUBCKT THS4509         IN+ IN- Vs+ Vs- OUT- OUT+ CM   Texas:THS4509  [FullDiffAmp]
+SUBCKT THS4501         VIN+ VIN- VOCM VOUT+ VOUT- VS+ VS-  TEXAS:FDA-5  [FullDiffAmp]
+SUBCKT RC_Network      Ccom Rin  <AutoShape>  [Internal]
+SUBCKT SCHEMATIC2_F1   1 2 3 4  <AutoShape>  [Internal]
+SUBCKT Diff2_F1        1 2 3 4  <AutoShape>  [Internal]
+SUBCKT Diff2_F2        1 2 3 4  <AutoShape>  [Internal]
+SUBCKT THS4502         1 2 3 4 5 6 7  TEXAS:FDA-4  [FullDiffAmp]
+SUBCKT THS450x_OP      Out In+ In- V+ V-  <AutoShape> [Internal]
+SUBCKT THS4502VOCM     1 2 3 4 5  <AutoShape>  [Internal]
+SUBCKT THS4520   In+ In- Vs+ Vs- Out- Out+ CM   Texas:THS4520  [FullDiffAmp]
+SUBCKT THS4520_Model_S2 1 2 3 4  <AutoShape>  [Internal]
+SUBCKT THS4513         IN+ IN- Vs+ Vs- OUT- OUT+ CM Texas:THS4513  [FullDiffAmp]
+SUBCKT THS4521         VIN+ VIN- VCC VEE VOUT- VOUT+ VOCM PD  Texas:THS4521  [FullDiffAmp]  ; No processable comment
+SUBCKT THS4521_F2      1 2 3 4  <AutoShape>  [Internal]  ; No processable comment
+SUBCKT THS4521_F3      1 2 3 4  <AutoShape>  [Internal]  ; No processable comment
+SUBCKT THS4521_F4      1 2 3 4  <AutoShape>  [Internal]  ; No processable comment  
+SUBCKT THS4521_F7      1 2 3 4  <AutoShape>  [Internal]  ; No processable comment  
+SUBCKT THS4521_F6      1 2 3 4  <AutoShape>  [Internal]  ; No processable comment  
+SUBCKT THS4521_S2      1 2 3 4  <AutoShape>  [Internal]  ; No processable comment
+SUBCKT THS4521_F9      1 2 3 4  <AutoShape>  [Internal]  ; No processable comment  
+SUBCKT THS4521_F10      1 2 3 4  <AutoShape>  [Internal]  ; No processable comment  
+SUBCKT THS4521_F5      1 2 3 4  <AutoShape>  [Internal]  ; No processable comment  
+SUBCKT THS4521_S3      1 2 3 4  <AutoShape>  [Internal]  ; No processable comment
+SUBCKT THS4521_F13      1 2 3 4  <AutoShape>  [Internal]  ; No processable comment  
+SUBCKT THS4521_S1      1 2 3 4  <AutoShape>  [Internal]  ; No processable comment
+SUBCKT THS4521_S4      1 2 3 4  <AutoShape>  [Internal]  ; No processable comment
+SUBCKT THS4521_F8      1 2 3 4  <AutoShape>  [Internal]  ; No processable comment  
+SUBCKT THS4521_S6      1 2 3 4  <AutoShape>  [Internal]  ; No processable comment
+SUBCKT THS4521_F1      1 2 3 4  <AutoShape>  [Internal]  ; No processable comment
+SUBCKT THS4521_S5      1 2 3 4  <AutoShape>  [Internal]  ; No processable comment
+SUBCKT THS4508 IN+ IN- Vs+ Vs- OUT- OUT+ CM   Texas:THS4508  [FullDiffAmp]  ; No comment
+SUBCKT THS4511 IN+ IN- Vs+ Vs- OUT- OUT+ CM   Texas:THS4511  [FullDiffAmp]  ; No comment
+LOCKED 6ME=
+
+
+
+
+
+
+
+

@@ -1,0 +1,6 @@
+Texas Instruments
+SUBCKT ADS61XX_HS      INP INM VCM GND CLKP CLKM  Texas:ADS61XX_HS  [ADConverters]  ; No processable comment
+SUBCKT ADS62C17        INP INM VCM GND CLKP CLKM  Texas:ADS62C17  [ADConverters]  ; No processable comment
+SUBCKT ADS62PXX_HS     INP INM VCM GND CLKP CLKM  Texas:ADS62PXX_HS  [ADConverters]  ; No processable comment
+SUBCKT ADS62PXX        INP INM VCM GND CLKP CLKM  Texas:ADS62C15  [ADConverters]  ; No processable comment
+LOCKED Yss=

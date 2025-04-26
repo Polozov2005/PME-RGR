@@ -1,0 +1,533 @@
+#comp_latch_jkffpc
+COMPONENT comp_latch_jkffpc
+GENERIC (
+	trise_clk_q,
+	tfall_clk_q : time := 1 ns;
+	latching : integer := 0);
+PORT (
+	j, k, clk, cl,
+	pr   : IN  std_logic;
+	q    : OUT std_logic;
+	qNot : OUT std_logic );
+END COMPONENT;
+
+%1 q, qNot, j, k, clk, cl, pr
+#
+
+#comp_latch_jkffpc_ms
+COMPONENT comp_latch_jkffpc_ms
+GENERIC (
+	trise_clk_q,
+	tfall_clk_q : time := 1 ns;
+	latching : integer := 0);
+PORT (
+	j, k, clk, p,
+	c    : IN  std_logic;
+	q    : OUT std_logic;
+	qNot : OUT std_logic );
+END COMPONENT;
+
+%1 q, qNot, j, k, clk, c, p
+#
+
+#comp_latch_jkffp_ms
+COMPONENT comp_latch_jkffp_ms
+GENERIC (
+	trise_clk_q,
+	tfall_clk_q : time := 1 ns;
+	latching : integer := 0);
+PORT (
+	j, k, clk,
+	p    : IN  std_logic;
+	q    : OUT std_logic;
+	qNot : OUT std_logic );
+END COMPONENT;
+
+%1 q, qNot, j, k, clk, p
+#
+
+#comp_latch_jkffc_ms
+COMPONENT comp_latch_jkffc_ms
+GENERIC (
+	trise_clk_q,
+	tfall_clk_q : time := 1 ns;
+	latching : integer := 0);
+PORT (
+	j, k, clk, 
+	c    : IN  std_logic;
+	q    : OUT std_logic;
+	qNot : OUT std_logic );
+END COMPONENT;
+
+%1 q, qNot, j, k, clk, c
+#
+
+#comp_latch_jkffpc_ms_falling
+COMPONENT comp_latch_jkffpc_ms_falling
+GENERIC (
+	trise_clk_q,
+	tfall_clk_q : time := 1 ns;
+	latching : integer := 0);
+PORT (
+	j, k, clk, p,
+	c    : IN  std_logic;
+	q    : OUT std_logic;
+	qNot : OUT std_logic );
+END COMPONENT;
+
+%1 q, qNot, j, k, clk, c, p
+#
+
+#comp_latch_jkffpc_synth
+COMPONENT comp_latch_jkffpc_synth
+GENERIC (
+	latching : integer := 0);
+PORT (
+	j, k, clk, cl,
+	pr   : IN  std_logic;
+	q    : OUT std_logic;
+	qNot : OUT std_logic );
+END COMPONENT;
+
+%1 q, qNot, j, k, clk, cl, pr
+#
+
+#comp_latch_jkffpc_ms_synth
+COMPONENT comp_latch_jkffpc_ms_synth
+GENERIC (
+	latching : integer := 0);
+PORT (
+	j, k, clk, p,
+	c    : IN  std_logic;
+	q    : OUT std_logic;
+	qNot : OUT std_logic );
+END COMPONENT;
+
+%1 q, qNot, j, k, clk, c, p
+#
+
+#comp_latch_jkffp_ms_synth
+COMPONENT comp_latch_jkffp_ms_synth
+GENERIC (
+	latching : integer := 0);
+PORT (
+	j, k, clk,
+	p    : IN  std_logic;
+	q    : OUT std_logic;
+	qNot : OUT std_logic );
+END COMPONENT;
+
+%1 q, qNot, j, k, clk, p
+#
+
+#comp_latch_jkffc_ms_synth
+COMPONENT comp_latch_jkffc_ms_synth
+GENERIC (
+	latching : integer := 0);
+PORT (
+	j, k, clk, 
+	c    : IN  std_logic;
+	q    : OUT std_logic;
+	qNot : OUT std_logic );
+END COMPONENT;
+
+%1 q, qNot, j, k, clk, c
+#
+
+#comp_latch_jkffpc_ms_falling_synth
+COMPONENT comp_latch_jkffpc_ms_falling_synth
+GENERIC (
+	latching : integer := 0);
+PORT (
+	j, k, clk, p,
+	c    : IN  std_logic;
+	q    : OUT std_logic;
+	qNot : OUT std_logic );
+END COMPONENT;
+
+%1 q, qNot, j, k, clk, c, p
+#
+
+#comp_latch_jkffp
+COMPONENT comp_latch_jkffp
+GENERIC (
+	trise_clk_q,
+	tfall_clk_q : time := 1 ns;
+	latching : integer := 0);
+PORT (
+	j, k, clk, 
+	pr   : IN  std_logic;
+	q    : OUT std_logic;
+	qNot : OUT std_logic );
+END COMPONENT;
+
+%1 q, qNot, j, k, clk, pr
+#
+
+#comp_latch_jkffc
+COMPONENT comp_latch_jkffc
+GENERIC (
+	trise_clk_q,
+	tfall_clk_q : time := 1 ns;
+	latching : integer := 0);
+PORT (
+	j, k, clk, 
+	cl   : IN  std_logic;
+	q    : OUT std_logic;
+	qNot : OUT std_logic );
+END COMPONENT;
+
+%1 q, qNot, j, k, clk, cl
+#
+
+#comp_latch_jkffp_synth
+COMPONENT comp_latch_jkffpc_synth
+GENERIC (
+	latching : integer := 0);
+PORT (
+	j, k, clk, 
+	pr   : IN  std_logic;
+	q    : OUT std_logic;
+	qNot : OUT std_logic );
+END COMPONENT;
+
+%1 q, qNot, j, k, clk, pr
+#
+
+#comp_latch_jkffc_synth
+COMPONENT comp_latch_jkffc_synth
+GENERIC (
+	latching : integer := 0);
+PORT (
+	j, k, clk, 
+	cl   : IN  std_logic;
+	q    : OUT std_logic;
+	qNot : OUT std_logic );
+END COMPONENT;
+
+%1 q, qNot, j, k, clk, cl
+#
+
+#comp_latch_rsflop
+COMPONENT comp_latch_rsflop IS
+GENERIC (
+        trise_clk_q,
+        tfall_clk_q : time := 1 ns;
+        latching : integer := 0
+        );
+PORT (q : OUT std_logic;
+        s : IN std_logic;
+        r : IN std_logic;
+        clk : IN std_logic
+        );
+END COMPONENT;
+
+%1 q, s, r, clk
+#
+
+#comp_latch_rsflop_synth
+COMPONENT comp_latch_rsflop_synth IS
+GENERIC (
+        latching : integer := 0
+        );
+PORT (q : OUT std_logic;
+        s : IN std_logic;
+        r : IN std_logic;
+        clk : IN std_logic
+        );
+END COMPONENT;
+
+%1 q, s, r, clk
+#
+
+#e_PS2_entity
+COMPONENT e_PS2_entity  
+PORT(
+ key : IN std_logic_vector( 7 downto 0 );
+ clk_out : OUT std_logic;
+ data : OUT std_logic ); 
+END COMPONENT;
+
+%1 data clk_out, vcc, gnd
+#
+
+#comp_dlatch
+COMPONENT comp_dlatch
+PORT (q : OUT std_logic;
+	d : IN std_logic;
+	e : IN std_logic
+	);
+END COMPONENT;
+
+%1 q, d, e
+#
+
+#comp_dlatch2
+COMPONENT comp_dlatch2
+PORT (q : OUT std_logic;
+	d : IN std_logic;
+	e : IN std_logic;
+	pr : IN std_logic;
+	cl : IN std_logic
+	);
+END COMPONENT;
+
+%1 q, d, e, pr, cl
+#
+
+#comp_tsb
+COMPONENT comp_tsb
+PORT (q : OUT std_logic;
+	d : IN std_logic;
+	e : IN std_logic
+	);
+END COMPONENT;
+
+%1 q, d, e
+#
+
+#comp_switch1
+COMPONENT comp_switch1
+PORT (d : IN std_logic;
+      q : OUT std_logic;
+      e : IN integer
+     );
+END COMPONENT;
+
+%1 q, d, e
+#
+
+#comp_alt_switch
+COMPONENT comp_alt_switch
+PORT (d1, d2 : IN std_logic;
+      q : OUT std_logic;
+      e : IN integer
+     );
+END COMPONENT;
+
+%1 q, d1, d2, e
+#
+
+#comp_pullup
+COMPONENT comp_pullup 
+PORT (q : OUT std_logic
+	);
+END COMPONENT;
+
+%1 q
+#
+
+#comp_pullup2
+COMPONENT comp_pullup2 
+PORT (d : IN std_logic;
+	  q : OUT std_logic
+	);
+END COMPONENT;
+
+%1 q, d
+#
+
+#comp_dip2
+COMPONENT comp_dip2 IS
+PORT (d0, d1 : IN std_logic;
+	  q0, q1 : OUT std_logic;
+	  e0, e1 : IN integer
+	 );
+END COMPONENT;
+%1 q0, q1, d0, d1
+#
+
+#comp_dip3
+COMPONENT comp_dip3 IS
+PORT (d0, d1, d2 : IN std_logic;
+	  q0, q1, q2 : OUT std_logic;
+	  e0, e1, e2 : IN integer
+	 );
+END COMPONENT;
+%1 q0, q1, q2, d0, d1, d2
+#
+
+#comp_dip4
+COMPONENT comp_dip4 IS
+PORT (d0, d1, d2, d3 : IN std_logic;
+	  q0, q1, q2, q3 : OUT std_logic;
+	  e0, e1, e2, e3 : IN integer
+	 );
+END COMPONENT;
+%1 q0, q1, q2, q3, d0, d1, d2, d3
+#
+
+#comp_dip5
+COMPONENT comp_dip5 IS
+PORT (d0, d1, d2, d3, d4 : IN std_logic;
+	  q0, q1, q2, q3, q4 : OUT std_logic;
+	  e0, e1, e2, e3, e4 : IN integer
+	 );
+END COMPONENT;
+%1 q0, q1, q2, q3, q4, d0, d1, d2, d3, d4
+#
+
+#comp_dip6
+COMPONENT comp_dip6 IS
+PORT (d0, d1, d2, d3, d4, d5 : IN std_logic;
+	  q0, q1, q2, q3, q4, q5 : OUT std_logic;
+	  e0, e1, e2, e3, e4, e5 : IN integer
+	 );
+END COMPONENT;
+%1 q0, q1, q2, q3, q4, q5, d0, d1, d2, d3, d4, d5
+#
+
+#comp_dip7
+COMPONENT comp_dip7 IS
+PORT (d0, d1, d2, d3, d4, d5, d6 : IN std_logic;
+	  q0, q1, q2, q3, q4, q5, q6 : OUT std_logic;
+	  e0, e1, e2, e3, e4, e5, e6 : IN integer
+	 );
+END COMPONENT;
+%1 q0, q1, q2, q3, q4, q5, q6, d0, d1, d2, d3, d4, d5, d6
+#
+
+#comp_dip8
+COMPONENT comp_dip8 IS
+PORT (d0, d1, d2, d3, d4, d5, d6, d7 : IN std_logic;
+	  q0, q1, q2, q3, q4, q5, q6, q7 : OUT std_logic;
+	  e0, e1, e2, e3, e4, e5, e6, e7 : IN integer
+	 );
+END COMPONENT;
+%1 q0, q1, q2, q3, q4, q5, q6, q7, d0, d1, d2, d3, d4, d5, d6, d7
+#
+
+#comp_battery
+COMPONENT comp_battery
+PORT (d : IN std_logic;
+	  q : OUT std_logic
+	);
+END COMPONENT;
+
+%1 q, d
+#
+
+#comp_resistor
+COMPONENT comp_resistor
+PORT (d : IN std_logic;
+	  q : OUT std_logic
+	);
+END COMPONENT;
+
+%1 q, d
+#
+
+#comp_hexkeypad
+COMPONENT comp_hexkeypad
+PORT (d : IN integer;
+      q0, q1, q2, q3 : OUT std_logic
+	 );
+END COMPONENT;
+%1 q0, q1, q2, q3
+#
+
+#comp_dffpc
+COMPONENT comp_dffpc 
+PORT (q : OUT std_logic;
+	qNot : OUT std_logic;
+	d : IN std_logic;
+	clk : IN std_logic;
+	cl : IN std_logic;
+	pr : IN std_logic
+	);
+END COMPONENT;
+%1 q, qNot, d, clk, cl, pr
+#
+
+#comp_cmos_ram_256x4
+COMPONENT comp_cmos_ram_256x4  
+PORT (
+ a0, a1, a2, a3, a4, a5, a6, a7: IN std_logic;
+ di1, di2, di3, di4: IN std_logic;
+ ce1, ce2, rw, od: IN std_logic;
+ do1, do2, do3, do4: OUT std_logic
+); 	
+END COMPONENT; 
+%1 a0, a1, a2, a3, a4, a5, a6, a7, di1, di2, di3, di4, ce1, ce2, rw, od, do1, do2, do3, do4
+#
+
+#comp_cmos_ram_2048x8
+COMPONENT comp_cmos_ram_2048x8 is 
+PORT (
+ a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10: IN std_logic;
+ di1, di2, di3, di4, di5, di6, di7, di8: IN std_logic;
+ cs, rw, od: IN std_logic;
+ do1, do2, do3, do4, do5, do6, do7, do8: OUT std_logic
+); 	
+END COMPONENT; 
+%1 a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, di1, di2, di3, di4, di5, di6, di7, di8, cs, rw, od, do1, do2, do3, do4, do5, do6, do7, do8
+#
+
+#comp_cmos_ram_1024x4
+COMPONENT comp_cmos_ram_1024x4 is 
+PORT (
+ a0, a1, a2, a3, a4, a5, a6, a7, a8, a9: IN std_logic;
+ di1, di2, di3, di4: IN std_logic;
+ cs, rw, od: IN std_logic;
+ do1, do2, do3, do4: OUT std_logic
+); 	
+END COMPONENT; 
+%1 a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, di1, di2, di3, di4, cs, rw, od, do1, do2, do3, do4
+#
+
+#LCDCORE
+COMPONENT LCDCORE is 
+port(
+ RS: in std_logic;
+ RW: in std_logic;
+ E: in std_logic;
+ DB0, DB1, DB2, DB3, DB4, DB5, DB6, DB7: in std_logic
+);
+end COMPONENT;
+%1 rs, rw, e, db0, db1, db2, db3, db4, db5, db6, db7
+#
+
+#comp_cmos_ram_256x4
+COMPONENT comp_cmos_ram_256x4  
+GENERIC (
+ file_name: string
+);
+PORT (
+ a0, a1, a2, a3, a4, a5, a6, a7: IN std_logic;
+ di1, di2, di3, di4: IN std_logic;
+ ce1, ce2, rw, od: IN std_logic;
+ do1, do2, do3, do4: OUT std_logic
+); 	
+END COMPONENT; 
+%1 a0, a1, a2, a3, a4, a5, a6, a7, di1, di2, di3, di4, ce1, ce2, rw, od, do1, do2, do3, do4
+#
+
+#comp_cmos_ram_2048x8
+COMPONENT comp_cmos_ram_2048x8 is 
+GENERIC (
+ file_name: string
+);
+PORT (
+ a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10: IN std_logic;
+ di1, di2, di3, di4, di5, di6, di7, di8: IN std_logic;
+ cs, rw, od: IN std_logic;
+ do1, do2, do3, do4, do5, do6, do7, do8: OUT std_logic
+); 	
+END COMPONENT; 
+%1 a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, di1, di2, di3, di4, di5, di6, di7, di8, cs, rw, od, do1, do2, do3, do4, do5, do6, do7, do8
+#
+
+#comp_cmos_ram_1024x4
+COMPONENT comp_cmos_ram_1024x4 is 
+GENERIC (
+ file_name: string
+);
+PORT (
+ a0, a1, a2, a3, a4, a5, a6, a7, a8, a9: IN std_logic;
+ di1, di2, di3, di4: IN std_logic;
+ cs, rw, od: IN std_logic;
+ do1, do2, do3, do4: OUT std_logic
+); 	
+END COMPONENT; 
+%1 a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, di1, di2, di3, di4, cs, rw, od, do1, do2, do3, do4
+#

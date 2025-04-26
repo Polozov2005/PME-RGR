@@ -1,0 +1,15 @@
+{PS_EXP template for PSpice import}
+function Signal(t);
+begin
+  v2:=@;
+  td1:=@;
+  tc1:=@;
+  td2:=@;
+  tc2:=@;
+  if (0<=t) and (t<=td1) then
+    Signal:=0
+  else if (td1<=t) and (t<=td2) then
+    Signal:=v2*(1-exp(-(t-td1)/tc1))
+  else
+    Signal:=v2*((1-exp(-(t-td1)/tc1))-(1-exp(-(t-td2)/tc2)));
+end;

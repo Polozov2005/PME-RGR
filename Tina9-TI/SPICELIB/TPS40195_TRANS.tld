@@ -1,0 +1,6 @@
+Texas Instruments
+SUBCKT TPS40195        BOOT BP COMP EN FB GND HDRV ILIM LDRV PGOOD RT SS_SEL SW SYNC   UVLO VDD   Texas:TPS40195  [SMPS]  ; No processable comment
+LOCKED /Jw=
+
+
+

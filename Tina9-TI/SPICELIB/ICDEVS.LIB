@@ -1,0 +1,37 @@
+
+* Connections:     C
+*                  |    B
+*                  |    |    E
+*                  |    |    |
+.SUBCKT Q_NPN      1    2    3
+Q1 1 2 3 QNPN
+.MODEL QNPN NPN( IS=10F NF=1.16 NR=1.16 BF=80 CJC=1P CJE=2P
++       TF=10P TR=1N )
+.ENDS Q_NPN
+*
+* Connections:     C
+*                  |    B
+*                  |    |    E
+*                  |    |    |
+.SUBCKT Q_PNP      1    2    3
+Q1 1 2 3 QPNP
+.MODEL QPNP PNP( IS=10F NF=1.16 NR=1.16 BF=80 CJC=1P CJE=2P
++      TF=10P TR=1N )
+.ENDS Q_PNP
+*
+* Connections:   A
+*                |    C
+*                |    |
+.SUBCKT D_D      1    2
+D1 1 2  DD
+.MODEL DD D( IS=1F N=1.16 CJO = 1P TT = 10p )
+.ENDS D_D
+*
+* Connections:   A
+*                |    C
+*                |    |
+.SUBCKT D_Z      1    2
+D1 1 2  D_5V1
+.MODEL D_5V1 D( IS=10F N=1.16 BV=5.1 IBV=0.5M CJO = 1P TT = 10p )
+.ENDS D_Z
+

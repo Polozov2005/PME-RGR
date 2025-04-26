@@ -1,0 +1,1392 @@
+*
+*
+* ------------------------------------------------------------------------
+*|(C) Copyright Texas Instruments Incorporated 2007. All rights reserved. |
+*|                                                                        |
+*|This Model is designed as an aid for customers of Texas Instruments.    |
+*|No warranties, either expressed or implied, with respect to this Model  |
+*|or its fitness for a particular purpose is claimed by Texas Instruments |
+*|or the author.  The Model is licensed solely on an "as is" basis.  The  |
+*|entire risk as to its quality and performance is with the customer.     |
+* ------------------------------------------------------------------------
+*
+*
+*
+* INA138 Current Shunt Monitor Macromodel Subcircuit
+*
+* REV A CREATED BY DAVID JONES 28 June 2000
+* REV B CREATED BY NEIL ALBAUGH 10 OCT 2000  REVISED TO STANDARD FORMAT
+*
+* 
+* connections:  Vin+
+*               | Vin-
+*               | | Vs
+*               | | |   gnd
+*               | | |   |   output
+*               | | |   |   |
+.subckt INA138  + - VS GND OUT
+*
+*
+C01      1N1030 1N1653  CAP 5PF
+D1       + VESD  EDD
+D2       GND +  EDD
+D3       - VESD  EDD
+D4       GND -  EDD
+D5       Vs VESD  EDD
+D6       GND Vs  EDD
+D7       OUT VESD  EDD
+D8       GND OUT  EDD
+I1       1N1819 GND  2UA  ;NOT4ECAD
+I2       1N940 GND  2UA  ;NOT4ECAD
+I3       1N1033 GND  2UA  ;NOT4ECAD
+I4       1N1833 GND  8UA  ;NOT4ECAD
+Q01      1N1107 1N1819 INP   PNP
+Q22      VO  1N1833 Vs   PNP
+Q23      1N1833 1N1833 Vs   PNP
+Q02      1N1030 1N1819 INN   PNP
+Q03      1N1819 1N1819 INP   PNP
+Q04      1N1819 1N1819 INN   PNP
+Q07      1N1107 1N940 GND   NPN
+Q08      1N1030 1N940 GND   NPN
+Q09      Vs 1N1107 1N940   NPN
+Q10      Vs 1N1030 1N1033   NPN
+Q11      VO  1N1033 GND   NPN
+Q20      INP VO  1N1673   NPN
+Q21      1N1673 1N1673 VO    NPN
+R11      1N1653 VO   FILM 3K
+R20      1N1673 OUT  FILM 5K
+RG1      + INP  FILM 5K
+RG2      - INN  FILM 5K
+*
+.MODEL NPN NPN
++IS=1FA      BF=250      VAF=1000
++CJE=.5PF    CJC=.2PF    TF=300PS  
+*
+.MODEL PNP LPNP
++IS=1.25FA     BF=250     VAF=1000
++CJE=.13PF     CJC=.6PF   TF=50NS
+*
+.model EDD D(Is=3.0E-14 BV=90 Rs=10)
+.MODEL FILM RES (R=1 TC1=.000050)
+.MODEL CAP CAP (C=1 TC1=0)
+.ENDS INA138
+*
+* 
+*
+*
+* ------------------------------------------------------------------------
+*|(C) Copyright Texas Instruments Incorporated 2007. All rights reserved. |
+*|                                                                        |
+*|This Model is designed as an aid for customers of Texas Instruments.    |
+*|No warranties, either expressed or implied, with respect to this Model  |
+*|or its fitness for a particular purpose is claimed by Texas Instruments |
+*|or the author.  The Model is licensed solely on an "as is" basis.  The  |
+*|entire risk as to its quality and performance is with the customer.     |
+* ------------------------------------------------------------------------
+
+*
+*
+* INA168 Current Shunt Monitor Macromodel Subcircuit
+*
+* REV A CREATED BY DAVID JONES 28 June 2000
+* REV B CREATED BY NEIL ALBAUGH 12 OCT 2000  REVISED TO STANDARD FORMAT
+*
+* 
+* connections:  Vin+
+*               | Vin-
+*               | | Vs
+*               | | |   gnd
+*               | | |   |   output
+*               | | |   |   |
+.subckt INA168  + - VS GND OUT
+*
+*
+C01      1N1030 1N1653  CAP 5PF
+D1       + VESD  EDD
+D2       GND +  EDD
+D3       - VESD  EDD
+D4       GND -  EDD
+D5       Vs VESD  EDD
+D6       GND Vs  EDD
+D7       OUT VESD  EDD
+D8       GND OUT  EDD
+I1       1N1819 GND  2UA  ;NOT4ECAD
+I2       1N940 GND  2UA  ;NOT4ECAD
+I3       1N1033 GND  2UA  ;NOT4ECAD
+I4       1N1833 GND  8UA  ;NOT4ECAD
+Q01      1N1107 1N1819 INP   PNP
+Q22      VO  1N1833 Vs   PNP
+Q23      1N1833 1N1833 Vs   PNP
+Q02      1N1030 1N1819 INN   PNP
+Q03      1N1819 1N1819 INP   PNP
+Q04      1N1819 1N1819 INN   PNP
+Q07      1N1107 1N940 GND   NPN
+Q08      1N1030 1N940 GND   NPN
+Q09      Vs 1N1107 1N940   NPN
+Q10      Vs 1N1030 1N1033   NPN
+Q11      VO  1N1033 GND   NPN
+Q20      INP VO  1N1673   NPN
+Q21      1N1673 1N1673 VO    NPN
+R11      1N1653 VO   FILM 3K
+R20      1N1673 OUT  FILM 5K
+RG1      + INP  FILM 5K
+RG2      - INN  FILM 5K
+*
+.MODEL NPN NPN
++IS=1FA      BF=250      VAF=1000
++CJE=.5PF    CJC=.2PF    TF=300PS  
+*
+.MODEL PNP LPNP
++IS=1.25FA     BF=250     VAF=1000
++CJE=.13PF     CJC=.6PF   TF=50NS
+*
+.model EDD D(Is=3.0E-14 BV=90 Rs=10)
+.MODEL FILM RES (R=1 TC1=.000050)
+.MODEL CAP CAP (C=1 TC1=0)
+.ENDS INA168
+*
+* 
+* INA169 SPICE Macro-model
+*
+*   Rev. A    27 June 2003, by W.K. Sands
+*
+*   Rev. B    4 August 2003 By Neil Albaugh: ADDED HEADER TEXT & EDITED TEXT
+*
+*	This macromodel has been optimized to model the AC, DC, and transient response performance within
+*     the device data sheet specified limits.
+*     Correct operation of this macromodel has been verified on MicroSim P-Spice ver. 8.0 and on
+*     PENZAR Development TopSPICE ver. 6.82d. For help with other analog simulation software,
+*     please consult your software supplier.
+*
+*
+* ------------------------------------------------------------------------
+*|(C) Copyright Texas Instruments Incorporated 2007. All rights reserved. |
+*|                                                                        |
+*|This Model is designed as an aid for customers of Texas Instruments.    |
+*|No warranties, either expressed or implied, with respect to this Model  |
+*|or its fitness for a particular purpose is claimed by Texas Instruments |
+*|or the author.  The Model is licensed solely on an "as is" basis.  The  |
+*|entire risk as to its quality and performance is with the customer.     |
+* ------------------------------------------------------------------------
+*
+*
+* OPERATING NOTES
+*
+* MODEL TEMPERATURE RANGE IS -55 C TO +150 C, NOT ALL PARAMETERS ACCURATELY TRACK
+* THOSE OF AN ACTUAL INA169 OVER THE FULL TEMPERATURE RANGE BUT ARE AS CLOSE AS PRACTICAL
+*
+* BEGIN MODEL INA169
+*
+* OPERATING NOTES
+*
+* THE INTERNAL OFFSET SOURCE, V71 IS SET
+* AT 1 MILLIVOLT SO THE OUTPUT STAGE IS
+* ENOUGH ON WITH ZERO SIGNAL TO GIVE THE
+* PROPER BANDWIDTH IN AN AC ANALYSIS WITH
+* NO INPUT SIGNAL PRESENT. THIS WILL GIVE
+* SLIGHTLY LARGER THAN TYPICAL OUTPUT
+* ERRORS. FOR TYPICAL OUTPUT ERRORS CHANGE
+* V71 TO 0.35 MILLIVOLT.
+*
+* MODEL FEATURES
+* THIS MODEL FEATURES INPUT RANGE, OUTPUT
+* SWING, OUTPUT COMPLIANCE, BANDWIDTH,
+* GAIN VS RL, CMRR VS FREQ, PSRR VS FREQ,
+* SETTLING TIME, QUIESCENT CURRENT AND
+* QUIESCENT CURRENT VERSUS SUPPLY VOLTAGE,
+* OUTPUT CURRENT DRAWN THROUGH THE SUPPLY,
+* OUTPUT IMPEDANCE, INPUT OFFSET, INPUT
+* BIAS CURRENT, AND NOISE.
+*
+* PINOUT ORDER OUT GND VIN+ VIN- V+
+* PINOUT ORDER  1   2    3    4   5
+*
+.SUBCKT INA169 1 2 3 4 5
+V71 11 9 1E-3
+Q1 6 7 8 QPI
+Q2 7 7 8 QPI
+Q3 7 7 9 QPI
+Q4 10 7 9 QPI
+R1 8 3 1E3
+R2 11 4 1E3
+Q5 12 12 5 QPI
+Q6 13 12 5 QPI
+Q7 6 14 15 QI
+Q8 5 6 14 QI
+Q9 13 16 15 QI
+Q10 5 10 16 QI
+Q11 10 17 15 QI
+Q12 8 13 18 QI
+Q13 18 18 13 QI
+I1 14 15 5E-6
+I2 7 15 5E-6
+I3 16 15 5E-6
+R3 18 1 500
+I4 12 15 20E-6
+R5 19 13 8E3
+C1 10 19 1.5E-12
+C6 15 1 5E-12
+C7 1 5 0.5E-12
+E2 20 14 5 0 0.15E-6
+E3 17 20 3 0 -2.5E-6
+D1 15 8 DD
+D2 15 11 DD
+D3 8 21 DD
+D4 11 21 DD
+D5 5 21 DD
+D6 15 5 DD
+D7 1 21 DD
+D8 15 1 DD
+R10 15 21 1E9
+R11 20 17 1E9
+R12 14 20 1E9
+L1 15 2 1N
+R13 15 2 10
+C8 15 3 1E-12
+C9 15 4 1E-12
+I18 0 22 1E-3
+D16 22 0 DD
+V74 23 22 -0.658
+R15 0 23 10E3
+G3 5 15 23 0 -65E-6
+I19 15 5 5E-6
+.MODEL DD D IS=3.0E-14 BV=90 RS=10
+.MODEL QI NPN
++IS=1E-15 BF=200 BR=0.1 NF=1 NR=1 EG=1.2056 ISE=1E-17
++NE=1.5 ISC=1E-17 NC=1.5 VAF=125 VAR=15 IKF=6E-3 RB=1.2E3
++RBM=65 RE=5 IKR=6E-3 IRB=60E-6 RC=750 CJE=0.5E-12 VJE=0.77
++MJE=0.3 CJC=0.6E-12 VJC=0.64 MJC=0.425 CJS=0.05E-12 VJS=0.58
++MJS=0.5  FC=0 XCJC=1 TF=300E-12 TR=1E-6 XTF=1
++VTF=0 ITF=10E-3 PTF=5 XTI=2.3
++ XTB=1.5 KF=0.16E-15 AF=1
+.MODEL QPI PNP
++IS=1E-15 BF=200 BR=0.1 NF=1 NR=1 EG=1.2056 ISE=1E-17
++NE=1.5 ISC=1E-17 NC=1.5 VAF=125 VAR=15 IKF=6E-3 RB=1.2E3
++RBM=65 RE=5 IKR=6E-3 IRB=60E-6 RC=750 CJE=0.5E-12 VJE=0.77
++MJE=0.3 CJC=0.6E-12 VJC=0.64 MJC=0.425 CJS=0.05E-12 VJS=0.58
++MJS=0.5  FC=0 XCJC=1 TF=50E-9 TR=1E-6 XTF=1
++VTF=0 ITF=10E-3 PTF=5 XTI=2.3
++ XTB=1.5 KF=0.16E-15 AF=1
+.ENDS
+* END MODEL INA169
+* INA170 SPICE Macro-model 
+*          
+*   Rev. A    27 June 2003, by W.K. Sands
+*
+*   Rev. B    4 August 2003 By Neil Albaugh: ADDED HEADER TEXT & EDITED TEXT
+*
+*	This macromodel has been optimized to model the AC, DC, and transient response performance within 
+*     the device data sheet specified limits. 
+*     Correct operation of this macromodel has been verified on MicroSim P-Spice ver. 8.0 and on 
+*     PENZAR Development TopSPICE ver. 6.82d. For help with other analog simulation software, 
+*     please consult your software supplier. 
+*
+*  
+* ------------------------------------------------------------------------
+*|(C) Copyright Texas Instruments Incorporated 2007. All rights reserved. |
+*|                                                                        |
+*|This Model is designed as an aid for customers of Texas Instruments.    |
+*|No warranties, either expressed or implied, with respect to this Model  |
+*|or its fitness for a particular purpose is claimed by Texas Instruments |
+*|or the author.  The Model is licensed solely on an "as is" basis.  The  |
+*|entire risk as to its quality and performance is with the customer.     |
+* ------------------------------------------------------------------------
+*
+*
+* OPERATING NOTES
+*
+* MODEL TEMPERATURE RANGE IS -55 C TO +150 C, NOT ALL PARAMETERS ACCURATELY TRACK 
+* THOSE OF AN ACTUAL INA170 OVER THE FULL TEMPERATURE RANGE BUT ARE AS CLOSE AS PRACTICAL
+*
+* BEGIN MODEL INA170
+*
+* PINOUT ORDER VIN- VIN+ VREF GND ROS OUT V+
+* PINOUT ORDER   1    2    3   4   5   6   8
+*
+* OPERATING NOTES
+* THE INTERNAL OFFSET SOURCE, V71 IS SET
+* AT 1 MILLIVOLT SO THE OUTPUT STAGE IS
+* ENOUGH ON WITH ZERO SIGNAL TO GIVE THE
+* PROPER BANDWIDTH IN AN AC ANALYSIS WITH
+* NO INPUT SIGNAL OR OFFSET PRESENT. THIS
+* WILL GIVE SLIGHTLY LARGER THAN TYPICAL
+* OUTPUT ERRORS. FOR TYPICAL OUTPUT ERRORS
+* CHANGE V71 TO 0.35 MILLIVOLT.
+*
+* MODEL FEATURES
+* THIS MODEL FEATURES INPUT RANGE, OUTPUT
+* SWING, OUTPUT COMPLIANCE, BANDWIDTH,
+* GAIN VS RL, CMRR VS FREQ, PSRR VS FREQ,
+* SETTLING TIME, QUIESCENT CURRENT AND
+* QUIESCENT CURRENT VERSUS SUPPLY VOLTAGE,
+* OUTPUT CURRENT DRAWN THROUGH THE SUPPLY,
+* OUTPUT IMPEDANCE, INPUT OFFSET, INPUT
+* BIAS CURRENT, AND NOISE. THE OFFSETING
+* AMPLIFIER HAS LIMITED COMMON MODE
+* VOLTAGE RANGE AND LIMITED BANDWIDTH.
+*
+.SUBCKT INA170 1 2 3 4 5 6 8
+V71 14 12 1E-3
+Q1 9 10 11 QPI
+Q2 10 10 11 QPI
+Q3 10 10 12 QPI
+Q4 13 10 12 QPI
+R1 11 2 1E3
+R2 14 1 1E3
+Q5 15 15 8 QPI
+Q6 16 15 8 QPI
+Q7 9 17 18 QI
+Q8 8 9 17 QI
+Q9 16 19 18 QI
+Q10 8 13 19 QI
+Q11 13 20 18 QI
+Q12 11 16 21 QI
+Q13 21 21 16 QI
+I1 17 18 5E-6
+I2 10 18 5E-6
+I3 19 18 5E-6
+R3 21 6 500
+I4 15 18 20E-6
+R5 22 16 8E3
+C1 13 22 1.5E-12
+C6 18 6 5E-12
+C7 6 8 0.5E-12
+E2 23 17 8 0 0.15E-6
+E3 20 23 2 0 -2.5E-6
+D1 18 11 DD
+D2 18 14 DD
+D3 11 24 DD
+D4 14 24 DD
+D5 8 24 DD
+D6 18 8 DD
+D7 6 24 DD
+D8 18 6 DD
+R10 18 24 1E9
+R11 23 20 1E9
+R12 17 23 1E9
+L1 18 4 1N
+R13 18 4 10
+C8 18 2 1E-12
+C9 18 1 1E-12
+Q14 25 26 27 QPI
+Q15 28 5 29 QI
+Q16 14 25 5 QI
+Q17 5 5 25 QI
+I5 8 30 6E-6
+R15 31 25 20E3
+C10 26 31 8E-12
+Q18 26 3 32 QI
+Q19 33 30 18 QI
+Q20 30 30 18 QI
+Q21 28 28 34 QPI
+Q22 26 28 35 QPI
+R16 34 8 1E3
+R17 35 8 1E3
+R18 36 29 10E3
+R19 36 32 10E3
+R20 27 8 1E3
+Q23 25 37 18 QI
+Q24 37 37 18 QI
+I6 8 37 3E-6
+V74 36 33 0.25
+D9 5 24 DD
+D10 18 5 DD
+D11 18 3 DD
+D12 3 24 DD
+I17 0 38 1E-3
+D15 38 0 DD
+V76 39 38 -0.658
+R22 0 39 10E3
+G2 8 18 39 0 -65E-6
+I18 18 8 15E-6
+.MODEL DD D IS=3.0E-14 BV=90 RS=10
+.MODEL QI NPN
++IS=1E-15 BF=200 BR=0.1 NF=1 NR=1 EG=1.2056 ISE=1E-17
++NE=1.5 ISC=1E-17 NC=1.5 VAF=125 VAR=15 IKF=6E-3 RB=1.2E3
++RBM=65 RE=5 IKR=6E-3 IRB=60E-6 RC=750 CJE=0.5E-12 VJE=0.77
++MJE=0.3 CJC=0.6E-12 VJC=0.64 MJC=0.425 CJS=0.05E-12 VJS=0.58
++MJS=0.5  FC=0 XCJC=1 TF=300E-12 TR=1E-6 XTF=1
++VTF=0 ITF=10E-3 PTF=5 XTI=2.3
++ XTB=1.5 KF=0.16E-15 AF=1
+.MODEL QPI PNP
++IS=1E-15 BF=200 BR=0.1 NF=1 NR=1 EG=1.2056 ISE=1E-17
++NE=1.5 ISC=1E-17 NC=1.5 VAF=125 VAR=15 IKF=6E-3 RB=1.2E3
++RBM=65 RE=5 IKR=6E-3 IRB=60E-6 RC=750 CJE=0.5E-12 VJE=0.77
++MJE=0.3 CJC=0.6E-12 VJC=0.64 MJC=0.425 CJS=0.05E-12 VJS=0.58
++MJS=0.5  FC=0 XCJC=1 TF=50E-9 TR=1E-6 XTF=1
++VTF=0 ITF=10E-3 PTF=5 XTI=2.3
++ XTB=1.5 KF=0.16E-15 AF=1
+.ENDS
+* END MODEL INA170
+* BEGIN MODEL INA193
+*
+* REV 29 DEC 04
+*
+* BEGIN MODEL FEATURES
+*
+* GAIN, BANDWITH, AND RISETIME
+* CMRR VS FREQUENCY
+* PSRR VS FREQUENCY
+* VOLTAGE NOISE
+* OUTPUT CURRENT LIMIT
+* CURRENT LIMIT VS SUPPLY VOLT
+* OUTPUT CURRENT THRU RAILS
+* QUIESCENT CURRENT
+* QUIESCENT CURRENT VS VOUT
+* LOW INPUT BIAS CURRENT
+* INPUT COMMON MODE VOLTAGE RANGE
+* OUTPUT VOLTAGE SWING VS IO
+* OUTPUT IMPEDANCE
+* SETTLING TO ONE PERCENT
+* MODEL TEMP RANGE -40 TO 125 C
+* NOTE THAT NOT ALL MODEL PARAMETERS
+* TRACK THE DATASHEET VERSUS TEMP
+* END MODEL FEATURES
+* ------------------------------------------------------------------------
+*|(C) Copyright Texas Instruments Incorporated 2007. All rights reserved. |
+*|                                                                        |
+*|This Model is designed as an aid for customers of Texas Instruments.    |
+*|No warranties, either expressed or implied, with respect to this Model  |
+*|or its fitness for a particular purpose is claimed by Texas Instruments |
+*|or the author.  The Model is licensed solely on an "as is" basis.  The  |
+*|entire risk as to its quality and performance is with the customer.     |
+* ------------------------------------------------------------------------
+*
+* PINOUT ORDER OUT GND VIN+ VIN- V+
+* PINOUT ORDER  1   2   3    4    5
+.SUBCKT INA193 1 2 3 4 5
+Q21 6 7 2 QNL
+R77 8 9 2
+R78 10 9 2
+R79 7 11 100
+R80 12 13 100
+R81 13 5 30
+R82 2 11 20
+R83 14 15 500
+R84 16 17 30
+R85 2 18 20
+D21 19 5 DD
+D22 2 19 DD
+E26 17 2 5 2 1
+E28 20 2 17 2 1
+R86 20 21 1E6
+R89 2 21 100
+C29 20 21 500E-12
+E33 22 23 21 2 -0.07
+E34 24 2 17 2 0.5E-6
+D27 25 17 DD
+D28 26 14 DD
+M24 27 28 11 11 NOUT L=3U W=20U
+M25 29 30 13 13 POUT L=3U W=200U
+M26 31 31 16 16 POUT L=3U W=200U
+M27 32 33 8 8 HVP L=3U W=600U
+M28 34 35 10 10 HVP L=3U W=600U
+M29 36 36 18 18 NOUT L=3U W=20U
+R94 37 30 100
+R95 38 28 100
+G14 14 24 39 24 0.2E-3
+R96 24 14 7.23E6
+C32 15 40 110E-12
+R97 2 32 2.05E3
+R98 2 34 2.05E3
+C33 32 34 10P
+C36 19 2 1E-12
+D29 28 6 DD
+D30 41 30 DD
+Q22 41 12 17 QPL
+V27 22 33 -0.3M
+M30 42 33 43 43 HVN L=3U W=600U
+R99 44 43 2
+M31 45 35 46 46 HVN L=3U W=600U
+R100 44 46 2
+R101 42 17 2.05E3
+R102 45 17 2.05E3
+C37 42 45 10P
+M32 47 48 49 49 PIN L=6U W=500U
+M33 9 50 17 17 PIN L=6U W=500U
+V29 17 48 1.9
+M34 44 47 2 2 NIN L=6U W=500U
+M35 47 47 2 2 NIN L=6U W=500U
+G15 14 24 51 24 0.2E-3
+I28 31 36 80E-6
+M36 50 50 17 17 PIN L=6U W=500U
+I29 50 2 400E-6
+R103 19 29 40
+R104 27 19 50
+J5 17 22 17 JNC
+J6 17 35 17 JNC
+J7 35 2 35 JNC
+J8 22 2 22 JNC
+E37 52 24 45 42 1
+R105 52 51 10E3
+C39 51 24 22E-12
+E38 53 24 34 32 1
+R106 53 39 10E3
+C40 39 24 22E-12
+G16 54 24 14 24 -1E-3
+G17 24 55 14 24 1E-3
+G18 24 56 36 2 1M
+G19 57 24 17 31 1E-3
+D33 57 54 DD
+D34 55 56 DD
+R107 54 57 100E6
+R108 56 55 100E6
+R109 57 17 1E3
+R110 2 56 1E3
+E39 17 37 17 57 1
+E40 38 2 56 2 1
+R111 55 24 1E6
+R112 56 24 1E6
+R113 24 57 1E6
+R114 24 54 1E6
+R115 2 5 1E6
+G20 5 2 58 2 -290E-6
+I32 2 59 1E-3
+D35 59 2 DD
+V31 59 58 0.71
+R116 2 58 1E6
+I33 5 2 230E-6
+R117 49 9 6.5E3
+R123 2 60 33.333E3
+R124 35 19 40E3
+C44 60 2 6E-12
+E41 23 2 60 2 1
+R127 2 35 20E3
+C45 35 19 6E-12
+R129 61 62 5E3
+R130 63 64 5E3
+G23 62 60 62 64 0.1E-3
+G24 64 60 62 64 0.1E-3
+R131 65 66 1E3
+R132 66 67 1E3
+E43 67 2 4 2 1
+E44 65 2 3 2 1
+M38 60 68 2 2 NCN L=6U W=20U
+M39 60 66 2 2 NCP L=6U W=20U
+E45 68 2 66 2 -1
+E46 61 3 69 2 1
+E47 63 4 69 2 -1
+R133 2 69 21.5E3
+C46 69 2 1E-12
+G26 60 2 70 2 0.2E-6
+R135 68 70 1E4
+R136 2 70 10
+C47 68 70 50E-9
+E48 26 2 17 2 -0.4
+E49 40 2 19 2 1
+V34 25 14 -3
+R137 19 1 1.35
+R138 2 19 20E3
+ R139 2 1 1E6    
+.MODEL DD D
+.MODEL QNL NPN
+.MODEL QPL PNP
+.MODEL JNC NJF IS=1E-18
+.MODEL POUT PMOS KP=200U VTO=-0.7
+.MODEL NOUT NMOS KP=200U VTO=0.7
+.MODEL PIN PMOS KP=200U VTO=-0.7
+.MODEL NIN NMOS KP=200U VTO=0.7
+.MODEL HVP PMOS KP=200U VTO=-0.7
+.MODEL HVN NMOS KP=200U VTO=0.7
+.MODEL NCN NMOS KP=200U VTO=16.5
+.MODEL NCP NMOS KP=200U VTO=80.3
+.ENDS
+* END MODEL INA193
+* BEGIN MODEL INA194
+*
+* REV 29 DEC 04
+*
+* BEGIN MODEL FEATURES
+*
+* GAIN, BANDWITH, AND RISETIME
+* CMRR VS FREQUENCY
+* PSRR VS FREQUENCY
+* VOLTAGE NOISE
+* OUTPUT CURRENT LIMIT
+* CURRENT LIMIT VS SUPPLY VOLT
+* OUTPUT CURRENT THRU RAILS
+* QUIESCENT CURRENT
+* QUIESCENT CURRENT VS VOUT
+* LOW INPUT BIAS CURRENT
+* INPUT COMMON MODE VOLTAGE RANGE
+* OUTPUT VOLTAGE SWING VS IO
+* OUTPUT IMPEDANCE
+* SETTLING TO ONE PERCENT
+* MODEL TEMP RANGE -40 TO 125 C
+* NOTE THAT NOT ALL MODEL PARAMETERS
+* TRACK THE DATASHEET VERSUS TEMP
+* END MODEL FEATURES
+* ------------------------------------------------------------------------
+*|(C) Copyright Texas Instruments Incorporated 2007. All rights reserved. |
+*|                                                                        |
+*|This Model is designed as an aid for customers of Texas Instruments.    |
+*|No warranties, either expressed or implied, with respect to this Model  |
+*|or its fitness for a particular purpose is claimed by Texas Instruments |
+*|or the author.  The Model is licensed solely on an "as is" basis.  The  |
+*|entire risk as to its quality and performance is with the customer.     |
+* ------------------------------------------------------------------------
+*
+* PINOUT ORDER OUT GND VIN+ VIN- V+
+* PINOUT ORDER  1   2   3    4    5
+.SUBCKT INA194 1 2 3 4 5
+Q21 6 7 2 QNL
+R77 8 9 2
+R78 10 9 2
+R79 7 11 100
+R80 12 13 100
+R81 13 5 30
+R82 2 11 20
+R83 14 15 500
+R84 16 17 30
+R85 2 18 20
+D21 19 5 DD
+D22 2 19 DD
+E26 17 2 5 2 1
+E28 20 2 17 2 1
+R86 20 21 1E6
+R89 2 21 100
+C29 20 21 500E-12
+E33 22 23 21 2 -0.07
+E34 24 2 17 2 0.5E-6
+D27 25 17 DD
+D28 26 14 DD
+M24 27 28 11 11 NOUT L=3U W=20U
+M25 29 30 13 13 POUT L=3U W=200U
+M26 31 31 16 16 POUT L=3U W=200U
+M27 32 33 8 8 HVP L=3U W=600U
+M28 34 35 10 10 HVP L=3U W=600U
+M29 36 36 18 18 NOUT L=3U W=20U
+R94 37 30 100
+R95 38 28 100
+G14 14 24 39 24 0.2E-3
+R96 24 14 7.23E6
+C32 15 40 110E-12
+R97 2 32 2.05E3
+R98 2 34 2.05E3
+C33 32 34 10P
+C36 19 2 1E-12
+D29 28 6 DD
+D30 41 30 DD
+Q22 41 12 17 QPL
+V27 22 33 -0.3M
+M30 42 33 43 43 HVN L=3U W=600U
+R99 44 43 2
+M31 45 35 46 46 HVN L=3U W=600U
+R100 44 46 2
+R101 42 17 2.05E3
+R102 45 17 2.05E3
+C37 42 45 10P
+M32 47 48 49 49 PIN L=6U W=500U
+M33 9 50 17 17 PIN L=6U W=500U
+V29 17 48 1.9
+M34 44 47 2 2 NIN L=6U W=500U
+M35 47 47 2 2 NIN L=6U W=500U
+G15 14 24 51 24 0.2E-3
+I28 31 36 80E-6
+M36 50 50 17 17 PIN L=6U W=500U
+I29 50 2 400E-6
+R103 19 29 40
+R104 27 19 50
+J5 17 22 17 JNC
+J6 17 35 17 JNC
+J7 35 2 35 JNC
+J8 22 2 22 JNC
+E37 52 24 45 42 1
+R105 52 51 10E3
+C39 51 24 22E-12
+E38 53 24 34 32 1
+R106 53 39 10E3
+C40 39 24 22E-12
+G16 54 24 14 24 -1E-3
+G17 24 55 14 24 1E-3
+G18 24 56 36 2 1M
+G19 57 24 17 31 1E-3
+D33 57 54 DD
+D34 55 56 DD
+R107 54 57 100E6
+R108 56 55 100E6
+R109 57 17 1E3
+R110 2 56 1E3
+E39 17 37 17 57 1
+E40 38 2 56 2 1
+R111 55 24 1E6
+R112 56 24 1E6
+R113 24 57 1E6
+R114 24 54 1E6
+R115 2 5 1E6
+G20 5 2 58 2 -290E-6
+I32 2 59 1E-3
+D35 59 2 DD
+V31 59 58 0.71
+R116 2 58 1E6
+I33 5 2 230E-6
+R117 49 9 6.5E3
+R123 2 60 83.333E3
+R124 35 19 40E3
+C44 60 2 6E-12
+E41 23 2 60 2 1
+R127 2 35 20E3
+C45 35 19 6E-12
+R129 61 62 5E3
+R130 63 64 5E3
+G23 62 60 62 64 0.1E-3
+G24 64 60 62 64 0.1E-3
+R131 65 66 1E3
+R132 66 67 1E3
+E43 67 2 4 2 1
+E44 65 2 3 2 1
+M38 60 68 2 2 NCN L=6U W=20U
+M39 60 66 2 2 NCP L=6U W=20U
+E45 68 2 66 2 -1
+E46 61 3 69 2 1
+E47 63 4 69 2 -1
+R133 2 69 21.5E3
+C46 69 2 1E-12
+G26 60 2 70 2 0.2E-6
+R135 68 70 1E4
+R136 2 70 10
+C47 68 70 50E-9
+E48 26 2 17 2 -0.4
+E49 40 2 19 2 1
+V34 25 14 -3
+R137 19 1 1.35
+R138 2 19 20E3
+ R139 2 1 1E6    
+.MODEL DD D
+.MODEL QNL NPN
+.MODEL QPL PNP
+.MODEL JNC NJF IS=1E-18
+.MODEL POUT PMOS KP=200U VTO=-0.7
+.MODEL NOUT NMOS KP=200U VTO=0.7
+.MODEL PIN PMOS KP=200U VTO=-0.7
+.MODEL NIN NMOS KP=200U VTO=0.7
+.MODEL HVP PMOS KP=200U VTO=-0.7
+.MODEL HVN NMOS KP=200U VTO=0.7
+.MODEL NCN NMOS KP=200U VTO=16.5
+.MODEL NCP NMOS KP=200U VTO=80.3
+.ENDS
+* END MODEL INA194
+* BEGIN MODEL INA195
+*
+* REV 29 DEC 04
+*
+*
+* BEGIN MODEL FEATURES
+*
+* GAIN, BANDWITH, AND RISETIME
+* CMRR VS FREQUENCY
+* PSRR VS FREQUENCY
+* VOLTAGE NOISE
+* OUTPUT CURRENT LIMIT
+* CURRENT LIMIT VS SUPPLY VOLT
+* OUTPUT CURRENT THRU RAILS
+* QUIESCENT CURRENT
+* QUIESCENT CURRENT VS VOUT
+* LOW INPUT BIAS CURRENT
+* INPUT COMMON MODE VOLTAGE RANGE
+* OUTPUT VOLTAGE SWING VS IO
+* OUTPUT IMPEDANCE
+* SETTLING TO ONE PERCENT
+* MODEL TEMP RANGE -40 TO 125 C
+* NOTE THAT NOT ALL MODEL PARAMETERS
+* TRACK THE DATASHEET VERSUS TEMP
+* END MODEL FEATURES
+* ------------------------------------------------------------------------
+*|(C) Copyright Texas Instruments Incorporated 2007. All rights reserved. |
+*|                                                                        |
+*|This Model is designed as an aid for customers of Texas Instruments.    |
+*|No warranties, either expressed or implied, with respect to this Model  |
+*|or its fitness for a particular purpose is claimed by Texas Instruments |
+*|or the author.  The Model is licensed solely on an "as is" basis.  The  |
+*|entire risk as to its quality and performance is with the customer.     |
+* ------------------------------------------------------------------------
+*
+* PINOUT ORDER OUT GND VIN+ VIN- V+
+* PINOUT ORDER  1   2   3    4    5
+.SUBCKT INA195 1 2 3 4 5
+Q21 6 7 2 QNL
+R77 8 9 2
+R78 10 9 2
+R79 7 11 100
+R80 12 13 100
+R81 13 5 30
+R82 2 11 20
+R83 14 15 500
+R84 16 17 30
+R85 2 18 20
+D21 19 5 DD
+D22 2 19 DD
+E26 17 2 5 2 1
+E28 20 2 17 2 1
+R86 20 21 1E6
+R89 2 21 100
+C29 20 21 500E-12
+E33 22 23 21 2 -0.07
+E34 24 2 17 2 0.5E-6
+D27 25 17 DD
+D28 26 14 DD
+M24 27 28 11 11 NOUT L=3U W=20U
+M25 29 30 13 13 POUT L=3U W=200U
+M26 31 31 16 16 POUT L=3U W=200U
+M27 32 33 8 8 HVP L=3U W=600U
+M28 34 35 10 10 HVP L=3U W=600U
+M29 36 36 18 18 NOUT L=3U W=20U
+R94 37 30 100
+R95 38 28 100
+G14 14 24 39 24 0.2E-3
+R96 24 14 7.23E6
+C32 15 40 110E-12
+R97 2 32 2.05E3
+R98 2 34 2.05E3
+C33 32 34 10P
+C36 19 2 1E-12
+D29 28 6 DD
+D30 41 30 DD
+Q22 41 12 17 QPL
+V27 22 33 -0.3M
+M30 42 33 43 43 HVN L=3U W=600U
+R99 44 43 2
+M31 45 35 46 46 HVN L=3U W=600U
+R100 44 46 2
+R101 42 17 2.05E3
+R102 45 17 2.05E3
+C37 42 45 10P
+M32 47 48 49 49 PIN L=6U W=500U
+M33 9 50 17 17 PIN L=6U W=500U
+V29 17 48 1.9
+M34 44 47 2 2 NIN L=6U W=500U
+M35 47 47 2 2 NIN L=6U W=500U
+G15 14 24 51 24 0.2E-3
+I28 31 36 80E-6
+M36 50 50 17 17 PIN L=6U W=500U
+I29 50 2 400E-6
+R103 19 29 40
+R104 27 19 50
+J5 17 22 17 JNC
+J6 17 35 17 JNC
+J7 35 2 35 JNC
+J8 22 2 22 JNC
+E37 52 24 45 42 1
+R105 52 51 10E3
+C39 51 24 22E-12
+E38 53 24 34 32 1
+R106 53 39 10E3
+C40 39 24 22E-12
+G16 54 24 14 24 -1E-3
+G17 24 55 14 24 1E-3
+G18 24 56 36 2 1M
+G19 57 24 17 31 1E-3
+D33 57 54 DD
+D34 55 56 DD
+R107 54 57 100E6
+R108 56 55 100E6
+R109 57 17 1E3
+R110 2 56 1E3
+E39 17 37 17 57 1
+E40 38 2 56 2 1
+R111 55 24 1E6
+R112 56 24 1E6
+R113 24 57 1E6
+R114 24 54 1E6
+R115 2 5 1E6
+G20 5 2 58 2 -290E-6
+I32 2 59 1E-3
+D35 59 2 DD
+V31 59 58 0.71
+R116 2 58 1E6
+I33 5 2 230E-6
+R117 49 9 6.5E3
+R123 2 60 166.67E3
+R124 35 19 40E3
+C44 60 2 6E-12
+E41 23 2 60 2 1
+R127 2 35 20E3
+C45 35 19 6E-12
+R129 61 62 5E3
+R130 63 64 5E3
+G23 62 60 62 64 0.1E-3
+G24 64 60 62 64 0.1E-3
+R131 65 66 1E3
+R132 66 67 1E3
+E43 67 2 4 2 1
+E44 65 2 3 2 1
+M38 60 68 2 2 NCN L=6U W=20U
+M39 60 66 2 2 NCP L=6U W=20U
+E45 68 2 66 2 -1
+E46 61 3 69 2 1
+E47 63 4 69 2 -1
+R133 2 69 21.5E3
+C46 69 2 1E-12
+G26 60 2 70 2 0.2E-6
+R135 68 70 1E4
+R136 2 70 10
+C47 68 70 50E-9
+E48 26 2 17 2 -0.4
+E49 40 2 19 2 1
+V34 25 14 -3
+R137 19 1 1.35
+R138 2 19 20E3
+ R139 2 1 1E6    
+.MODEL DD D
+.MODEL QNL NPN
+.MODEL QPL PNP
+.MODEL JNC NJF IS=1E-18
+.MODEL POUT PMOS KP=200U VTO=-0.7
+.MODEL NOUT NMOS KP=200U VTO=0.7
+.MODEL PIN PMOS KP=200U VTO=-0.7
+.MODEL NIN NMOS KP=200U VTO=0.7
+.MODEL HVP PMOS KP=200U VTO=-0.7
+.MODEL HVN NMOS KP=200U VTO=0.7
+.MODEL NCN NMOS KP=200U VTO=16.5
+.MODEL NCP NMOS KP=200U VTO=80.3
+.ENDS
+* END MODEL INA195
+* INA210 - Current-shunt monitor SPICE MODEL
+*
+* Product classification: Voltage Output, High/Low-Side Measurement, Bi-Directional Zero-Drift Series Current Shunt Monitor
+*
+* Model Definition by Precision Analog, Linear Products Applications Engineering (tek) - Texas Instruments Inc.
+*
+************************************************************************
+*    (C) Copyright 2008 Texas Instruments Incorporated. All rights reserved. 
+*    INA21X ver1.3 TRANSIENT MODEL (TINA v6 Netlist Editor format)
+************************************************************************
+** This model is designed as an aid for customers of Texas Instruments.
+** TI and its licensors and suppliers make no warranties, either expressed 
+** or implied, with respect to this model, including the warranties of 
+** merchantability or fitness for a particular purpose. The model is provided
+** solely on an "as is" basis. The entire risk as to its quality and performance
+** is with the customer          
+************************************************************************
+*
+* Simulation model notes:
+*  1) CMRR and PSRR responses closely track the product to approximately 5kHz, but then begin to flatten out as the frequency
+*     is increased. The actual product continues to roll-off as frequency is increased.
+*  2) The simulated common-mode voltage transient response exhibits peaks associated with the input pulse edges that are
+*     inverted relative to the datasheet plot. Otherwise the time characteristics and peak amplitude are correct.
+*
+* Begin INA210
+*
+.SUBCKT INA210 IN+ IN- V+ GND OUT REF
+XDP6         GND IN-   D_Z26V
+XDP5         GND IN+   D_Z26V
+R4          INp IN+ 4.9999875K 
+R3          INm IN- 5.0000125K TC=1.5U
+XU1          IN- IN+ GND INp OUT V+ INm   INA21Xopa
+XDP4         GND REF   D_DIS1PN0_52
+XDP3         REF V+   D_DIS1PN0_52
+XDP2         GND OUT   D_DIS1PN0_52
+XDP1         OUT V+   D_DIS1PN0_52
+R2          REF INp 1.0000025MEG 
+R1          OUT INm 999.9975K TC=1.5U
+.ENDS
+*
+* INA211 - Current-shunt monitor SPICE MODEL
+*
+* Product classification: Voltage Output, High/Low-Side Measurement, Bi-Directional Zero-Drift Series Current Shunt Monitor
+*
+* Model Definition by Precision Analog, Linear Products Applications Engineering (tek) - Texas Instruments Inc.
+*
+************************************************************************
+*    (C) Copyright 2008 Texas Instruments Incorporated. All rights reserved. 
+*    INA21X ver1.3 TRANSIENT MODEL (TINA v6 Netlist Editor format)
+************************************************************************
+** This model is designed as an aid for customers of Texas Instruments.
+** TI and its licensors and suppliers make no warranties, either expressed 
+** or implied, with respect to this model, including the warranties of 
+** merchantability or fitness for a particular purpose. The model is provided
+** solely on an "as is" basis. The entire risk as to its quality and performance
+** is with the customer          
+************************************************************************
+*
+* Simulation model notes:
+*  1) CMRR and PSRR responses closely track the product to approximately 5kHz, but then begin to flatten out as the frequency
+*     is increased. The actual product continues to roll-off as frequency is increased.
+*  2) The simulated common-mode voltage transient response exhibits peaks associated with the input pulse edges that are
+*     inverted relative to the datasheet plot. Otherwise the time characteristics and peak amplitude are correct.
+*
+* Begin INA211
+*
+.SUBCKT INA211 IN+ IN- V+ GND OUT REF
+XDP6         GND IN-   D_Z26V
+XDP5         GND IN+   D_Z26V
+R4          INp IN+ 1.999995K 
+R3          INm IN- 2.000005K TC=1.5U
+XU1          IN- IN+ GND INp OUT V+ INm   INA21Xopa
+XDP4         GND REF   D_DIS1PN0_52
+XDP3         REF V+   D_DIS1PN0_52
+XDP2         GND OUT   D_DIS1PN0_52
+XDP1         OUT V+   D_DIS1PN0_52
+R2          REF INp 1.0000025MEG 
+R1          OUT INm 999.9975K TC=1.5U
+.ENDS 
+*
+* INA212 - Current-shunt monitor SPICE MODEL
+*
+* Product classification: Voltage Output, High/Low-Side Measurement, Bi-Directional Zero-Drift Series Current Shunt Monitor
+*
+* Model Definition by Precision Analog, Linear Products Applications Engineering (tek) - Texas Instruments Inc.
+*
+************************************************************************
+*    (C) Copyright 2008 Texas Instruments Incorporated. All rights reserved. 
+*    INA21X ver1.3 TRANSIENT MODEL (TINA v6 Netlist Editor format)
+************************************************************************
+** This model is designed as an aid for customers of Texas Instruments.
+** TI and its licensors and suppliers make no warranties, either expressed 
+** or implied, with respect to this model, including the warranties of 
+** merchantability or fitness for a particular purpose. The model is provided
+** solely on an "as is" basis. The entire risk as to its quality and performance
+** is with the customer          
+************************************************************************
+*
+* Simulation model notes:
+*  1) CMRR and PSRR responses closely track the product to approximately 5kHz, but then begin to flatten out as the frequency
+*     is increased. The actual product continues to roll-off as frequency is increased.
+*  2) The simulated common-mode voltage transient response exhibits peaks associated with the input pulse edges that are
+*     inverted relative to the datasheet plot. Otherwise the time characteristics and peak amplitude are correct.
+*
+* Begin INA212
+*
+.SUBCKT INA212 IN+ IN- V+ GND OUT REF
+XDP6         GND IN-   D_Z26V
+XDP5         GND IN+   D_Z26V
+R4          INp IN+ 999.9975 
+R3          INm IN- 1.0000025K TC=1.5U
+XU1          IN- IN+ GND INp OUT V+ INm   INA21Xopa
+XDP4         GND REF   D_DIS1PN0_52
+XDP3         REF V+   D_DIS1PN0_52
+XDP2         GND OUT   D_DIS1PN0_52
+XDP1         OUT V+   D_DIS1PN0_52
+R2          REF INp 1.0000025MEG 
+R1          OUT INm 999.9975K TC=1.5U
+.ENDS 
+*
+* INA213 - Current-shunt monitor SPICE MODEL
+*
+* Product classification: Voltage Output, High/Low-Side Measurement, Bi-Directional Zero-Drift Series Current Shunt Monitor
+*
+* Model Definition by Precision Analog, Linear Products Applications Engineering (tek) - Texas Instruments Inc.
+*
+************************************************************************
+*    (C) Copyright 2008 Texas Instruments Incorporated. All rights reserved. 
+*    INA21X ver1.3 TRANSIENT MODEL (TINA v6 Netlist Editor format)
+************************************************************************
+** This model is designed as an aid for customers of Texas Instruments.
+** TI and its licensors and suppliers make no warranties, either expressed 
+** or implied, with respect to this model, including the warranties of 
+** merchantability or fitness for a particular purpose. The model is provided
+** solely on an "as is" basis. The entire risk as to its quality and performance
+** is with the customer          
+************************************************************************
+*
+* Simulation model notes:
+*  1) CMRR and PSRR responses closely track the product to approximately 5kHz, but then begin to flatten out as the frequency
+*     is increased. The actual product continues to roll-off as frequency is increased.
+*  2) The simulated common-mode voltage transient response exhibits peaks associated with the input pulse edges that are
+*     inverted relative to the datasheet plot. Otherwise the time characteristics and peak amplitude are correct.
+*
+* Begin INA213
+*
+.SUBCKT INA213 IN+ IN- V+ GND OUT REF
+XDP6         GND IN-   D_Z26V
+XDP5         GND IN+   D_Z26V
+R4          INp IN+ 19.99995K 
+R3          INm IN- 20.00005K TC=1.5U
+XU1          IN- IN+ GND INp OUT V+ INm   INA21Xopa
+XDP4         GND REF   D_DIS1PN0_52
+XDP3         REF V+   D_DIS1PN0_52
+XDP2         GND OUT   D_DIS1PN0_52
+XDP1         OUT V+   D_DIS1PN0_52
+R2          REF INp 1.0000025MEG 
+R1          OUT INm 999.9975K TC=1.5U
+.ENDS	
+*
+* INA214 - Current-shunt monitor SPICE MODEL
+*
+* Product classification: Voltage Output, High/Low-Side Measurement, Bi-Directional Zero-Drift Series Current Shunt Monitor
+*
+* Model Definition by Precision Analog, Linear Products Applications Engineering (tek) - Texas Instruments Inc.
+*
+************************************************************************
+*    (C) Copyright 2008 Texas Instruments Incorporated. All rights reserved. 
+*    INA21X ver1.3 TRANSIENT MODEL (TINA v6 Netlist Editor format)
+************************************************************************
+** This model is designed as an aid for customers of Texas Instruments.
+** TI and its licensors and suppliers make no warranties, either expressed 
+** or implied, with respect to this model, including the warranties of 
+** merchantability or fitness for a particular purpose. The model is provided
+** solely on an "as is" basis. The entire risk as to its quality and performance
+** is with the customer          
+************************************************************************
+*
+* Simulation model notes:
+*  1) CMRR and PSRR responses closely track the product to approximately 5kHz, but then begin to flatten out as the frequency
+*     is increased. The actual product continues to roll-off as frequency is increased.
+*  2) The simulated common-mode voltage transient response exhibits peaks associated with the input pulse edges that are
+*     inverted relative to the datasheet plot. Otherwise the time characteristics and peak amplitude are correct.
+*
+* Begin INA214
+*
+.SUBCKT INA214 IN+ IN- V+ GND OUT REF
+XDP6         GND IN-   D_Z26V
+XDP5         GND IN+   D_Z26V
+R4          INp IN+ 9.999975K 
+R3          INm IN- 10.000025K TC=1.5U
+XU1          IN- IN+ GND INp OUT V+ INm   INA21Xopa
+XDP4         GND REF   D_DIS1PN0_52
+XDP3         REF V+   D_DIS1PN0_52
+XDP2         GND OUT   D_DIS1PN0_52
+XDP1         OUT V+   D_DIS1PN0_52
+R2          REF INp 1.0000025MEG 
+R1          OUT INm 999.9975K TC=1.5U
+.ENDS
+*
+.SUBCKT INA21Xopa VBus1 VBus2 GND IN+ OUT AVDD IN-
+VS3         IGND 34 600M
+VS1         35 IGND 600M
+VLo         VM VLo 33.2616122199
+VHi         VHi VM 26.6092897759
+Vps         36 GND 5
+IS2         38 39 1U
+VS1_2       29 IGND 26
+VS2         1V GND 1
+ISb1        49 GND 1U
+VSr         50 21 120.3M
+ISr         47 21 16U
+V2          51 VLo 392.9666571583M
+V1          VHi 52 392.9666571583M
+EVSe        VAmm VAm POLY(2) Vecm VM Veps VM 0 1 -1 
+SWMD1       AVDD VGP Shdown GND  S_VSWITCH_1
+SWMD1_2     VG GND Shdown GND  S_VSWITCH_2
+XD11         33 34   D_D
+
+EVCVS1      VB VV 33 IGND  30
+XDP2         35 33   D_D
+
+C33         VB OUT 5P 
+XMD1         OUT VG GND   DRVMOS_1
+
+R201        37 VM 19.99999MEG 
+L191        37 VM 15.9154863514M 
+R191        Veps 37 10 
+G8ps        VM Veps 36 AVDD  7.9394101858N
+Rpsrr1      38 39 1G 
+XD5          VGP 40   D_ZR_2V
+
+EVMP1       40 AVDD 38 AVDD  1
+Rdn2        VGP 40 33.2333063684K 
+Gdn2        40 VGP VV VM  124.84365U
+XD4          41 VG   D_ZR_2V
+
+EVMD1       41 GND 39 GND  1
+Rdn1        VG 41 33.2333063684K 
+Gdn1        41 VG VV VM  124.84365U
+XDPO1        39 38   D_D_1
+
+C5          42 VG 2.5P 
+C4          VGP 42 2.5P 
+Rf1         42 OUT 2K 
+XT4          38 38 AVDD AVDD   DRVPMOS
+
+XMP1         OUT VGP AVDD AVDD   DRVPMOS_1
+
+XT3          39 39 GND   DRVMOS
+
+R210        43 VM 3.0612144898MEG 
+L4          43 VM 243.6037089578M 
+R20         Vecm 43 10 
+G8          VM Vecm 17 VM  1.5822914842N
+XD3          GND RT   D_D10
+GIEEc       RT GND 1V Shdown  37U
+EVCVS5      19 IGND 1V Shdown  2.1
+*EAVDD       IAVDD 0 VALUE = {IF(V(SHDOWN,GND)<0.5,2.1,0)}
+EAVDD       IAVDD 0 VALUE= { 1.05*SGN(0.5-V(Shdown,GND)) + 1.05 }
+EGND        IGND 0 GND 0  1
+EVM         VM IGND AVDD IGND  500M
+XU3          IN+ 45 44   VOST
+
+XD10         IGND 46   D_D10_1
+
+GIEE        46 IGND 1V Shdown  2U
+Rp2         RT GND 200MEG 
+XU2          GND Vref_VBus 20 GND   HYSTCOMP
++ PARAMS: VTHRES=-0.5 VHYST=40M VOUTH=1 VOUTL=0 ROUT=100 TDEL=10N 
+XSDComp      GND AVDD Shdown GND   HYSTCOMP
++ PARAMS: VTHRES=-2.6 VHYST=40M VOUTH=1 VOUTL=0 ROUT=100 TDEL=100n 
+XD9          AVDD 47   D_D9
+
+Cf6         48 GND 1P 
+Cf5         RT GND 2.5P 
+Cf4         21 GND 10P 
+XDZb1        49 48   D_ZB1
+
+XDb1         GND 49   D_DB1
+
+Rpr         21 GND 2.1MEG 
+XDr          50 47   D_DR
+
+XDZr         GND 21   D_ZR_2_1V
+
+Rbus2       VBus2 48 1.2987K 
+Rbus1       VBus1 48 1.3K 
+XVrVbComp    19 48 Vref_VBus GND   HYSTCOMP
++ PARAMS: VTHRES=0 VHYST=42M VOUTH=1 VOUTL=0 ROUT=100 TDEL=10N 
+SWVbus      RT 48 20 Shdown  S_VSWITCH_3
+SWVref      RT 21 Vref_VBus Shdown  S_VSWITCH_4
+XT2          VAmm 45 46   Q_NMOS
+
+XT1          VAp IN- 46   Q_NMOS
+
+R10         24 IGND 100K 
+R9          IAVDD 24 100K 
+R8          VB VM 32.9146618566MEG 
+G2          VM VB VAm VAp  120.9513171632U
+XD2          51 VB   D_DIS1PN0_1
+
+XD1          VB 52   D_DIS1PN0_1
+
+C1          VAp VAmm 24.0625P 
+R4g         29 VAmm 8.2677892515K 
+R3g         29 VAp 8.2677892515K 
+R2c         17 IN+ 500G 
+R1c         IN- 17 500G 
+.MODEL S_VSWITCH_1 VSWITCH (RON=1K ROFF=100MEG VON=700M VOFF=300M)
+.MODEL S_VSWITCH_2 VSWITCH (RON=1K ROFF=100MEG VON=700M VOFF=300M)
+.MODEL S_VSWITCH_3 VSWITCH (RON=100M ROFF=100MEG VON=700M VOFF=300M)
+.MODEL S_VSWITCH_4 VSWITCH (RON=100M ROFF=100MEG VON=700M VOFF=300M)
+.ENDS
+
+.SUBCKT D_D       1    2
+D1 1 2  DD
+.MODEL DD D( IS=0.9E-18 N=1.0 )
+.ENDS D_D 
+
+.SUBCKT DRVMOS_1  D G S
+*                D G S
+M6 D G S S DRVMOS
+.MODEL DRVMOS NMOS LEVEL=1 L=1.0U W=55U KP=100U VTO=1.0 RS=10.0 LAMBDA=20E-3 PHI=3.3 
+.ENDS DRVMOS_1 
+
+.SUBCKT D_ZR_2V       1    2
+D1 1 2  D_2V
+*C1 1 2 1P
+.MODEL D_2V D( IS=1P N=0.1 BV=2.0 IBV=1.0M RS=1 )
+.ENDS 
+
+.SUBCKT D_D_1       1    2
+D1 1 2  DD
+.MODEL DD D( IS=10F N=0.1 RS=1 )
+.ENDS D_D_1 
+
+.SUBCKT DRVPMOS  D G S B
+*                D G S B
+M1 D G S B DRVPMOS
+.MODEL DRVPMOS PMOS LEVEL=1 L=1.0U W=1.9U KP=100U VTO=-1.0 RS=1.0 LAMBDA=20E-3 PHI=3.3 
+.ENDS DRVPMOS 
+
+.SUBCKT DRVPMOS_1  D G S B
+*                D G S B
+M1 D G S B DRVPMOS
+.MODEL DRVPMOS PMOS LEVEL=1 L=1.0U W=95U KP=100U VTO=-1.0 RS=10.0 LAMBDA=20E-3 PHI=3.3 
+.ENDS DRVPMOS_1 
+
+.SUBCKT DRVMOS  D G S
+*                D G S
+M6 D G S S DRVMOS
+.MODEL DRVMOS NMOS LEVEL=1 L=1.0U W=1.1U KP=100U VTO=1.0 RS=1.0 LAMBDA=20E-3 PHI=3.3 
+.ENDS DRVMOS 
+
+.SUBCKT D_D10       1    2
+D1 1 2  DD
+CD 1 2 1P
+.MODEL DD D( IS=10F N=2.0 RS=1 )
+.ENDS 
+
+.SUBCKT VOST  1 2 3
+RT 30 0 RMOD 1 
+IT 0 30 1
+E2 3 0 VALUE = { V(30,0) + 26 } 
+E1 2 1 TABLE {V(3,0)} ((-50,1U) (+10,2U) (+21,1.5U) (+25,500N) (+28,100N) (+100,1N) (+110,1U) (+125,5U) (+150,18U))
+.MODEL RMOD RES (TC1=1 TC2=0 TCE=0 )
+.ENDS
+
+.SUBCKT D_D10_1       1    2
+D1 1 2  DD
+CD 1 2 10F
+.MODEL DD D( IS=1F N=2.0 RS=1 )
+.ENDS 
+
+
+.SUBCKT HYSTCOMP  IN+ IN- OUT GND 
++ PARAMS: VTHRES=0 VHYST=1 VOUTH=5 VOUTL=0 ROUT=1 TDEL=1N
+*
+*.PARAM RDEL = {IF ( (TDEL > 1E-15) & (ROUT < 1), 1, ROUT ) } 
+.PARAM RDEL = {ROUT}
+.PARAM VOUTM={(VOUTH+VOUTL)/2}
+.PARAM VTHH={VTHRES+VHYST}
+.PARAM VTHL={VTHRES-VHYST}
+.PARAM COUT={TDEL/(0.693*(RDEL+1U))}
+.PARAM VTHM={(VTHH+VTHL)/2}
+.PARAM VTHD2={(VTHH-VTHL)/2}
+.PARAM VOUTD2={(VOUTH-VOUTL)/2}
+*
+*ETHR THR GND VALUE= { IF ( V(OUT,GND) < {VOUTM}, {VTHH}, {VTHL}) }
+ETHR THR GND VALUE= { VTHD2*SGN(VOUTM-V(OUT,GND)) + VTHM }
+*EOUT OUT GND VALUE= { IF ( V(IN+,IN-) > V(THR,GND), VOUTH + RDEL*I(EOUT) , VOUTL + RDEL*I(EOUT)  ) }
+EOUT OUT GND VALUE= { (VOUTD2*SGN(V(IN+,IN-) - V(THR,GND)) + VOUTM) + RDEL*I(EOUT) }
+COUT OUT GND {COUT}
+.ENDS
+
+.SUBCKT D_D9       1    2
+D1 1 2  DD
+CD 1 2 1P
+.MODEL DD D( IS=5.4F  N=1.0 RS=1)
+.ENDS
+
+.SUBCKT D_ZB1        1    2
+D1 1 2  D_2_1V
+CD 1 2 1P
+.MODEL D_2_1V D( IS=1P N=1.0 BV=2.1 IBV=1.0U RS=1 )
+.ENDS 
+
+.SUBCKT D_DB1       1    2
+D1 1 2  DD
+CD 1 2 1P
+.MODEL DD D( IS=1P N=0.5 RS=1 )
+.ENDS D_DB1 
+
+.SUBCKT D_DR       1    2
+D1 1 2  DD
+CD 1 2 1P
+.MODEL DD D( IS=10F N=0.5 RS=1 )
+.ENDS 
+
+.SUBCKT D_ZR_2_1V       1    2
+D1 1 2  D_2_1V
+CD 1 2 1P
+.MODEL D_2_1V D( IS=1P N=0.2 BV=2.1 IBV=16.0U RS=1 )
+.ENDS 
+
+.SUBCKT Q_NMOS  D G S
+*            D G S
+MNI2 D G S S Q_NMOS
+.MODEL Q_NMOS NMOS LEVEL=1 L=1.0U W=73.1461U KP=100.0U VTO=0.7
+.ENDS Q_NMOS 
+
+.SUBCKT D_DIS1PN0_1       1    2
+D1 1 2  DD
+CD 1 2 1P
+.MODEL DD D( IS=1P N=1.0 RS=10)
+.ENDS 
+
+.SUBCKT D_Z26V       1    2
+D1 1 2  D_26V
+CD 1 2 100F
+.MODEL D_26V D( IS=1P N=0.52 BV=26.3 IBV=5.0M RS=10 )
+.ENDS D_Z26V 
+
+.SUBCKT D_DIS1PN0_52       1    2
+D1 1 2  DDIS1PN0_52
+CD 1 2 100F
+.MODEL DDIS1PN0_52 D( IS=1P N=0.52 RS=10 )
+.ENDS

@@ -1,0 +1,14 @@
+// General
+"parser error"
+"token"
+"line"
+"col"
+
+// TMessageWindow
+"Message Window"
+"Initializing VHDL simulation..."
+"Compiling MCU source code..."
+
+// TProgressWindow
+"Progress Window"
+

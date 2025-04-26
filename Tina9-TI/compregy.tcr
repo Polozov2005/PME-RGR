@@ -1,0 +1,84 @@
+; TINA Component Registry V2.0
+; Copyright (c) 1993-1999 DesignSoft, Inc.
+
+
+[!Основные]:{basic}
+Земля,2,TGnd,AnaComps.dll,0,basic/ground
+Источник напряжения,14,TVSource,AnaComps.dll,19,sources/voltage_source
+Батарея,67,TBattery,AnaComps.dll,127,sources/battery
+Генератор напряжения,16,TVGenerator,AnaComps.dll,21,sources/voltage_generator
+Вольтметр,5,TVoltageMeter,AnaComps.dll,13,meters/voltage_meter
+Амперметр,6,TAmperMeter,AnaComps.dll,15,meters/ampere_meter
+Резистор,9,TResistor,AnaComps.dll,2,basic/resistor
+Потенциометр,36,TPotenciometer,AnaComps.dll,3,basic/potentiometer
+Конденсатор,10,TCapacitor,AnaComps.dll,4,basic/capacitor
+Катушка индуктивности,11,THndlNonLinMagneticComps,AnaComps.dll,6,basic/inductor
+Нелинейная катушка индуктивности,-300,THndlNonLinMagneticComps,AnaComps.dll,142,basic/nonlinear_inductor
+Связанные катушки,12,TCoupledInds,AnaComps.dll,134,basic/coupled_inductor
+Трансформаторы,-301,THndlNonLinMagneticComps,AnaComps.dll,80,basic/transformers
+Ключ,52,TSwitch,AnaComps.dll,9,switches/switch
+Терморезистор,-302,THndlNonLinMagneticComps,AnaComps.dll,150,basic/thermistor
+Пересечение без соединения,3,TJumper,AnaComps.dll,1,special/jumper
+Начальное условие1,81,TInitCond1,AnaComps.dll,146,special/initial_condition1
+Начальное условие2,82,TInitCond2,AnaComps.dll,147,special/initial_condition2
+Группа узлов1,83,TNodeset1,AnaComps.dll,148,special/nodeset1
+Группа узлов2,84,TNodeset2,AnaComps.dll,149,special/nodeset2
+
+[!Ключи]:{switches}
+Ключ,52,TSwitch,AnaComps.dll,9,switches/switch
+Переключатель,59,TSwitch,AnaComp.dll,129,switches/alternate_switch
+Ключ контролируемый временем,35,TTimeSwitch,AnaComps.dll,96,switches/time-ctld_switch
+Ключ контролируемый напряжением,32,TVoltageSwitch,AnaComps.dll,10,switches/voltage-ctld_switch
+Однополюсное открытое реле,70,TRelay,AnaComps.dll,137,switches/single_pole_open_relay
+Однополюсное закрытое реле,71,TRelay,AnaComps.dll,138,switches/single_pole_closed_relay
+Однополюсное переключающее реле,72,TRelay,AnaComps.dll,139,switches/single_pole_changeover_relay
+
+[!Измерительные приборы]:{meters}
+Внешний вывод для измерения напряжения,4,TVoltagePin,AnaComps.dll,11,meters/voltage_pin
+Вольтметр,5,TVoltageMeter,AnaComps.dll,13,meters/voltage_meter
+Открытая цепь,33,TVoltageTap,AnaComps.dll,14,meters/open_circuit
+Амперметр,6,TAmperMeter,AnaComps.dll,15,meters/ampere_meter
+Указатель тока,34,TCurrentArrow,AnaComps.dll,16,meters/current_arrow
+Ваттметр,7,TPowerMeter,AnaComps.dll,17,meters/power_meter
+Омметр,8,TImpedanceMeter,AnaComps.dll,18,meters/impedance_meter
+Динамик,60,TSpeaker,AnaComps.dll,92,meters/speaker
+Триггер с устойчивым состоянием,700,TTriggerComp,AnaComps.dll,214,special/steady_state_trigger
+Сенсор с устойчивым состоянием,701,TSteadyStateSensor,AnaComps.dll,215,special/steady_state_sensor
+
+[!Источники]:{sources}
+Источник напряжения,14,TVSource,AnaComps.dll,19,sources/voltage_source
+Батарея,67,TBattery,AnaComps.dll,127,sources/battery
+Источник тока,13,TCSource,AnaComps.dll,20,sources/current_source
+Генератор напряжения,16,TVGenerator,AnaComps.dll,21,sources/voltage_generator
+Генератор тока,15,TCGenerator,AnaComps.dll,22,sources/current_generator
+Controlled Sources,-304,THndlNonLinMagneticComps,AnaComps.dll,24,basic/controlled_sources
+
+[!Полупроводники]:{semiconductors/index}
+Идеальный операционный усилитель,86,TIdealOpamp,AnaComps.dll,29,semiconductors/ideal_op_amplifier
+Операционный усилитель,85,TOpamp,AnaComps.dll,30,semiconductors/operational_amplifier
+555 Таймер,45,T555,Mixed.dll,69,ad_da-555/555_timer
+Диод,23,TDiode,[D],31,semiconductors/diode
+Стабилитрон,43,TZener,[DZ],32,semiconductors/zener_diode
+Светодиод,44,TLED,[DL],33,semiconductors/led
+Параметрический диод,53,TVaricap,[DV],114,semiconductors/varicap_diode
+Диод Шотки,64,TSchottky,[DS],115,semiconductors/schottky_diode
+NPN биполярный транзистор,87,TNPN,[NPN],34,semiconductors/npn_bipolar_transistor
+PNP биполярный транзистор,88,TPNP,[PNP],35,semiconductors/pnp_bipolar_transistor
+N-канальный обогащенный МОП-транзистор,89,TNMOSInc,[NMOSE],36,semiconductors/nmos_enhancement-type
+P-канальный обогащенный МОП-транзистор,90,TPMOSInc,[PMOSE],37,semiconductors/pmos_enhancement-type
+N-канальный полевой транзистор с р-n-переходом,93,TJFETN,[NJF],40,semiconductors/junction_fet_n-channel
+P-канальный полевой транзистор с р-n-переходом,94,TJFETP,[PJF],41,semiconductors/junction_fet_p-channel
+
+[!Макроэлементы Spice]:{manufacturers_models/index}
+Операционный усилитель,-1100,TSpiceMacroCompHandler,[OpAmp],119,manufacturers_models/operational_amplifiers
+Дифференциальный усилитель,-1440,TSpiceMacroCompHandler,[DiffAmp],208,manufacturers_models/operational_amplifiers
+Полно-дифференциальный усилитель,-1450,TSpiceMacroCompHandler,[FullDiffAmp],206,manufacturers_models/operational_amplifiers
+Измерительный усилитель,-1110,TSpiceMacroCompHandler,[InstAmp],132,manufacturers_models/instrumentation_amplifiers
+Компараторы,-1120,TSpiceMacroCompHandler,[Comparator],207,manufacturers_models/comparators
+Регуляторы напряжения,-1200,TSpiceMacroCompHandler,[VoltageReg],158,manufacturers_models/voltage_regulators
+Буферы,-1140,TSpiceMacroCompHandler,[Buffer],131,manufacturers_models/buffers
+Current Shunt Monitors,-1460,TSpiceMacroCompHandler,[CurrShuntMon],205,manufacturers_models/operational_amplifiers
+SMPS,-1480,TSpiceMacroCompHandler,[SMPS],221,manufacturers_models/smps
+AD Converters,-1490,TSpiceMacroCompHandler,[ADConverters],226,manufacturers_models/adconverters
+Другие компоненты,-1150,TSpiceMacroCompHandler,[Misc],120,manufacturers_models/other_components
+

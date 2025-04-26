@@ -1,0 +1,4 @@
+Texas Instruments
+SUBCKT TPS40007_AVG    FB COMP GND SW VDD  Texas:TPS40007_AVG  [SMPS]  ; No processable comment
+LOCKED Au0=
+

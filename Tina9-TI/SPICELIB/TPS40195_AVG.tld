@@ -1,0 +1,4 @@
+Texas Instruments
+SUBCKT TPS40195_AVG     Vin Gnd Fb Out Comp  Texas:TPS40195AVG  [SMPS]
+LOCKED +rc=
+

@@ -1,0 +1,6 @@
+{ Use this template to create your
+  own signals }
+Function Signal(t);
+Begin
+   Signal := t;
+End;

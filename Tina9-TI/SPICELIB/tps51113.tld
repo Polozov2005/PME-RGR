@@ -1,0 +1,3 @@
+Texas Instruments
+SUBCKT TPS51113        BOOT SW HDRV LDRV_OC GND VDD COMP_EN FB VOS PGOOD   Texas:TPS51113  [SMPS]  ; No processable comment
+LOCKED Mjw=

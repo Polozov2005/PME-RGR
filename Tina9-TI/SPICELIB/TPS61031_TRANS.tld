@@ -1,0 +1,3 @@
+Texas Instruments
+SUBCKT TPS61031_TRANS  SW VBAT EN LBI SYNC GND VOUT FB LBO PGND  Texas:TPS61031_TRANS  [SMPS]  ; No processable comment
+LOCKED mRk=

@@ -1,0 +1,4 @@
+Texas Instruments
+SUBCKT TPS40190         EN FB COMP VDD GND BP5 LDRV BOOT SW HDRV   Texas:TPS40190  [SMPS] ; No processable comment
+LOCKED ct4=
+

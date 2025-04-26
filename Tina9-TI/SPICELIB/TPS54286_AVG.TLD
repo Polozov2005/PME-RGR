@@ -1,0 +1,4 @@
+Texas Instruments
+SUBCKT TPS54286_AVG     RTN VIN OUT FB  Texas:TPS54286AVG  [SMPS]  ; No processable comment
+LOCKED UaY=
+

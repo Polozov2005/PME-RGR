@@ -1,0 +1,4 @@
+Texas Instruments
+SUBCKT TPS40190_AVG     Vin Comp Out Fb Gnd  Texas:TPS40190AVG  [SMPS]
+LOCKED neM=
+

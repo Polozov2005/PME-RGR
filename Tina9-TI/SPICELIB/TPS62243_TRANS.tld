@@ -1,0 +1,3 @@
+Texas Instruments
+SUBCKT TPS62243_TRANS  SW MODE FB EN VIN GND  Texas:TPS62243_TRANS  [SMPS]  ; No processable comment
+LOCKED 8ac=

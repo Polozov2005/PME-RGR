@@ -1,0 +1,9 @@
+Texas Instruments
+SUBCKT TLE2425         3 4 5  TEXAS:TLE2425  [VoltageReg]          
+SUBCKT TLE2426         1 3 4 5  TEXAS:TLE2426  [internal]               
+LOCKED nc0=
+
+
+
+
+
